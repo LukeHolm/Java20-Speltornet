@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,600|Montserrat+Alternates:600");
+
 .App {
   text-align: center;
 }
@@ -14,7 +16,7 @@
 }
 
 .App-header {
-
+  color: white;
 }
 
 .App-link {
@@ -48,6 +50,36 @@
   width: 100%;
 }
 
+.speltornet {
+  font-family: Helvetica;
+  font-weight: 600;
+  color: #1a3455;
+  height: 80px;
+  left: 64px;
+  letter-spacing: 0px;
+  position: absolute;
+  text-align: center;
+  top: 90px;
+  width: 294px;
+  font-size: 40px;
+}
+
+.moto {
+  font-weight: bold;
+  font-family: Helvetica;
+  font-size: 48px;
+  margin-top: 200px;
+  color: #333; 
+  height: 74px;
+  letter-spacing: 0px;
+  line-height: 72.7px;
+  min-height: 74px;
+  text-align: center;
+  white-space: nowrap;
+  width: 536px;
+
+}
+
 .container {
   padding: 20px;
 }
@@ -78,4 +110,28 @@
   left: -1px;
   top: 3138px;
   background-color: #7B7B7B; 
+}
+
+.lines {
+  position: absolute;
+  top: 290px;
+  color: #333;
+  background-color: #333;
+  width: 330px;
+  height: 5px;
+
+}
+
+.burger {
+  position: absolute;
+  font-size: 30px;
+  right: 20px;
+  top: 20px;
+  padding: 10px;
+}
+
+.burger:hover {
+  background-color: white;
+  cursor: pointer;
+  border-radius: 5px;
 }
