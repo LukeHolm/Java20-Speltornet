@@ -70,3 +70,11 @@
   width: 103px;
   height: 33;
 }
+.App-footer {
+  position: absolute;
+  width: 1440px;
+  height: 158px;
+  left: -1px;
+  top: 3138px;
+  background-color: #7B7B7B; 
+}

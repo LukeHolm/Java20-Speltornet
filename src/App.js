@@ -27,6 +27,19 @@ function App() {
           </div>
         </div>
       </body>
+      <footer className="App-footer">
+        <div class="row align-items-center">
+          <div class="col">
+            One of three columns
+    </div>
+          <div class="col">
+            One of three columns
+    </div>
+          <div class="col">
+            One of three columns
+    </div>
+        </div>
+      </footer>
     </div>
   );
 }
