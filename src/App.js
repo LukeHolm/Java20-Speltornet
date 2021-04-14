@@ -2,15 +2,17 @@ import './App.css';
 import Burger from './components/Burger';
 import Lines from './components/Lines';
 
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <div className="top-bar">
-          <div class="speltornet">Speltornet</div>
+          <div className="speltornet-logga"><img class="tornlogga" src="tornet.png" alt="alt"></img></div>
+          <div className="speltornet">Speltornet</div>
         </div>
         <div className="top-bar-overlap">
-          <h1 className="moto">Byt, spela, byt!</h1>
+          <h1 className="motto">Byt, spela, byt!</h1>
           <Lines />
         </div>
       </header>
