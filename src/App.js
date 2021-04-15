@@ -119,6 +119,7 @@ function App() {
           <div class="container">
             <div class="row">
               <div class="col">
+                
                 1
                 <h2>Välj ut ett spel från sidan du är intresserad av.</h2>
               </div>
