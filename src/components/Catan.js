@@ -1,6 +1,6 @@
 import React from "react";
 
-function Modal() {
+function Catan() {
     // Get the modals
     var modal = document.getElementsByClassName('modal');
 
@@ -129,4 +129,4 @@ function Modal() {
         </div>
     )
 }
-export default Modal
+export default Catan

@@ -1,6 +1,7 @@
 import './App.css';
 import Burger from './components/Burger';
-import Modals from './components/Modals';
+import Catan from './components/Catan';
+import Pandemic from './components/Pandemic';
 
 
 function App() {
@@ -20,14 +21,17 @@ function App() {
         <div className="container">
           <div className="row">
             <div className="col">
-              <img className="bild" src="https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-03-22-kl--15-31-6@2x.png" alt="bild" />
-              <p className="spelnamn">Pandemic</p>
-              <Modals />
+              <img className="bild" src="https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-03-22-kl--15-28-5@2x.png" alt="Catan" />
+              <p className="spelnamn">Catan</p>
+              <Catan />
             </div>
             <div className="col">
               <img className="bild" src="https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-03-22-kl--15-31-5@2x.png" alt="bild" />
               <p className="spelnamn">Smallworld</p>
               <Modals />
+              <img className="bild" src="https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-03-22-kl--15-31-6@2x.png" alt="Pandemic" />
+              <p className="spelnamn">Pandemic</p>
+            <Pandemic />
             </div>
             <div className="col">
               <img className="bild" src="https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-04-08-kl--14-19-3@2x.png" alt="bild" />
