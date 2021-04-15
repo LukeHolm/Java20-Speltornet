@@ -1,6 +1,5 @@
 import './App.css';
 import Burger from './components/Burger';
-import Lines from './components/Lines';
 import Modals from './components/Modals';
 
 
