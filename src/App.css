@@ -18,6 +18,7 @@
 
 .App-header {
   color: white;
+  height: 601px;
 }
 
 .App-link {
@@ -38,31 +39,37 @@
   background-size: 100% 100%;
   background-color: #d4d2d2;
   height: 601px;
-  left: 0px;
+  width: 100%;
+  padding: 0;
+}
 
-  top: 0px;
-  width: 100%;
-}
-/*
 .top-bar-overlap {
-  align-items: center;
-  background-color: #e5e5e5;
-  display: flex;
-  flex-direction: column;
-  min-height: 575px;
+  background-color: #1A3455;
+  height: 601px;
   width: 100%;
+  display: inline-block;
 }
-*/
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+}
+  .col, [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
 
 .tornlogga {
-  padding-left: 20px;
+  padding-left: 30px;
   padding-top: 20px;
   height: 140px;
 
 }
 
 .speltornet {
-  font-family: Helvetica;
+  font-family: Montserrat;
   font-weight: 600;
   color: #1a3455;
   height: 80px;
@@ -78,18 +85,65 @@
 
 .motto {
   font-weight: bold;
-  font-family: Helvetica;
+  font-family: Montserrat;
   font-size: 48px;
-  margin-top: 200px;
-  color: #333; 
-  height: 74px;
-  letter-spacing: 0px;
-  line-height: 72.7px;
-  min-height: 74px;
   text-align: center;
-  white-space: nowrap;
-  width: 536px;
+  margin-top: 150px;
+  color: #EE387A; 
+  height: 74px;
+}
 
+.motto-text {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  padding: 15px;
+  padding-bottom: 20px;
+}
+
+.motto-text-forts {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.knappannons {
+  background-color: #EE387A;
+  border-radius: 15px;
+  border-style: none;
+  width: 202px;
+  height: 52px;
+  color: #FFFFFF;
+  font-family: Montserrat;
+}
+
+.knappannons:hover {
+  font-weight: bolder;
+}
+
+.plus {
+  background-color: #EE387A;
+  color: #FFFFFF;
+  font-family: Montserrata;
+  font-weight: bold;
+}
+
+.pink {
+  color: #EE387A;
+  background-color: #1A3455;
+  padding: 0;
+}
+
+.speltorget {
+  font-family: Montserrat;
+  font-size: 48px;
+  font-weight: bold;
+  color: #1A3455;
+  background-color: #FFFFFF;
+  padding-top: 40px;
+  padding-bottom: 30px;
 }
 
 .container {
@@ -106,12 +160,12 @@
 }
 
 .knapp {
-  background-color: #1a3455;
+  background-color: #EE387A;
   border-radius: 15px;
   border-style: none;
   width: 125px;
   height: 32px;
-  color: white;
+  color: #FFFFFF;
   font-family: Helvetica;
 }
 
@@ -120,6 +174,7 @@
   padding-bottom: 100px;
   background-color: #1A3455;
   color: #FFFFFF;
+  margin-top: 100px;
 }
 
 .body-bottom-header {
@@ -167,14 +222,15 @@
 
 .burger {
   position: absolute;
-  font-size: 30px;
+  font-size: 35px;
   right: 20px;
   top: 20px;
   padding: 10px;
+  color: #FFFFFF;
 }
 
 .burger:hover {
-  background-color: white;
+  color: #EE387A;
   cursor: pointer;
   border-radius: 5px;
 }
@@ -223,15 +279,20 @@
 }
 
 .button {
-  font-weight: bold;
-  font-size: 14px;
-  background-color: #294254;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 18px;
+  background-color: #EE387A;
   color: #FFFFFF;
-  height: 30px;
-  width: 100px;
+  height: 32px;
+  width: 125px;
   border-radius: 15px;
   border: none;
+}
 
+.button:hover {
+  color: #1A3455;
+  font-weight: bolder;
 }
 
 .gametitle {

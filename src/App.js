@@ -7,22 +7,38 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div className="top-bar">
-          <div className="col-sm-1 offset-sm-0 speltornet-logga"><img class="tornlogga" src="Speltornet_Logga.svg" alt="alt"></img></div>
-          <div className="speltornet">Speltornet</div>
-        </div>
-        <div className="top-bar-overlap">
-          <h1 className="motto">Byt, spela, byt!</h1>
-        </div>
+      <div className="row no-gutter">
+        <div className="col top-bar">
+          <div className="col-sm-1 offset-sm-0 speltornet-logga">
+            <img class="tornlogga" src="Speltornet_Logga.svg" alt="alt">
+            </img>
+            </div>
+              <div className="speltornet">
+                Speltornet
+              </div>
+          </div>
+          <div className="col-sm-4 offset-sm-0">
+            <span className="top-bar-overlap">
+              <h1 className="motto">
+                Byt, spela, byt!
+              </h1>
+              <h2 className="motto-text">Spel ska <mark className="pink">spelas</mark>,<br/> inte stå och damma!</h2>
+              <h3 className="motto-text-forts"> Speltornet låter dig <mark className="pink">snabbt</mark> och <br/> <mark className="pink">enkelt</mark> byta begagnade brädspel.</h3>
+              <br/><br/>
+              <button className="knappannons">Skapa annons <mark className="plus"> + </mark></button>
+              </span>
+          </div>
+      </div>
       </header>
       <body>
         <Burger />
         <div className="container">
+          <h1 className="speltorget">Speltorget</h1>
           <div className="row">
             <div className="col">
               <img className="bild" src="https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-03-22-kl--15-31-6@2x.png" alt="bild" />
               <p className="spelnamn">Pandemic</p>
-              <Modals />
+              <button className="knapp" id="knapp1">Se spel</button>
             </div>
             <div className="col">
               <img className="bild" src="https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-03-22-kl--15-31-5@2x.png" alt="bild" />
@@ -37,7 +53,7 @@ function App() {
             <div className="col">
               <img className="bild" src="https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-03-22-kl--15-28-5@2x.png" alt="bild" />
               <p className="spelnamn">Catan</p>
-              <button className="knapp" id="knapp4">Se spel</button>
+              <Modals/>
             </div>
           </div>
         </div>
