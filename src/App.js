@@ -13,7 +13,6 @@ function App() {
         </div>
         <div className="top-bar-overlap">
           <h1 className="motto">Byt, spela, byt!</h1>
-          <Lines />
         </div>
       </header>
       <body>
