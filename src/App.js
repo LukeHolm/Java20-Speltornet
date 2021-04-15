@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="top-bar">
-          <div className="col-sm-1 offset-sm-0 speltornet-logga"><img class="tornlogga" src="tornet.png" alt="alt"></img></div>
+          <div className="col-sm-1 offset-sm-0 speltornet-logga"><img class="tornlogga" src="Speltornet_Logga.svg" alt="alt"></img></div>
           <div className="speltornet">Speltornet</div>
         </div>
         <div className="top-bar-overlap">
