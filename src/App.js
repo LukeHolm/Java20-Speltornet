@@ -27,7 +27,7 @@ function App() {
             <div className="col">
               <img className="bild" src="https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-03-22-kl--15-31-5@2x.png" alt="bild" />
               <p className="spelnamn">Smallworld</p>
-              <button className="knapp" id="knapp2">Se spel</button>
+              <Modals />
             </div>
             <div className="col">
               <img className="bild" src="https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-04-08-kl--14-19-3@2x.png" alt="bild" />
