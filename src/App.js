@@ -40,7 +40,6 @@ function App() {
               <img className="bild" src="https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-03-22-kl--15-31-6@2x.png" alt="Pandemic" />
               <p className="spelnamn">Pandemic</p>
               <Pandemic />
-
             </div>
             <div className="col">
               <img className="bild" src="https://s3-alpha-sig.figma.com/img/7f70/2364/4fb5e9ecdf3348ed10de4ce06dbdbad7?Expires=1619395200&Signature=Zo06Cd1pP9gE0unuq3niiauK5~wLux8DO12mLmKHaq9z6APPyuD-tXLQVVD4zbOkJ0VGfIu2y8wXoe5i5q8g0lZ3ttc8Ck~L1YCV8GDaH2ACYFseX9xaxmEJDwxXBK6N9fa~OBBMuagC9HQcrD5QSm-eZ14MPyzIflPzwtHv9dniAYPVqi~1qiaJKMUwMmPmC7K8KDwGwF8A~yiGWnkFlJ57aPqtGFxfde1cZLIBP2ofDEf7XF2ATHn4iKa6Dwt4SPmlYI92eecwOw~5tDKTT5ynFYiyIC~I2v5xJ4IlvIBEg9OawpJaj3tLkp-RL9UJWR6PzzAPsNLY5WKbz0t-bg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="Small world" />
@@ -56,7 +55,6 @@ function App() {
               <img className="bild" src="https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-03-22-kl--15-28-5@2x.png" alt="bild" />
               <p className="spelnamn">Catan</p>
               <Catan />
-              
             </div>
           </div>
         </div>
