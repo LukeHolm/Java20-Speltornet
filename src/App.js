@@ -54,11 +54,7 @@ function App() {
             <div className="col">
               <img className="bild" src="https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-03-22-kl--15-28-5@2x.png" alt="bild" />
               <p className="spelnamn">Catan</p>
-<<<<<<< HEAD
-              <Catan />
-=======
               <Catan />              
->>>>>>> 4e8311d94ddf95f8067c0869ee35ed3793e207cc
             </div>
           </div>
         </div>
