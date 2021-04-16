@@ -198,6 +198,10 @@
   
 }
 
+.body-bottom-text {
+  text-align: left;
+}
+
 .dice {
   width: 82px;
   height: 82px;
