@@ -73,7 +73,7 @@ function Catan() {
                                 </div>
                                 <div className="col-sm-9">
                                     <p className="sellerinfo">
-                                        <b>Alexerius</b>
+                                        <b><br/>Alexerius</b>
                           +467014142390 <br />
                           alexerius@gmail.com
                           </p>

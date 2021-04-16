@@ -157,6 +157,17 @@
 .bild {
   height: 240px;
   width: 240px;
+  border-radius: 10px;
+}
+
+.spelnamn {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.exemplar {
+  
 }
 
 .knapp {
