@@ -2,9 +2,13 @@ import './App.css';
 import Burger from './components/Burger';
 import Catan from './components/Catan';
 import Pandemic from './components/Pandemic';
+import GamePopup from './components/GamePopup';
+import {React, useState} from 'react';
 
 
 function App() {
+  const [show, setShow] = useState(false)
+
   return (
     <div className="App">
       <header className="App-header">
@@ -46,7 +50,11 @@ function App() {
             <div className="col">
               <img className="bild" src="https://s3-alpha-sig.figma.com/img/7f70/2364/4fb5e9ecdf3348ed10de4ce06dbdbad7?Expires=1619395200&Signature=Zo06Cd1pP9gE0unuq3niiauK5~wLux8DO12mLmKHaq9z6APPyuD-tXLQVVD4zbOkJ0VGfIu2y8wXoe5i5q8g0lZ3ttc8Ck~L1YCV8GDaH2ACYFseX9xaxmEJDwxXBK6N9fa~OBBMuagC9HQcrD5QSm-eZ14MPyzIflPzwtHv9dniAYPVqi~1qiaJKMUwMmPmC7K8KDwGwF8A~yiGWnkFlJ57aPqtGFxfde1cZLIBP2ofDEf7XF2ATHn4iKa6Dwt4SPmlYI92eecwOw~5tDKTT5ynFYiyIC~I2v5xJ4IlvIBEg9OawpJaj3tLkp-RL9UJWR6PzzAPsNLY5WKbz0t-bg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="Small world" />
               <p className="spelnamn">Small world</p>
-              <button className="knapp" id="knapp2">Se spel</button>
+              <button className="knapp" onClick={() => setShow(true)}>Open</button>
+              <GamePopup title="Game Popup" onClose={() => setShow(false)} show={show}>
+                <p>Body body!</p>
+              </GamePopup>
+
             </div>
             <div className="col">
               <img className="bild" src="https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-04-08-kl--14-19-3@2x.png" alt="bild" />
