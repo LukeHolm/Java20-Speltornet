@@ -166,10 +166,6 @@
   font-size: 22px;
 }
 
-.exemplar {
-  
-}
-
 .knapp {
   background-color: #EE387A;
   border-radius: 15px;
@@ -376,7 +372,7 @@
 .game-modal-content {
   width: 70%;
   height: 90%;
-  background-color: #FFFFFF;
+  background-color: #FFFFF0;
 }
 
 .game-modal-header, .game-modal-footer {

@@ -1,0 +1,67 @@
+[
+    {
+        "id": 1,
+        "title": "Pandemic",
+        "imageURL": "https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-03-22-kl--15-31-6@2x.png"
+    },
+    {
+        "id": 2,
+        "title": "Small world",
+        "imageURL": "https://s3-alpha-sig.figma.com/img/7f70/2364/4fb5e9ecdf3348ed10de4ce06dbdbad7?Expires=1620000000&Signature=K5KgbDW1iXzKf8F1B5PaQ1N54P9oU~81GnlPpK~3M4Ta7vr3ingygEtzuUWuB~-ygTIqDb6XKWlqSeyxGcwT5N42v9-HmLzPxpWeW5Fz6Mkv~gojccNR1F~hSQfcAKBjG0NQEXlSCqVoNmBMEUzJqhNpHMixNPsOqpkd-4A-jSgcDRPGlMiMsxLR5B6K4EceTsoEkHRf5Bj8pcuOpDb1V-PNCmkkV6yzVvP-hkWAS80xGzlfl46U27k3N7R1ktw9t6iT2i4h8uklbC~Od9MElia2M2Ip1VMZ3zs8QFeqayYLrRibMTV5HmMBR-5M42jweNB9QKWXZrsSnuAzUDkDFA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+    },
+    {
+        "id": 3,
+        "title": "Labyrint",
+        "imageURL": "https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-04-08-kl--14-19-3@2x.png"
+    },
+    {
+        "id": 4,
+        "title": "Catan",
+        "imageURL": "https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-03-22-kl--15-28-5@2x.png"
+    },
+    {
+        "id": 5,
+        "title": "Civilization",
+        "imageURL": "https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-04-08-kl--14-19@2x.png"
+    },
+    {
+        "id": 6,
+        "title": "Minecraft",
+        "imageURL": "https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-04-08-kl--14-19-2@2x.png"
+    },
+    {
+        "id": 7,
+        "title": "Ticket to ride",
+        "imageURL": "https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-03-22-kl--15-30-3@2x.png"
+    },
+    {
+        "id": 8,
+        "title": "Maracaibo",
+        "imageURL": "https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-04-08-kl--14-18@2x.png"
+    },
+    {
+        "id": 9,
+        "title": "Diamanten",
+        "imageURL": "https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-04-08-kl--14-18-1@2x.png"
+    },
+    {
+        "id": 10,
+        "title": "Othello",
+        "imageURL": "https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-04-08-kl--14-18-2@2x.png"
+    },
+    {
+        "id": 11,
+        "title": "Nova luna",
+        "imageURL": "https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-04-08-kl--14-18-3@2x.png"
+    },
+    {
+        "id": 12,
+        "title": "Game of thrones",
+        "imageURL": "https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-04-08-kl--14-19-1@2x.png"
+    },
+    {
+        "id": 13,
+        "title": "Monopol",
+        "imageURL": "https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-03-22-kl--15-32-3@2x.png"
+    }
+]
