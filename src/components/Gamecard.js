@@ -15,16 +15,13 @@ const Gamecard = () => {
     return (
         <div>
             {gamecards.map(gamecard => (
-
-                <div className="row">
-                    <div className="col">
-                        <img className="bild" src={gamecard.imageURL} alt="bild" />
-                        <p className="spelnamn">{gamecard.title}</p>
-                        <button className="knapp" onClick={() => setShow(true)}>Se spel</button>
-                        <GamePopup title="Game Popup" onClose={() => setShow(false)} show={show}>
-                            <p>Body body!</p>
-                        </GamePopup>
-                    </div>
+                <div className="box col">
+                    <img className="bild" src={gamecard.imageURL} alt="bild" />
+                    <p className="spelnamn">{gamecard.title}</p>
+                    <button className="knapp" onClick={() => setShow(true)}>Se spel</button>
+                    <GamePopup title={gamecard.title} onClose={() => setShow(false)} show={show}>
+                        <p>Body body!</p>
+                    </GamePopup>
                 </div>
             ))}
         </div>
