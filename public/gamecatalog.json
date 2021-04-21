@@ -2,71 +2,79 @@
     {
         "id": 1,
         "title": "Pandemic",
-        "imageURL": "https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-03-22-kl--15-31-6@2x.png"
+        "imageURL": "https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-03-22-kl--15-31-6@2x.png",
+        "description": "Du och dina medarbetare är medlemmar i en smittkontrollsenhet som slås mot fyra dödliga smittor. Er enhet kommer att resa kors och tvärs över jorden för att försöka hindra smittorna från att sprida sig och utveckla ett vaccin mot dem, innan epidemin är ett faktum och mänskligheten går under!"
     },
     {
         "id": 2,
         "title": "Small world",
-        "imageURL": "https://s3-alpha-sig.figma.com/img/7f70/2364/4fb5e9ecdf3348ed10de4ce06dbdbad7?Expires=1620000000&Signature=K5KgbDW1iXzKf8F1B5PaQ1N54P9oU~81GnlPpK~3M4Ta7vr3ingygEtzuUWuB~-ygTIqDb6XKWlqSeyxGcwT5N42v9-HmLzPxpWeW5Fz6Mkv~gojccNR1F~hSQfcAKBjG0NQEXlSCqVoNmBMEUzJqhNpHMixNPsOqpkd-4A-jSgcDRPGlMiMsxLR5B6K4EceTsoEkHRf5Bj8pcuOpDb1V-PNCmkkV6yzVvP-hkWAS80xGzlfl46U27k3N7R1ktw9t6iT2i4h8uklbC~Od9MElia2M2Ip1VMZ3zs8QFeqayYLrRibMTV5HmMBR-5M42jweNB9QKWXZrsSnuAzUDkDFA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+        "imageURL": "https://s3-alpha-sig.figma.com/img/7f70/2364/4fb5e9ecdf3348ed10de4ce06dbdbad7?Expires=1620000000&Signature=K5KgbDW1iXzKf8F1B5PaQ1N54P9oU~81GnlPpK~3M4Ta7vr3ingygEtzuUWuB~-ygTIqDb6XKWlqSeyxGcwT5N42v9-HmLzPxpWeW5Fz6Mkv~gojccNR1F~hSQfcAKBjG0NQEXlSCqVoNmBMEUzJqhNpHMixNPsOqpkd-4A-jSgcDRPGlMiMsxLR5B6K4EceTsoEkHRf5Bj8pcuOpDb1V-PNCmkkV6yzVvP-hkWAS80xGzlfl46U27k3N7R1ktw9t6iT2i4h8uklbC~Od9MElia2M2Ip1VMZ3zs8QFeqayYLrRibMTV5HmMBR-5M42jweNB9QKWXZrsSnuAzUDkDFA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+        "description": "In Small World, players vie for conquest and control of a world that is simply too small to accommodate them all.\n Designed by Philippe Keyaerts as a fantasy follow-up to his award-winning Vinci?, Small World is inhabited by a zany cast of characters such as dwarves, wizards, amazons, giants, orcs and even humans; who use their troops to occupy territory and conquer adjacent lands in order to push the other races off the face of the earth. Picking the right combination from the 14 different fantasy races and 20 unique special powers, players rush to expand their empires – often at the expense of weaker neighbors. Yet they must also know when to push their own over-extended civilization into decline and ride a new one to victory!"
     },
     {
         "id": 3,
         "title": "Labyrint",
-        "imageURL": "https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-04-08-kl--14-19-3@2x.png"
+        "imageURL": "https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-04-08-kl--14-19-3@2x.png",
+        "description": "Nu är det möjligt att svara på Daidalos utmaning på hemmaplan. Labyrintspelet bjuder på fyra utmaningar var din uppgift är att samla livspuckar.\n Undvik att bli slajmad av Taurus i labyrinten, ta dig över slajmsjön, para ihop korten i minnesspelet och var snabbast i byggutmaningen. Spelaren med flest livspuckar i behåll efter utmaningarna vinner spelet."
     },
     {
         "id": 4,
         "title": "Catan",
-        "imageURL": "https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-03-22-kl--15-28-5@2x.png"
+        "imageURL": "https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-03-22-kl--15-28-5@2x.png",
+        "description": "Catan är en ö som spelarna ska kolonisera byar, städer och vägar, och på så vis erhålla poäng. Den som först får 10 poäng vinner spelet. Spelplanen är uppbyggd av ett antal hexagonformade brickor vars position kan variera från spel till spel."
     },
     {
         "id": 5,
         "title": "Civilization",
-        "imageURL": "https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-04-08-kl--14-19@2x.png"
+        "imageURL": "https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-04-08-kl--14-19@2x.png",
+        "description": "Rule the world and build an empire to withstand the test of time in Sid Meier’s Civilization: A New Dawn! This new tabletop game based on the groundbreaking video game series lets players become some of history’s greatest leaders as they try to advance their people through the ages, from ancient history to the modern era. Trade, battle, build, and pursue your agendas to become the premier world power!"
     },
     {
         "id": 6,
         "title": "Minecraft",
-        "imageURL": "https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-04-08-kl--14-19-2@2x.png"
+        "imageURL": "https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-04-08-kl--14-19-2@2x.png",
+        "description": "Likt originalet samlar spelarna in resursblock för att bygga olika strukturer av spektakulära slag, genom att samla in byggnadsmaterial. Men emellanåt stötar man ihop med någon fiende som behöver besegras! Samla erfarenhetspoäng på att bygga och slåss och bli den som har flest poäng när spelet avslutas!"
     },
     {
         "id": 7,
         "title": "Ticket to ride",
-        "imageURL": "https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-03-22-kl--15-30-3@2x.png"
+        "imageURL": "https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-03-22-kl--15-30-3@2x.png",
+        "description": "Ticket to Ride handlar om att resa mellan städer och åka så långa sträckor som möjligt för att generera ett större antal poäng än vad kortare sträckor ger, men samtidigt är det också just de längre sträckorna som är svåra att lyckas genomföra. Slumpen har nämligen en del makt över vilka tåglinjer på spelplanen som du faktiskt får använda dig utav då det gäller att kunna matcha en viss färg för varje tåglinje genom att spela ut kort med lika färgglada tågvagnar tryckta på sig, och det är inte säkert att den eller de färger som du är ute efter faktiskt dyker upp i tid – innan någon annan får för sig att plocka åt sig samma kort eller ockupera samma tåglinje."
     },
     {
         "id": 8,
         "title": "Maracaibo",
-        "imageURL": "https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-04-08-kl--14-18@2x.png"
+        "imageURL": "https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-04-08-kl--14-18@2x.png",
+        "description": "The Caribbean in the 17th Century: You are seafarers and adventurers, trying to increase your reputation with various nations, establish strong alliances, and obtain wealth and fame.\n You must go all out to win — your opponents do not rest. Only if you manage to successfully implement your plans, victory shall be yours! This can be achieved through different strategies, upgrading your ship to a mighty vessel, engaging in combat, working as a privateer, building a network of assistants, setting off on expeditions, fulfilling quests, and much more.\n But beware: your maneuvers should be carefully planned because the end of a round can come quickly!\n Immerse yourself in a colorful world full of adventures and opportunities. A new and splendid design by the master of strategic games – Alexander Pfister.\n A unique story mode: You can optionally play Maracaibo as a campaign, experiencing an exciting story as you go. In the process, several surprises change how the game plays out!\n Climb aboard and set sail for Maracaibo!"
     },
     {
         "id": 9,
         "title": "Diamanten",
-        "imageURL": "https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-04-08-kl--14-18-1@2x.png"
+        "imageURL": "https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-04-08-kl--14-18-1@2x.png",
+        "description": "Jakten på Den Försvunna Diamanten har pågått i nästan 40 år. Den klassiska nostalgitrippen för alla spelproffs inleds i Kairo och Tanger. Här får du och dina motspelare samma mystiska uppdrag: Att finna världens största diamant, Afrikas Stjärna, och återlämna den sägenomspunna stenen till uppdragsgivaren. Genast startar en rafflande skattjakt kors och tvärs över den afrikanska kontinenten!"
     },
     {
         "id": 10,
         "title": "Othello",
-        "imageURL": "https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-04-08-kl--14-18-2@2x.png"
+        "imageURL": "https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-04-08-kl--14-18-2@2x.png",
+        "description": "Othello är storfavoriten bland dagens strategispelare. Alla förstår spelet på en minut, men det tar en livstid att bemästra de taktiska finesserna. Den geniala spelidén uppfanns 1971 och bygger på två klassiska brädspel, Reversi och Go. Idag är Othello världens mest sålda strategispel med årliga VM-, EM- och SM-turneringar."
     },
     {
         "id": 11,
         "title": "Nova luna",
-        "imageURL": "https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-04-08-kl--14-18-3@2x.png"
+        "imageURL": "https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-04-08-kl--14-18-3@2x.png",
+        "description": "The new moon is a symbol for a new beginning, the perfect time to start something new and to plan your future — and that is what Nova Luna (lat. for new moon) is all about. In each round of this abstract tile-laying game, you have to plan your future anew, developing a new strategy to cope with what the moon wheel has to offer you.\n On each turn, you have to decide which new tile from the moon wheel to place in front of you. Every new tile brings a new task you have to fulfill. In order to do so, you need to place tiles of the correct color adjacent to the task you want to complete, but these of course again bring you new tasks. Each time a task is solved, you may place one of your markers on it. So decide wisely and be the first one to place all your markers."
     },
     {
         "id": 12,
         "title": "Game of thrones",
-        "imageURL": "https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-04-08-kl--14-19-1@2x.png"
+        "imageURL": "https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-04-08-kl--14-19-1@2x.png",
+        "description": "A Game of Thrones: The Board Game tar vara på den maktkamp och de intriger som böckerna samt TV-serien har blivit så kända för. Här skapar spelarna pakter, planerar uppsåt, sår osämja och tar över markområden när de jagar efter tillräckligt med segerpoäng för att kunna styra Westeros"
     },
     {
         "id": 13,
         "title": "Monopol",
-        "imageURL": "https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-03-22-kl--15-32-3@2x.png"
-    },
-    {
-        "id": 14,
-        "title": "Lords of vegas",
-        "imageURL": "http://www.ninivegames.com/46-large_default/lords-of-vegas-dust-dice-dollars.jpg"
+        "imageURL": "https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-03-22-kl--15-32-3@2x.png",
+        "description": "Det världsberömda affärsspelet för hela familjen. Förflytta spelpjäsen runt spelplanen och köp och sälj tomter, bygg hus och hotell. Det handlar om stora pengar och om att snabbt bygga upp en förmögenhet tills du äger allt!"
     }
 ]

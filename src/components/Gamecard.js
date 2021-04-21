@@ -1,32 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import GamePopup from './GamePopup';
-import gamecatalog from '../data/gamecatalog.json';
-
-
-
+import ModalButton from './ModalButton'
 const Gamecard = () => {
-
     const [gamecards, setGamecards] = useState([]);
-    const [show, setShow] = useState(false);
-
     useEffect(() => {
         fetch("gamecatalog.json").then(response => response.json().then(data => setGamecards(data)))
     }, [])
-
     return (
         <div>
             {gamecards.map(gamecard => (
                 <div className="box col">
-                    <img className="bild" src={gamecard.imageURL} alt="bild" />
+                    <img className="bild" src={gamecard.imageURL} alt={gamecard.title} />
                     <p className="spelnamn">{gamecard.title}</p>
-                    <button className="knapp" onClick={() => setShow(true)}>Se spel</button>
-                    <GamePopup title={gamecard.title} onClose={() => setShow(false)} show={show}>
-                        <p>Body body!</p>
-                    </GamePopup>
+                    <ModalButton title={gamecard.title} imageURL={gamecard.imageURL} description={gamecard.description}/>
                 </div>
             ))}
         </div>
     )
 }
-
 export default Gamecard;

@@ -283,7 +283,10 @@
 
 /* The Close Button */
 .close {
-  color: #aaa;
+  position: relative;
+  right: 20px;
+  top: 10px;
+  color: white;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -316,7 +319,7 @@
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: white;
   text-decoration: none;
   cursor: pointer;
 }
@@ -326,11 +329,9 @@
 }
 
 .cover {
-  margin-left: -15px;
   width: 150px;
   height: 150px;
   border-radius: 5px;
-  padding: 10px;
 
 }
 
@@ -359,6 +360,7 @@
 
 .game-modal {
   position: fixed;
+  background-color: rgba(0,0,0,0.8);
   left: 0px;
   top: 0px;
   right: 0px;
@@ -372,15 +374,26 @@
 .game-modal-content {
   width: 70%;
   height: 90%;
-  background-color: #FFFFF0;
+  background-color: #FFFFFF;
+ border-radius: 20px;
 }
 
-.game-modal-header, .game-modal-footer {
+.game-modal-header {
+  background-color: #1A3455;
+  padding: 10px;
+  padding-top: 40px;
+
+  border-radius:20px 20px 0px 0px ;
+}
+
+.game-modal-footer {
   padding: 10px;
 }
 
 .game-modal-title {
-  margin: 0;
+  color: white;
+  text-align: left;
+  padding-left:50px;
 }
 
 .game-modal-body {
@@ -398,4 +411,31 @@
   margin: 30px;
   height: 300px;
   vertical-align:top;
+}
+
+.game-modal-description {
+  font-family: Poppins;
+  color:white;
+  text-align: left;
+  padding-left: 50px;
+}
+
+.game-modal-cover {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  margin-bottom: 40px;
+}
+
+.game-modal-review {
+  text-align: left;
+  margin-left: 20px;
+  color: white;
+}
+
+.star-rating {
+  text-align: left;
+  margin-right: 5px;
+  height: 12px;
+  width: 13px;
 }
