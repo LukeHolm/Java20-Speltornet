@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import GamePopup from './GamePopup';
+import gamecatalog from '../data/gamecatalog.json';
 
 
 
