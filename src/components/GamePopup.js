@@ -17,7 +17,7 @@ const GamePopup = props => {
                     {props.children}
                 </div>
                 <div className="game-modal-footer">
-                {/*<button onClick={props.onClose} className="game-modal-closebtn">Close</button>*/}               
+                <button onClick={props.onClose} className="game-modal-closebtn">Close</button>               
                 </div>
             </div>
         </div>
