@@ -402,6 +402,17 @@
   border-bottom: 1px solid #eee;
 }
 
+.box {
+  display: inline-block;
+  color: #EE387A;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 330px;
+  margin: 30px;
+  height: 300px;
+  vertical-align:top;
+}
+
 .game-modal-description {
   font-family: Poppins;
   color:white;
