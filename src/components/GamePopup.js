@@ -42,7 +42,6 @@ const GamePopup = props => {
                     <p>This text is in the body</p>
                 </div>
                 <div className="game-modal-footer">
-
                 </div>
             </div>
         </div>
