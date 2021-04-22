@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import Form from './components/Form'
-import HeaderThin from './components/HeaderThin';
 import Landingpage from './components/Landingpage';
 
 
