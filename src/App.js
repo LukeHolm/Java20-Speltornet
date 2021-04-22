@@ -1,5 +1,7 @@
+import React, { Component } from 'react';
 import './App.css';
-import React from 'react';
+import Form from './components/Form'
+import HeaderThin from './components/HeaderThin';
 import Landingpage from './components/Landingpage';
 
 
@@ -7,7 +9,8 @@ function App() {
 
   return (
     <div className="App">
-        <Landingpage />  
+        <HeaderThin />
+        <Form /> 
     </div>
   );
 }
