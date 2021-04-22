@@ -106,7 +106,7 @@ margin-top: 52px;
 }
 
 .line {
-width: 1074px;
+width: 900px;
 height: 0px;
 border: 1px solid #1A3455;
 }
@@ -118,6 +118,7 @@ border: 1px solid #1A3455;
   font-size: 48px;
   line-height: 59px;
   color: #1A3455;
+  margin-top: 30px;
 }
 
 .form-h2 {
@@ -147,9 +148,68 @@ line-height: 24px;
 color: #1A3455;
 }
 
+.form-element {
+  text-align: left;
+  padding-left: 120px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 .textarea {
-width: 1076px;
+width: 900px;
 height: 108px;
+background-color: #FFFFFF;
+border: 3px solid #1A3455;
+box-sizing: border-box;
+border-radius: 10px;
+}
+
+.thin-textarea {
+width: 900px;
+height: 47px;
+background-color: #FFFFFF;
+border: 3px solid #1A3455;
+box-sizing: border-box;
+border-radius: 10px;
+}
+
+.camera-box {
+width: 147.34px;
+height: 149.75px;
+background-color: #FFFFFF;
+border: 3px solid #1A3455;
+box-sizing: border-box;
+border-radius: 10px;
+}
+
+#radio {
+  margin-right: 10px;
+}
+
+#radio-text {
+  margin-right: 40px;
+}
+
+::-webkit-input-placeholder {
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+color: #1A3455;
+padding-top: 15px;
+padding-left: 25px;
+}
+
+:-moz-placeholder {
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+color: #1A3455;
+padding-top: 15px;
+padding-left: 25px;
 }
 
 
