@@ -24,7 +24,6 @@
 .Thin-header {
   height: 104px;
   background-color: #1A3455;
-  z-index: -2;
 }
 
 .App-link {
@@ -74,6 +73,12 @@
 
 }
 
+.tornlogga-invert {
+  height: 90px;
+  padding-top: 17px;
+  padding-left: 36px;
+}
+
 .speltornet {
   font-family: Montserrat;
   font-weight: 600;
@@ -90,58 +95,63 @@
 }
 
 .speltornet-vit {
-  position: absolute;
-  width: 233.41px;
-  height: 61.77px;
-  left: 83px;
-  top: 33px;
-  
-  font-family: Montserrat Alternates;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 34.3559px;
-  line-height: 42px;
-  display: flex;
-  align-items: flex-end;
-  text-align: center;
-  
-  color: #FFFFFF;
+font-family: Montserrat;
+font-style: normal;
+font-weight: 600;
+font-size: 34.3559px;
+line-height: 42px;  
+color: #FFFFFF;
+margin-left: 35px;
+margin-top: 52px;
+}
+
+.line {
+width: 1074px;
+height: 0px;
+border: 1px solid #1A3455;
 }
 
 .form-h1 {
-position: absolute;
-left: 36.74%;
-right: 36.74%;
-top: 6.27%;
-bottom: 92.15%;
-font-family: Montserrat;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 59px;
+  color: #1A3455;
+}
+
+.form-h2 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1A3455;
+}
+
+.form-h3 {
+font-family: Poppins;
 font-style: normal;
 font-weight: bold;
-font-size: 48px;
-line-height: 59px;
-display: flex;
-align-items: flex-end;
-text-align: center;
+font-size: 18px;
+line-height: 27px;
 color: #1A3455;
 }
 
-/*{.form-h2 {
-position: absolute;
-left: 13.06%;
-right: 62.5%;
-top: 21.97%;
-bottom: 77.25%;
-font-family: Montserrat;
+.body-text {
+font-family: Poppins;
 font-style: normal;
-font-weight: bold;
-font-size: 24px;
-line-height: 29px;
-display: flex;
-align-items: flex-end;
-text-align: center;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
 color: #1A3455;
 }
-}*/
+
+.textarea {
+width: 1076px;
+height: 108px;
+}
+
 
 .motto {
   font-weight: bold;
