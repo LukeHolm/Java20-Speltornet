@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react'
 import Topfooter from './Topfooter';
 import Footer from './Footer';
 import HeaderThin from './HeaderThin';
+import Changereceipt from './Changereceipt'
 
 const Form = () => {
 
@@ -24,6 +25,7 @@ const Form = () => {
             </>
             <div>
                 <h1 className="form-h1">Bytesförfrågan</h1>
+                <Changereceipt />
                 <h2 className="form-h2">Vilket spel vill du byta bort?</h2>
                 <label className="form-h3" for="boardgame">Spelets namn: </label><br></br>
                 <input type="text" id="boardgame" value={boardgame} onChange={(event) => setBoardgame(event.target.value)} />
