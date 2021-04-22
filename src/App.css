@@ -522,12 +522,15 @@ height: 108px;
  
 }
 
-.col-left {
+.receipt-border {
   width: 264px;
+  height: 252px;
+  background-color: #1A3455;
+}
+
+.col-left {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  background-color: #1A3455;
-  height: 252px;
 }
 
 .col-mid {
@@ -538,9 +541,30 @@ height: 108px;
 }
 
 .col-right {
-  width: 264px;
-  height: 252px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  background-color: #1A3455;
+  font-family: Montserrat;
+  font-size: 14px;
+  padding-top: 43px;
+  color: #FFFFFF;
+}
+
+.userimage {
+  border-radius: 45px;
+  height: 84px;
+  width: 84px;
+  margin-top: 74px;
+  
+}
+
+.spel {
+  height: 33px;
+  background-color: #FFFFFF;
+  border-radius: 17px;
+  color: #565656;
+  margin: 5px;
+}
+
+.changegame {
+  padding-bottom: 30px;
 }
