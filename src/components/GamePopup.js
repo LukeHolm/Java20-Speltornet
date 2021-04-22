@@ -35,7 +35,21 @@ const GamePopup = props => {
                     </div>
                 </div>
                 <div className="game-modal-body">
-                    <p>This text is in the body</p>
+                    <h2>Annonser</h2>
+                    <div className="row">
+                        <div className="col">
+                            <p>This text is in the body</p>
+                        </div>
+                        <div className="col">
+                            <p>Card</p>
+                        </div>
+                        <div className="col">
+                            <p>card</p>
+                        </div>
+                        <div className="col">
+                            <p>Card</p>
+                        </div>
+                    </div>
                 </div>
                 <div className="game-modal-footer">
                 </div>
