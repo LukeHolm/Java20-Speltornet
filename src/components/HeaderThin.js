@@ -1,4 +1,5 @@
 import React from 'react';
+import tornloggareverst from '../img/Speltornet_Logga(1).svg'
 
 const HeaderThin = () => {
 
@@ -7,7 +8,7 @@ const HeaderThin = () => {
             <div className="cont">                
                     <div className="col thin-top-bar">
                         <div className="col-sm-1 offset-sm-0 speltornet-logga">
-                            <img class="tornlogga-inverterad" src="C:\Users\miran\Documents\JAVA20\MVX-ramverk i Javascript\repos\speltornet\src\img\Speltornet_Logga (1).svg" alt="alt">
+                            <img className="tornlogga-inverterad" src={tornloggareverst} alt="alt">
                             </img>
                         </div>
                         <div className="speltornet-vit">

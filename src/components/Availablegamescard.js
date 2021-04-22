@@ -6,14 +6,15 @@ const Availablegamescard = () => {
         fetch("gamesavailable.json").then(response => response.json().then(data => setAvailablegamescard(data)))
     }, [])
 
-   /* let title;
+    let title;
 
+    const spel = [];
     availablegamescard.map(availablegame => (
         title = availablegame.title
     ))
     if (title === "Pandemic") {
 
-    }*/
+    }
     return (
         <div>
             {
