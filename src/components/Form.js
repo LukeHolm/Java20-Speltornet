@@ -91,7 +91,7 @@ const Form = () => {
                 <input type="submit" id="submitbutton" value="Send" />
             </div>
             <button className="cancel">Avbryt</button>
-            <button className="send-request">Skicka Bytesförfrågan</button>v
+            <button className="send-request">Skicka Bytesförfrågan</button>
             <>
                 <Topfooter />
                 <Footer />
@@ -102,4 +102,3 @@ const Form = () => {
 }
 
 export default Form
-
