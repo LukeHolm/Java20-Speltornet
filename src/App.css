@@ -106,9 +106,12 @@ margin-top: 52px;
 }
 
 .line {
-width: 900px;
-height: 0px;
-border: 1px solid #1A3455;
+border: none;
+height: 1px;
+background-color: #1A3455;  
+width: 1076px;
+text-align: left;
+margin-right: 65px;
 }
 
 .form-h1 {
@@ -156,7 +159,7 @@ color: #1A3455;
 }
 
 .textarea {
-width: 900px;
+width: 1076px;
 height: 108px;
 background-color: #FFFFFF;
 border: 3px solid #1A3455;
@@ -165,7 +168,7 @@ border-radius: 10px;
 }
 
 .thin-textarea {
-width: 900px;
+width: 1076px;
 height: 47px;
 background-color: #FFFFFF;
 border: 3px solid #1A3455;
