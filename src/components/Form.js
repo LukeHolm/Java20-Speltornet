@@ -64,7 +64,7 @@ const Form = () => {
             </div>
             <div className="form-element">
                 <h3 className="form-h3">Detaljer</h3>
-                <label for="details" className="body-text">Saknade komponenter och slitage</label>
+                <label for="details" className="body-text">Saknade komponenter och slitage</label><br/>
                 <textarea className="textarea" name="details" rows="5" cols="30" placeholder="Skriv här">
                 </textarea>
             </div>
@@ -72,7 +72,7 @@ const Form = () => {
 
             <div className="form-element">
                 <h3 className="form-h3">Hälsning</h3>
-                <label for="greeting" className="body-text">Skriv en kort hälsning till bytaren! </label>
+                <label for="greeting" className="body-text">Skriv en kort hälsning till bytaren! </label><br/>
                 <textarea className="textarea" name="greeting" rows="5" cols="30" placeholder="Skriv här">
                 </textarea>
             </div>
