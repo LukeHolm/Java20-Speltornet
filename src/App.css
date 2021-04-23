@@ -24,7 +24,6 @@
 .Thin-header {
   height: 104px;
   background-color: #1A3455;
-  z-index: -2;
 }
 
 .App-link {
@@ -74,6 +73,12 @@
 
 }
 
+.tornlogga-invert {
+  height: 90px;
+  padding-top: 17px;
+  padding-left: 36px;
+}
+
 .speltornet {
   font-family: Montserrat;
   font-weight: 600;
@@ -90,58 +95,135 @@
 }
 
 .speltornet-vit {
-  position: absolute;
-  width: 233.41px;
-  height: 61.77px;
-  left: 83px;
-  top: 33px;
-  
-  font-family: Montserrat Alternates;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 34.3559px;
-  line-height: 42px;
-  display: flex;
-  align-items: flex-end;
-  text-align: center;
-  
-  color: #FFFFFF;
+font-family: Montserrat;
+font-style: normal;
+font-weight: 600;
+font-size: 34.3559px;
+line-height: 42px;  
+color: #FFFFFF;
+margin-left: 35px;
+margin-top: 52px;
+}
+
+.line {
+width: 900px;
+height: 0px;
+border: 1px solid #1A3455;
 }
 
 .form-h1 {
-position: absolute;
-left: 36.74%;
-right: 36.74%;
-top: 6.27%;
-bottom: 92.15%;
-font-family: Montserrat;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 59px;
+  color: #1A3455;
+  margin-top: 30px;
+}
+
+.form-h2 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1A3455;
+}
+
+.form-h3 {
+font-family: Poppins;
 font-style: normal;
 font-weight: bold;
-font-size: 48px;
-line-height: 59px;
-display: flex;
-align-items: flex-end;
-text-align: center;
+font-size: 18px;
+line-height: 27px;
 color: #1A3455;
 }
 
-/*{.form-h2 {
-position: absolute;
-left: 13.06%;
-right: 62.5%;
-top: 21.97%;
-bottom: 77.25%;
-font-family: Montserrat;
+.body-text {
+font-family: Poppins;
 font-style: normal;
-font-weight: bold;
-font-size: 24px;
-line-height: 29px;
-display: flex;
-align-items: flex-end;
-text-align: center;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
 color: #1A3455;
 }
-}*/
+
+.form-element {
+  text-align: left;
+  padding-left: 120px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.textarea {
+width: 900px;
+height: 108px;
+background-color: #FFFFFF;
+border: 3px solid #1A3455;
+box-sizing: border-box;
+border-radius: 10px;
+}
+
+.thin-textarea {
+width: 900px;
+height: 47px;
+background-color: #FFFFFF;
+border: 3px solid #1A3455;
+box-sizing: border-box;
+border-radius: 10px;
+}
+
+.camera-box {
+width: 147.34px;
+height: 149.75px;
+background-color: #FFFFFF;
+border: 3px solid #1A3455;
+box-sizing: border-box;
+border-radius: 10px;
+}
+
+.camera {
+  font-size: 60px;
+  margin-top: 30px;
+  margin-left: 40px;
+  
+}
+
+.camera-text {
+  font-size: 14px;
+  text-align: center;
+}
+
+#radio {
+  margin-right: 10px;
+}
+
+#radio-text {
+  margin-right: 40px;
+}
+
+::-webkit-input-placeholder {
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+color: #1A3455;
+padding-top: 15px;
+padding-left: 25px;
+}
+
+:-moz-placeholder {
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+color: #1A3455;
+padding-top: 15px;
+padding-left: 25px;
+}
+
 
 .motto {
   font-weight: bold;
@@ -204,6 +286,13 @@ color: #1A3455;
   background-color: #FFFFFF;
   padding-top: 40px;
   padding-bottom: 30px;
+}
+
+.tornlogga-inverterad {
+  padding-left: 0px;
+  padding-top: 20px;
+  height: 90px;
+  
 }
 
 .container {
@@ -500,6 +589,7 @@ color: #1A3455;
   width: 13px;
 }
 
+<<<<<<< HEAD
 .box {
   display: inline-block;
   color: #EE387A;
@@ -509,4 +599,56 @@ color: #1A3455;
   margin: 30px;
   height: 300px;
   vertical-align:top;
+=======
+.changereceipt {
+  width: 1272px;
+  text-align: center;
+}
+
+.receipt-border {
+  width: 264px;
+  height: 252px;
+  background-color: #1A3455;
+}
+
+.col-left {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.col-mid {
+  width: 544px;
+  height: 252px;
+  border: 3px solid #1A3455;
+  background-color: #FFFFFF;
+}
+
+.col-right {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-family: Montserrat;
+  font-size: 14px;
+  padding-top: 43px;
+  color: #FFFFFF;
+}
+
+.userimage {
+  border-radius: 45px;
+  height: 84px;
+  width: 84px;
+  margin-top: 74px;
+  
+}
+
+.spel {
+  height: 33px;
+  background-color: #FFFFFF;
+  border-radius: 17px;
+  color: #565656;
+  margin: 5px;
+}
+
+.changegame {
+  padding-bottom: 30px;
+>>>>>>> 9d850b168f07c3e8211a2e9eed2fb88c6210661c
 }
