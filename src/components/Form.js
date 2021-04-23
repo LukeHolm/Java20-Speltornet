@@ -90,6 +90,8 @@ const Form = () => {
             <div className="form-element">
                 <input type="submit" id="submitbutton" value="Send" />
             </div>
+            <button className="cancel">Avbryt</button>
+            <button className="send-request">Skicka Bytesförfrågan</button>v
             <>
                 <Topfooter />
                 <Footer />

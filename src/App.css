@@ -589,17 +589,6 @@ padding-left: 25px;
   width: 13px;
 }
 
-<<<<<<< HEAD
-.box {
-  display: inline-block;
-  color: #EE387A;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  width: 330px;
-  margin: 30px;
-  height: 300px;
-  vertical-align:top;
-=======
 .changereceipt {
   width: 1272px;
   text-align: center;
@@ -650,5 +639,30 @@ padding-left: 25px;
 
 .changegame {
   padding-bottom: 30px;
->>>>>>> 9d850b168f07c3e8211a2e9eed2fb88c6210661c
+}
+
+.cancel{
+  background-color: #FFFFFF;
+  color:#E21c64;
+  width: 142px;
+  height: 52px;
+  border-radius: 50px;
+  border: 4px solid #E21c64;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+}
+
+.send-request{
+  width: 272px;
+  height:52px;
+  border-radius: 50px;
+  background-color: #EE387A;
+  border: 4px solid #EE387A;
+  color: #FFFFFF;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
 }
