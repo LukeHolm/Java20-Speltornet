@@ -21,6 +21,11 @@
   height: 601px;
 }
 
+.Thin-header {
+  height: 104px;
+  background-color: #1A3455;
+}
+
 .App-link {
   color: #61dafb;
 }
@@ -38,7 +43,7 @@
   background-image: url('https://s3-alpha-sig.figma.com/img/09ed/b2e4/d9be4540864c52136e85d2db324a0d14?Expires=1619395200&Signature=Ip-yFwNKI04XB77J7tV9i417UhV60sUVfHuNWK3C-LYh9Jlu~hR3v8n4MuUxFNWxWP2~7FgrrcDrGqcPsI-5B34CZYyXS71FpyBodfmmw0yoIg0VRvKeU20uCtzhjbdEQmhF-Dx4C7Pe59DkCYgOOzU~EyvoUEmhB3~vsa0Mf9Z2ysCTJiMczA-7XnRwa5sarXu1RgXtyL7w0wuZXNv6-KhuWjvTA2Ia3Yz46EQGw-YaTPfj72v6~XX2Kv~qZ0qyt2QQWDLDzaFu0jTyg-ONgdQL0U54v9EhtA0t5OunXriOCYfkX-aTHefyFKeWFGYJfCaaRb~cTbuKNiZaRUAS4g__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA');
   background-size: 100% 100%;
   background-color: #d4d2d2;
-  height: 601px;
+
   width: 100%;
   padding: 0;
 }
@@ -68,6 +73,12 @@
 
 }
 
+.tornlogga-invert {
+  height: 90px;
+  padding-top: 17px;
+  padding-left: 36px;
+}
+
 .speltornet {
   font-family: Montserrat;
   font-weight: 600;
@@ -82,6 +93,140 @@
   font-size: 40px;
   padding-left: 31px;
 }
+
+.speltornet-vit {
+font-family: Montserrat;
+font-style: normal;
+font-weight: 600;
+font-size: 34.3559px;
+line-height: 42px;  
+color: #FFFFFF;
+margin-left: 35px;
+margin-top: 52px;
+}
+
+.line {
+border: none;
+height: 1px;
+background-color: #1A3455;  
+margin-left:120px;
+text-align: left;
+margin-right: 120px;
+}
+
+.form-h1 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 59px;
+  color: #1A3455;
+  margin-top: 30px;
+}
+
+.form-h2 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1A3455;
+}
+
+.form-h3 {
+font-family: Poppins;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 27px;
+color: #1A3455;
+}
+
+.body-text {
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+color: #1A3455;
+}
+
+.form-element {
+  text-align: left;
+  padding-left: 120px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.textarea {
+width: 1076px;
+height: 108px;
+background-color: #FFFFFF;
+border: 3px solid #1A3455;
+box-sizing: border-box;
+border-radius: 10px;
+}
+
+.thin-textarea {
+width: 1076px;
+height: 47px;
+background-color: #FFFFFF;
+border: 3px solid #1A3455;
+box-sizing: border-box;
+border-radius: 10px;
+}
+
+.camera-box {
+width: 147.34px;
+height: 149.75px;
+background-color: #FFFFFF;
+border: 3px solid #1A3455;
+box-sizing: border-box;
+border-radius: 10px;
+}
+
+.camera {
+  font-size: 60px;
+  margin-top: 30px;
+  margin-left: 40px;
+  
+}
+
+.camera-text {
+  font-size: 14px;
+  text-align: center;
+}
+
+#radio {
+  margin-right: 10px;
+}
+
+#radio-text {
+  margin-right: 40px;
+}
+
+::-webkit-input-placeholder {
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+color: #1A3455;
+padding-top: 15px;
+padding-left: 25px;
+}
+
+:-moz-placeholder {
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+color: #1A3455;
+padding-top: 15px;
+padding-left: 25px;
+}
+
 
 .motto {
   font-weight: bold;
@@ -144,6 +289,13 @@
   background-color: #FFFFFF;
   padding-top: 40px;
   padding-bottom: 30px;
+}
+
+.tornlogga-inverterad {
+  padding-left: 0px;
+  padding-top: 20px;
+  height: 90px;
+  
 }
 
 .container {
@@ -283,7 +435,10 @@
 
 /* The Close Button */
 .close {
-  color: #aaa;
+  position: relative;
+  right: 20px;
+  top: 10px;
+  color: white;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -316,7 +471,7 @@
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: white;
   text-decoration: none;
   cursor: pointer;
 }
@@ -326,11 +481,9 @@
 }
 
 .cover {
-  margin-left: -15px;
   width: 150px;
   height: 150px;
   border-radius: 5px;
-  padding: 10px;
 
 }
 
@@ -355,4 +508,164 @@
 
 .sellerinfo {
   word-wrap: break-word;
+}
+
+.game-modal {
+  position: fixed;
+  background-color: rgba(0,0,0,0.8);
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.game-modal-content {
+  width: 70%;
+  height: 90%;
+  background-color: #FFFFFF;
+ border-radius: 20px;
+}
+
+.game-modal-header {
+  background-color: #1A3455;
+  padding: 10px;
+  padding-top: 40px;
+
+  border-radius:20px 20px 0px 0px ;
+}
+
+.game-modal-footer {
+  padding: 10px;
+}
+
+.game-modal-title {
+  color: white;
+  text-align: left;
+  padding-left:50px;
+}
+
+.game-modal-body {
+  padding: 10px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.box {
+  display: inline-block;
+  color: #EE387A;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 330px;
+  margin: 30px;
+  height: 300px;
+  vertical-align:top;
+}
+
+.game-modal-description {
+  font-family: Poppins;
+  color:white;
+  text-align: left;
+  padding-left: 50px;
+}
+
+.game-modal-cover {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  margin-bottom: 40px;
+}
+
+.game-modal-review {
+  text-align: left;
+  margin-left: 20px;
+  color: white;
+}
+
+.star-rating {
+  text-align: left;
+  margin-right: 5px;
+  height: 12px;
+  width: 13px;
+}
+
+.changereceipt {
+  width: 1272px;
+  text-align: center;
+}
+
+.receipt-border {
+  width: 264px;
+  height: 252px;
+  background-color: #1A3455;
+}
+
+.col-left {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.col-mid {
+  width: 544px;
+  height: 252px;
+  border: 3px solid #1A3455;
+  background-color: #FFFFFF;
+}
+
+.col-right {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-family: Montserrat;
+  font-size: 14px;
+  padding-top: 43px;
+  color: #FFFFFF;
+}
+
+.userimage {
+  border-radius: 45px;
+  height: 84px;
+  width: 84px;
+  margin-top: 74px;
+  
+}
+
+.spel {
+  height: 33px;
+  background-color: #FFFFFF;
+  border-radius: 17px;
+  color: #565656;
+  margin: 5px;
+}
+
+.changegame {
+  padding-bottom: 30px;
+}
+
+.cancel{
+  background-color: #FFFFFF;
+  color:#E21c64;
+  width: 142px;
+  height: 52px;
+  border-radius: 50px;
+  border: 4px solid #E21c64;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+}
+
+.send-request{
+  width: 272px;
+  height:52px;
+  border-radius: 50px;
+  background-color: #EE387A;
+  border: 4px solid #EE387A;
+  color: #FFFFFF;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
 }

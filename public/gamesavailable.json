@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "title": "Pandemic",
+        "condition": "Nyskick",
+        "parts": "No missing parts",
+        "imageURL": "https://media.newyorker.com/photos/5f0392652385d52b037bf56f/master/w_2560%2Cc_limit/Jahromi-Pandemictheboardgame.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Pandemic",
+        "condition": "Used",
+        "parts": "All parts missing",
+        "imageURL": "https://media.newyorker.com/photos/5f0392652385d52b037bf56f/master/w_2560%2Cc_limit/Jahromi-Pandemictheboardgame.jpg"
+    },
+    {
+        "id": 3,
+        "title": "",
+        "condition": "",
+        "parts": "",
+        "imageURL": ""
+    },
+    {
+        "id": 4,
+        "title": "",
+        "condition": "",
+        "parts": "",
+        "imageURL": ""
+    },
+    {
+        "id": 5,
+        "title": "",
+        "condition": "",
+        "parts": "",
+        "imageURL": ""
+    },
+    {
+        "id": 6,
+        "title": "",
+        "condition": "",
+        "parts": "",
+        "imageURL": ""
+    }
+]
