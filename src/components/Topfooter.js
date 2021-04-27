@@ -4,7 +4,7 @@ const Topfooter = () => {
 
     return (
         <div className="body-bottom">
-            <h1 className="body-bottom-header">Hur funkar det?</h1>
+            <h2 className="body-bottom-header">Hur funkar det?</h2>
             <div class="container">
                 <div class="row">
                     <div class="col">

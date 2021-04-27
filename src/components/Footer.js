@@ -8,13 +8,13 @@ const Footer = () => {
         <footer className="App-footer">
             <div className="row align-items-center footer-text">
                 <div className="col">
-                    <h3>Kontakt</h3>
+                    <h5>Kontakt</h5>
                 </div>
                 <div className="col">
-                    <h3>Användarvillkor</h3>
+                    <h5>Användarvillkor</h5>
                 </div>
                 <div className="col">
-                    <h3>Företagsinfo</h3>
+                    <h5>Företagsinfo</h5>
                 </div>
             </div>
         </footer>

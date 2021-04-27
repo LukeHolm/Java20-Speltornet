@@ -5,6 +5,7 @@ import HeaderThin from './HeaderThin';
 import Changereceipt from './Changereceipt'
 import Burger from './Burger'
 import Camera from './Camera'
+import {Link} from 'react-router-dom'
 
 const Form = () => {
 
@@ -90,14 +91,15 @@ const Form = () => {
             <div className="form-element">
                 <input type="submit" id="submitbutton" value="Send" />
             </div>
-            <button className="cancel">Avbryt</button>
+            <Link to="/">
+            <button  className="cancel"onClick="Vill du verkligen avbryta?">Avbryt</button>
+            </Link>
             <button className="send-request">Skicka Bytesförfrågan</button>
             <>
                 <Topfooter />
                 <Footer />
             </>
         </form>
-
     )
 }
 

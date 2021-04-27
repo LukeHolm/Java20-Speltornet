@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const Header = () => {
 
@@ -8,8 +9,7 @@ const Header = () => {
                 <div className="row no-gutter">
                     <div className="col top-bar">
                         <div className="col-sm-1 offset-sm-0 speltornet-logga">
-                            <img class="tornlogga" src="Speltornet_Logga.svg" alt="alt">
-                            </img>
+                            <img class="tornlogga" src="Speltornet_Logga.svg" alt="alt" />
                         </div>
                         <div className="speltornet">
                             Speltornet
@@ -23,7 +23,9 @@ const Header = () => {
                             <h2 className="motto-text">Spel ska <mark className="pink">spelas</mark>,<br /> inte stå och damma!</h2>
                             <h3 className="motto-text-forts"> Speltornet låter dig <mark className="pink">snabbt</mark> och <br /> <mark className="pink">enkelt</mark> byta begagnade brädspel.</h3>
                             <br /><br />
-                            <button className="knappannons">Skapa annons <mark className="plus"> + </mark></button>
+                                <Link to="/Form">
+                                    <button className="skapa-annons">Skapa annons <mark className="plus"> + </mark></button>
+                                </Link>
                         </span>
                     </div>
                 </div>
