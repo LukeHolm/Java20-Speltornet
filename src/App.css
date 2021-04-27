@@ -114,6 +114,41 @@ text-align: left;
 margin-right: 120px;
 }
 
+/* ---------------------------------------------- TEXT --------------------------------------------*/
+h1 {
+  font-size: 49px;
+  font-family: Montserrat;
+}
+
+h2 {
+  font-size: 39px;
+  font-family: Montserrat;
+}
+
+h3 {
+  font-size: 31px;
+  font-family: Montserrat;
+}
+
+h4 {
+  font-size: 25px;
+  font-family: Montserrat;
+}
+
+h5 {
+  font-size: 20px;
+  font-family: Montserrat;
+}
+
+p{
+  font-size: 16px;
+  font-family: Poppins;
+}
+
+.bold{
+  font-weight: bold;
+}
+
 .form-h1 {
   font-family: Montserrat;
   font-style: normal;
@@ -254,7 +289,7 @@ padding-left: 25px;
   text-align: center;
 }
 
-.knappannons {
+.skapa-annons {
   background-color: #EE387A;
   border-radius: 15px;
   border-style: none;
@@ -264,7 +299,7 @@ padding-left: 25px;
   font-family: Montserrat;
 }
 
-.knappannons:hover {
+.skapa-annons:hover {
   font-weight: bolder;
 }
 
@@ -316,16 +351,6 @@ padding-left: 25px;
   font-family: Montserrat;
   font-weight: 600;
   font-size: 22px;
-}
-
-.knapp {
-  background-color: #EE387A;
-  border-radius: 15px;
-  border-style: none;
-  width: 125px;
-  height: 32px;
-  color: #FFFFFF;
-  font-family: Helvetica;
 }
 
 .body-bottom {
@@ -398,41 +423,6 @@ padding-left: 25px;
   border-radius: 5px;
 }
 
-/* The Modal (background) */
-.modal {
-  display: none;
-  /* Hidden by default */
-  position: fixed;
-  /* Stay in place */
-  z-index: 1;
-  /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%;
-  /* Full width */
-  height: 100%;
-  /* Full height */
-  overflow: auto;
-  /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0);
-  /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  font-family: Helvetica;
-  color: #333333;
-  margin: 15% auto;
-  /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  /* Could be more or less, depending on screen size */
-}
-
 /* The Close Button */
 .close {
   position: relative;
@@ -444,70 +434,8 @@ padding-left: 25px;
   font-weight: bold;
 }
 
-.button {
-  font-family: Montserrat;
-  font-weight: 600;
-  font-size: 18px;
-  background-color: #EE387A;
-  color: #FFFFFF;
-  height: 32px;
-  width: 125px;
-  border-radius: 15px;
-  border: none;
-}
-
-.button:hover {
-  color: #1A3455;
-  font-weight: bolder;
-}
-
-.gametitle {
-
-  font-weight: bold;
-  padding-top: 10px;
-  padding-left: 20px;
-  margin-bottom: -5px;
-}
-
-.close:hover,
-.close:focus {
-  color: white;
-  text-decoration: none;
-  cursor: pointer;
-}
-
 .bold {
   font-weight: bold;
-}
-
-.cover {
-  width: 150px;
-  height: 150px;
-  border-radius: 5px;
-
-}
-
-.modalrow {
-  padding-top: 30px;
-  padding-left: 35px;
-}
-
-.howto {
-  text-align: center;
-}
-
-.userpic {
-  width: 75px;
-  height: 75px;
-  margin-left: -35px;
-}
-
-.seller {
-  margin-top: -30px;
-}
-
-.sellerinfo {
-  word-wrap: break-word;
 }
 
 .game-modal {
@@ -644,6 +572,21 @@ padding-left: 25px;
   padding-bottom: 30px;
 }
 
+
+/* ---------------------------------------------- KNAPPAR ----------------------------------------*/
+
+.knapp {
+  background-color: #EE387A;
+  border-radius: 21px;
+  border-style: none;
+  width: 144px;
+  height: 33px;
+  color: #FFFFFF;
+  font-family: Poppins;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
 .cancel{
   background-color: #FFFFFF;
   color:#E21c64;
@@ -669,3 +612,4 @@ padding-left: 25px;
   font-size: 18px;
   text-align: center;
 }
+

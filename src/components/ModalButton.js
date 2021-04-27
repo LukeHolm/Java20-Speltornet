@@ -6,7 +6,7 @@ const ModalButton = gamecard => {
 
     return (
         <div>
-            <button className="knapp" onClick={() => setShow(true)}>Se spel</button>
+            <button className="knapp" onClick={() => setShow(true)}>Se Annonser</button>
             <GamePopup onClose={() => setShow(false)} show={show} title={gamecard.title} imageURL={gamecard.imageURL} description={gamecard.description}>
             </GamePopup>
         </div>

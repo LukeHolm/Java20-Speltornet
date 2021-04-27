@@ -1,15 +1,21 @@
-import React, { Component } from 'react';
 import './App.css';
 import Form from './components/Form'
 import Landingpage from './components/Landingpage';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 
 function App() {
 
   return (
+    <Router>
     <div className="App">
-        <Landingpage /> 
+        <Switch>
+          <Route exact path="/" component={Landingpage}/>
+          <Route path="/Form" 
+          component={Form}/>
+        </Switch>
     </div>
+    </Router>
   );
 }
 
