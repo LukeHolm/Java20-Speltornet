@@ -6,7 +6,7 @@ const Footer = () => {
     return (
 
         <footer className="App-footer">
-            <div className="row align-items-center">
+            <div className="row align-items-center footer-text">
                 <div className="col">
                     <h3>Kontakt</h3>
                 </div>
