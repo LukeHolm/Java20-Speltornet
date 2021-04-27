@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 
@@ -23,7 +24,9 @@ const Header = () => {
                             <h2 className="motto-text">Spel ska <mark className="pink">spelas</mark>,<br /> inte stå och damma!</h2>
                             <h3 className="motto-text-forts"> Speltornet låter dig <mark className="pink">snabbt</mark> och <br /> <mark className="pink">enkelt</mark> byta begagnade brädspel.</h3>
                             <br /><br />
-                            <button className="knappannons">Skapa annons <mark className="plus"> + </mark></button>
+                            <Link to="/form">
+                                <button className="knappannons">Skapa annons <mark className="plus"> + </mark></button>
+                            </Link>
                         </span>
                     </div>
                 </div>

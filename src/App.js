@@ -9,10 +9,12 @@ function App() {
 
   return (
     <Router>
-    <div className="App">
-        <Route path="/landingpage" component={Landingpage} />
-        <Route path="/form" component={Form} /> 
-    </div>
+      <div className="App">
+        <Switch>
+          <Route exact path="/" component={Landingpage} />
+          <Route path="/form" component={Form} />
+        </Switch>
+      </div>
     </Router>
   );
 }
