@@ -338,22 +338,30 @@ padding-left: 25px;
 
 .body-bottom-header {
   text-align: center;
-  padding: 40px;
-  margin-bottom: 20px;
+  padding: 70px;
   font-weight: bold;
   font-family: Montserrat;
   color: #EE387A
+
   
 }
 
 .body-bottom-text {
-  text-align: left;
+font-family: Montserrat;
+font-weight: 600;
+font-style: normal; 
+font-size: 20px;
+line-height: 24,38px; 
+display: flex;
+text-align: left;
+margin-right: 40px;
 }
 
 .dice {
   width: 82px;
   height: 82px;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
+  margin-right: 40px;
 }
 
 #dice-one {
@@ -372,6 +380,16 @@ padding-left: 25px;
   width: 100%;
   background-color: #4DBAB3; 
   padding: 30px;
+}
+
+.footer-text {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-style: normal; 
+  font-size: 20px;
+  line-height: 24,38px; 
+  display: flex;
+  text-align: center;
 }
 
 .lines {
