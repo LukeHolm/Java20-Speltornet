@@ -1,11 +1,13 @@
 import React from 'react';
 import Loggainvert from '../img/Speltornet_Logga(1).svg'
 import {Link} from 'react-router-dom'
+import Burger from './Burger'
 
 const HeaderThin = () => {
 
     return (
         <header className="Thin-header">
+            <Burger/>
             <div className="row">
                 <div className="col-sm-1">
                     <Link to="/">

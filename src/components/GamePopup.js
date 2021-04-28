@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const GamePopup = props => {
     if (!props.show) {
@@ -38,16 +39,24 @@ const GamePopup = props => {
                     <h2>Annonser</h2>
                     <div className="row">
                         <div className="col">
-                            <p>This text is in the body</p>
+                            <Link to="/Detail">
+                                <button className="knapp"> Se annons</button>
+                            </Link>
                         </div>
                         <div className="col">
-                            <p>Card</p>
+                            <Link to="/Detail">
+                                <button className="knapp"> Se annons</button>
+                            </Link>
                         </div>
                         <div className="col">
-                            <p>card</p>
+                            <Link to="/Detail">
+                                <button className="knapp"> Se annons</button>
+                            </Link>
                         </div>
                         <div className="col">
-                            <p>Card</p>
+                            <Link to="/Detail">
+                                <button className="knapp"> Se annons</button>
+                            </Link>
                         </div>
                     </div>
                 </div>
