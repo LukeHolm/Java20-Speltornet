@@ -1,7 +1,8 @@
 import './App.css';
-import Form from './components/Form'
 import Landingpage from './components/Landingpage';
+import Details from './components/Details'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import CreateAdd from './components/CreateAdd'
 
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
       <div className="App">
         <Switch>
           <Route exact path="/" component={Landingpage} />
-          <Route path="/form" component={Form} />
+          <Route path="/CreateAdd" component={CreateAdd} />
+          <Route path="/detail" component={Details}/>
         </Switch>
       </div>
     </Router>
