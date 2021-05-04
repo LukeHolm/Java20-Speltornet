@@ -109,8 +109,7 @@ margin-top: 52px;
 border: none;
 height: 1px;
 background-color: #1A3455;  
-margin-left:120px;
-text-align: left;
+margin-left:100px;
 margin-right: 120px;
 }
 
@@ -149,6 +148,10 @@ p{
   font-weight: bold;
 }
 
+.form-text {
+  color: #E21C64;
+}
+
 .form-h1 {
   font-family: Montserrat;
   font-style: normal;
@@ -168,13 +171,12 @@ p{
   color: #1A3455;
 }
 
-.form-h3 {
-font-family: Poppins;
+.form-h5 {
 font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: 27px;
+font-weight: 600;
+line-height: 24px;
 color: #1A3455;
+
 }
 
 .body-text {
@@ -188,10 +190,23 @@ color: #1A3455;
 
 .form-element {
   text-align: left;
-  padding-left: 120px;
   margin-top: 30px;
   margin-bottom: 30px;
+  display: block;
 }
+
+.form {
+  display: block;
+  text-align: left;
+}
+
+/*.box {
+  display: inline-block;
+  color: #EE387A;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  vertical-align:top;
+}*/
 
 .textarea {
 width: 1076px;
@@ -239,6 +254,7 @@ border-radius: 10px;
 #radio-text {
   margin-right: 40px;
 }
+
 
 ::-webkit-input-placeholder {
 font-family: Poppins;
@@ -505,9 +521,6 @@ margin-right: 40px;
   color: #EE387A;
   padding-top: 20px;
   padding-bottom: 20px;
- /* width: 330px;*/
-  /*margin: 30px;*/
-  /*height: 300px;*/
   vertical-align:top;
 }
 
