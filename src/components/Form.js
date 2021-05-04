@@ -1,8 +1,10 @@
 import React, { useState} from 'react'
 import Camera from './Camera'
-import { Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 const Form = () => {
+
+    let history = useHistory();
 
     const [boardgame, setBoardgame] = useState('');
 
@@ -15,6 +17,9 @@ const Form = () => {
         };
 
     }
+
+
+    
 
     return (
         <form onSubmit={(event) => submitForm(event)}>
@@ -77,8 +82,7 @@ const Form = () => {
 
 
             <div className="form-element">
-
-                <button className="cancel" onClick={() => { if (window.confirm('Vill du verkligen avsluta?')) { <Link to="/" /> } }}>Avbryt</button>
+                <button className="cancel" onClick={() => { if (window.confirm('Vill du verkligen avsluta?')) {history.goBack(-1)} }}>Avbryt</button>
                 <input className="send-request" type="submit" id="submitbutton" value="Skicka bytesförfrågan" />
             </div>
 
