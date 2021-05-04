@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Camera from './Camera'
-import { Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 /*Skapa övre del med bilder (bl.a. en funktion slideshow) och text om spelet som ska bytas bort. 4 olika element*/
 /*Färdigställa formuläret enligt utseende i Figma */
@@ -10,6 +10,8 @@ import { Link } from 'react-router-dom'
 /*3. Skriva array/objekt till fil (databas)*/
 
 const Form = () => {
+
+    let history = useHistory();
 
     const [boardgame, setBoardgame] = useState('');
 
@@ -22,6 +24,9 @@ const Form = () => {
         };
 
     }
+
+
+    
 
     return (
         <div className="container">
