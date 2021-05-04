@@ -3,6 +3,7 @@ import Landingpage from './components/Landingpage';
 import Details from './components/Details'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import CreateAdd from './components/CreateAdd'
+import data from "./data.json";
 
 
 function App() {
