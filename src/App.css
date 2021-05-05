@@ -137,6 +137,7 @@ h4 {
 h5 {
   font-size: 20px;
   font-family: Montserrat;
+  font-weight: 600;
 }
 
 p{
@@ -209,7 +210,7 @@ color: #1A3455;
 }*/
 
 .textarea {
-width: 1076px;
+width: 641px;
 height: 108px;
 background-color: #FFFFFF;
 border: 3px solid #1A3455;
@@ -218,7 +219,7 @@ border-radius: 10px;
 }
 
 .thin-textarea {
-width: 1076px;
+width: 641px;
 height: 47px;
 background-color: #FFFFFF;
 border: 3px solid #1A3455;
@@ -227,23 +228,24 @@ border-radius: 10px;
 }
 
 .camera-box {
-width: 147.34px;
-height: 149.75px;
+width: 112px;
+height: 118px;
 background-color: #FFFFFF;
 border: 3px solid #1A3455;
 box-sizing: border-box;
 border-radius: 10px;
+margin-right: 25px;
 }
 
 .camera {
-  font-size: 60px;
+  font-size: 40px;
   margin-top: 30px;
-  margin-left: 40px;
+  margin-left: 35px;
   
 }
 
 .camera-text {
-  font-size: 14px;
+  font-size: 10px;
   text-align: center;
 }
 
@@ -263,7 +265,7 @@ font-weight: normal;
 font-size: 16px;
 line-height: 24px;
 color: #1A3455;
-padding-top: 15px;
+padding-top: 35px;
 padding-left: 25px;
 }
 
