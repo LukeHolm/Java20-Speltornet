@@ -22,7 +22,7 @@ const LoadData = () => {
 
     return (
         <>
-        {filterGames(games, "Pandemic")}
+        {filterGames(games, "Catan")}
         </>
     )
 }
