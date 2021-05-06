@@ -8,25 +8,17 @@ const GameAdds = () => {
 
     const { gameId } = useParams();
     const gameTitle = JSON.stringify(gamecatalog.filter(gametitle => gametitle.id == gameId).map(title => title.title));
-            
-    console.log(gameTitle);
+
+    // console.log(gameTitle);
 
     return (
 
         <>
             <HeaderThin />
-            <div className="Container">
-
-                <div className="row">
-                    <div className="col">
-                        this is the addBox
-                        <LoadData gametitle={gameTitle} />
-                        <br /><br /><br /><br /><br /><br />
-                    </div>
-                </div>
+            <div className="container">
+                <LoadData gametitle={gameTitle} />
             </div>
             <div className="addBottom">
-
                 <div className="container">
                     {gamecatalog.filter(game => game.id == gameId).map(filteredgame =>
                         <div className="row">
