@@ -1,31 +1,25 @@
-import React, { useEffect, useState } from 'react';
+import gamesAvailable from './gamesavailable.json'
 
 
-const LoadData = () => {
+const LoadData = fromGameAdds => {
 
-    const [games, setGames] = useState([]);
+    const gameTitle = JSON.stringify(fromGameAdds).slice(17,-5);
 
-    useEffect(() => {
-        fetch("gamesavailable.json").then(response => response.json().then(data => setGames(data)))
-    }, [])
+    console.log(gameTitle);
 
-    const filterGames = (arr, query) => {
-        return arr.filter(el => el.title.toLowerCase().indexOf(query.toLowerCase()) !== -1).map(game =>
-            <>
-            <p>{game.title}</p>
-            <p>{game.condition}</p>
-            <p>{game.parts}</p>
-            <p>{game.vbm} </p>
-            <p>{game.conddesc}</p>
-
-            <img className="bild" src={game.imageURL} alt={game.title}/>
-            </>
-            )
-    }
+   
 
     return (
         <>
-        {filterGames(games, "Pandemic")}
+        {gamesAvailable.filter(game => game.title == gameTitle).map(filteredgame => 
+        <div>
+            <p>{filteredgame.title}</p>
+            <p>{filteredgame.condition}</p>
+            <p>{filteredgame.parts}</p>
+            <p>{filteredgame.vbm} </p>
+            <p>{filteredgame.conddesc}</p>
+            <img className="bild" src={filteredgame.imageURL} alt={filteredgame.title}/>
+            </div>)}
         </>
     )
 }

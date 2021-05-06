@@ -11,7 +11,7 @@ const HeaderThin = () => {
             <div className="row">
                 <div className="col-sm-1">
                     <Link to="/">
-                    <img class="tornlogga-invert" src={Loggainvert} alt="alt" />
+                    <img className="tornlogga-invert" src={Loggainvert} alt="alt" />
                     </Link>
                 </div>
                 <div className="col-sm-1 speltornet-vit">
