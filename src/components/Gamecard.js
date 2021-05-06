@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import ModalButton from './ModalButton'
+import { useHistory } from 'react-router';
+import gamecatalog from './gamecatalog.json'
+
 const Gamecard = () => {
-    const [gamecards, setGamecards] = useState([]);
-    useEffect(() => {
-        fetch("gamecatalog.json").then(response => response.json().then(data => setGamecards(data)))
-    }, [])
+    let history = useHistory();
+
     return (
         <div className="container">
-            {gamecards.map(gamecard => (
+            {gamecatalog.map(gamecard => (
                 <div className="box col col-md-3">
-                    
+
                     <img className="bild" src={gamecard.imageURL} alt={gamecard.title} />
                     <p className="spelnamn">{gamecard.title}</p>
-                    <ModalButton title={gamecard.title} imageURL={gamecard.imageURL} description={gamecard.description}/>
+                    <button className="knapp" onClick={() => history.push("/GameAdds/" + gamecard.id)}>Se annonser</button>
                 </div>
             ))}
         </div>

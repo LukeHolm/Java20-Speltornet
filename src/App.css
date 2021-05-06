@@ -23,6 +23,7 @@
 
 .Thin-header {
   height: 104px;
+  width:100%;
   background-color: #1A3455;
 }
 
@@ -423,6 +424,8 @@ margin-right: 40px;
   width: 100%;
   background-color: #4DBAB3; 
   padding: 30px;
+  position:absolute;
+
 }
 
 .footer-text {
@@ -647,3 +650,28 @@ margin-right: 40px;
   text-align: center;
 }
 
+.addBottom{
+  background-color:#1A3455;
+  color:#FFFFFF;
+  width: 100%;
+  position:relative;
+  bottom:0%;
+
+}
+
+.addBox {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+.left-align{
+  text-align: left;
+}
