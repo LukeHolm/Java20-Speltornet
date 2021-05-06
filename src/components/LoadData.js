@@ -14,14 +14,14 @@ const LoadData = fromGameAdds => {
 
             <div className="container">
 
-                <h3 className=" col-sm-8 offset-sm-2 addPresent">Annonser med {gameTitle}</h3>
+                <h3 className=" col-sm-8 offset-sm-1 addPresent">Annonser med {gameTitle}</h3>
                 {gamesAvailable.filter(game => game.title == gameTitle).map(filteredgame =>
-                    <div className="col-sm-4 offset-sm-1 smallAdd">
+                    <div className="col-sm-5 smallAdd">
                         <>
                             <div className="col-sm-5">
                                 <img className="addImg" src={filteredgame.imageURL} alt={filteredgame.title} />
                             </div>
-                            <div className="col-sm-6 offset-sm-1">
+                            <div className="col-sm-6">
                                 <div className="location">{filteredgame.title} • {filteredgame.location}</div>
                                 <p className="addDec">{filteredgame.addtitle}</p>
                                 <p className="vbm">Vill byta mot:</p>
@@ -30,7 +30,7 @@ const LoadData = fromGameAdds => {
                         </>
                     </div>
                 )}
-                <div className="col-sm-3 offset-sm-2 tillbaka-knapp">
+                <div className="col-sm-3 offset-sm-1 tillbaka-knapp">
                 <button className="cancel" onClick={() => history.goBack(-1)}>Tillbaka</button>
                 </div>
             </div>
