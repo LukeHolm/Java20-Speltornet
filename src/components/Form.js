@@ -9,16 +9,34 @@ import { Link } from 'react-router-dom';
 /*1. Spara variabler i en array (det som användaren fyller i) */
 /*2. Skapa en nedfällningsfunktion(fold down?) med onClick (Du vill byta bort)*/
 /*3. Skriva array/objekt till fil (databas)*/
+//Validering
 
 const Form = () => {
 
     let history = useHistory();
 
     const [headline, setHeadline] = useState('');
+    const [greeting, setGreeting] = useState('');
+
+    const postData = () => {
+        fetch("data.json", {
+            method: "POST",
+            headers: {
+                'data.json': 'application/json'
+            },
+            //TODO: Lägg in fler variabler
+            body: JSON.stringify({'headline': headline, 'greeting': greeting})
+        }).then(res => res.json());
+    }
 
     const submitForm = (event) => {
+        // Hindrar formuläret från att ladda om sidan. 
         event.preventDefault();
+        postData();
+        alert(['Rubrik: ' + headline, 'Hälsning: ' + greeting]); 
+        console.log(greeting);
 
+        //Är denna överflödig?
         const requestBody = {
             headline: headline,
             /*{lägg till fler här}*/
@@ -28,10 +46,14 @@ const Form = () => {
 
     return (
         <div className="container">
+            {/*Event är det som triggas av ett knapptryck (tex). 
+            onSubmit är ett event i sig som kan säga att något ska triggas, kan skicka iväg sitt egna event.
+            submitForm är JS-funktion som hämtar värden.   */}
             <form onSubmit={(event) => submitForm(event)}>
                 <div className="col">
                     <div className="row form">
                         <div className="form-element">
+                            {/* TODO: Bryta ut till egen komponent. */}
                             <h4 className="form-text">Vad du vill byta mot Catan?</h4>
                         </div>
 
@@ -40,7 +62,7 @@ const Form = () => {
                                 <p className="bold">Du vill ha</p>
                                 <input type="radio" id="radio" name="boardgame" value="myBoardgame" />
 
-                                {/*TODO: Spelnamnen ska ej vara hårdkodade.
+                                {/*TODO: Spelnamnen ska ej vara hårdkodade. 
                         Styla radio buttons, se sparad länk */}
                                 <label for="myBoardgame" id="radio">Catan</label>
                             </div>
@@ -103,8 +125,8 @@ const Form = () => {
                         <div className="form-element">
                             <h5>Hälsning</h5>
                             <label for="greeting" className="p">Skriv en kort hälsning till bytaren! </label><br />
-                            <textarea className="textarea" name="greeting" rows="5" cols="30" placeholder="Skriv här">
-                            </textarea>
+                            <input type="textarea" className="textarea" name="greeting" rows="5" cols="30" placeholder="Skriv här" 
+                            value={greeting} onChange={(event) => setGreeting(event.target.value)}/>
                         </div>
 
                         <div className="form-element">

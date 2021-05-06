@@ -8,7 +8,8 @@ const formObject = {
     hälsning: "text"
 }
 
-{/*Komponent för att spara data:*/}
+{/*Komponent för att spara data:
+Obs!! Se föreläsning 3 med Henning för ett annat sätt att skirva med fetch*/}
 function download(content, fileName, contentType) {
     var a = document.createElement("a");
     var file = new Blob([content], {type: contentType});
