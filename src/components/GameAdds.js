@@ -1,69 +1,58 @@
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Footer from './Footer';
 import HeaderThin from './HeaderThin';
+import gamecatalog from './gamecatalog.json'
 
 const GameAdds = () => {
 
-    const {id} = useParams();
+    const { gameId } = useParams();
 
-    useEffect(() => {
-        fetch("gamecatalog.json").then(response => response.json().then(data => setGamecards(data)))
-    }, [])
-
-    const filterGames = (arr, query) => {
-        return arr.filter(el => el.id.indexOf(query) !== -1).map(game => <><p>{game.title}</p></>)
-    }
-
-    const [gamecard, setGamecards] = useState([]);
-
-
+    console.log(gamecatalog);
 
     return (
+
         <>
-
-
-
-        
             <HeaderThin />
             <div className="Container">
+
                 <div className="row">
                     <div className="col addBox">
+
                         this is the first statement
-            </div>
-                </div>
-            </div>
-
-
-            <div className="addBottom">
-                <div className="container">
-                    <div className="row">
-                    <div className="col-sm-2 offset-sm-1"><img src="https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-03-22-kl--15-31-6@2x.png" alt=" " className="game-modal-cover" /></div>
-                        <div className="col-sm-5">
-                            <h4 className="game-modal-title">Om {filterGames(gamecard, id)}</h4>
-                            <p className="game-modal-description">this is the description atpöäawjrföläaksnföl öalkshdn ölakshdö öaskhfdö lakshdöas hdäöas d</p>
-                        </div>
-                        <div className="col-sm-2" >
-                        <div className="left-align">
-                            <h5>Spelets omdöme</h5>
-                            <img src="Star_Rating.svg" alt="rating" className="star-rating"></img>
-                            <img src="Star_Rating.svg" alt="rating" className="star-rating"></img>
-                            <img src="Star_Rating.svg" alt="rating" className="star-rating"></img>
-                            <img src="Star_Rating.svg" alt="rating" className="star-rating"></img>
-                            <img src="Star_Rating.svg" alt="rating" className="star-rating"></img>
-                            <p>"Toppenspel"</p>
-                            <img src="Star_Rating.svg" alt="rating" className="star-rating"></img>
-                            <img src="Star_Rating.svg" alt="rating" className="star-rating"></img>
-                            <img src="Star_Rating.svg" alt="rating" className="star-rating"></img>
-                            <img src="Star_Rating.svg" alt="rating" className="star-rating"></img>
-                            <img src="Star_Rating2.svg" alt="rating" className="star-rating"></img>
-                            <p>"Perfekt för familjen"</p>
-                            </div>
-
-                        </div>
+                        {/* {gamecatalog.filter(game => game.id == gameId).map(filteredgame =>
+                        <p>
+                            {filteredgame.title}
+                        </p>
+                        )} */}
                     </div>
                 </div>
             </div>
+            <div className="addBottom">
+
+                <div className="container">
+                    {gamecatalog.filter(game => game.id == gameId).map(filteredgame =>
+                        <div className="row">
+
+                            <div className="col-sm-2 offset-sm-1"><img src={filteredgame.imageURL} alt=" " className="game-modal-cover" /></div>
+                            <div className="col-sm-5">
+                                <h4 className="game-modal-title">Om {filteredgame.title}</h4>
+                                <p className="game-modal-description">{filteredgame.description}</p>
+                            </div>
+                            <div className="col-sm-2" >
+                                <div className="left-align">
+                                    <h5>Spelets omdöme</h5>
+                                    <h5>{filteredgame.rating}</h5>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    )}
+                </div>
+            </div>
+
+
             <Footer />
         </>
     )
