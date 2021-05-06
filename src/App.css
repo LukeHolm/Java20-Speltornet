@@ -110,8 +110,7 @@ margin-top: 52px;
 border: none;
 height: 1px;
 background-color: #1A3455;  
-margin-left:120px;
-text-align: left;
+margin-left:100px;
 margin-right: 120px;
 }
 
@@ -139,6 +138,7 @@ h4 {
 h5 {
   font-size: 20px;
   font-family: Montserrat;
+  font-weight: 600;
 }
 
 p{
@@ -148,6 +148,10 @@ p{
 
 .bold{
   font-weight: bold;
+}
+
+.form-text {
+  color: #E21C64;
 }
 
 .form-h1 {
@@ -169,13 +173,12 @@ p{
   color: #1A3455;
 }
 
-.form-h3 {
-font-family: Poppins;
+.form-h5 {
 font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: 27px;
+font-weight: 600;
+line-height: 24px;
 color: #1A3455;
+
 }
 
 .body-text {
@@ -189,13 +192,26 @@ color: #1A3455;
 
 .form-element {
   text-align: left;
-  padding-left: 120px;
   margin-top: 30px;
   margin-bottom: 30px;
+  display: block;
 }
 
+.form {
+  display: block;
+  text-align: left;
+}
+
+/*.box {
+  display: inline-block;
+  color: #EE387A;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  vertical-align:top;
+}*/
+
 .textarea {
-width: 1076px;
+width: 641px;
 height: 108px;
 background-color: #FFFFFF;
 border: 3px solid #1A3455;
@@ -204,7 +220,7 @@ border-radius: 10px;
 }
 
 .thin-textarea {
-width: 1076px;
+width: 641px;
 height: 47px;
 background-color: #FFFFFF;
 border: 3px solid #1A3455;
@@ -213,23 +229,24 @@ border-radius: 10px;
 }
 
 .camera-box {
-width: 147.34px;
-height: 149.75px;
+width: 112px;
+height: 118px;
 background-color: #FFFFFF;
 border: 3px solid #1A3455;
 box-sizing: border-box;
 border-radius: 10px;
+margin-right: 25px;
 }
 
 .camera {
-  font-size: 60px;
+  font-size: 40px;
   margin-top: 30px;
-  margin-left: 40px;
+  margin-left: 35px;
   
 }
 
 .camera-text {
-  font-size: 14px;
+  font-size: 10px;
   text-align: center;
 }
 
@@ -241,6 +258,7 @@ border-radius: 10px;
   margin-right: 40px;
 }
 
+
 ::-webkit-input-placeholder {
 font-family: Poppins;
 font-style: normal;
@@ -248,7 +266,7 @@ font-weight: normal;
 font-size: 16px;
 line-height: 24px;
 color: #1A3455;
-padding-top: 15px;
+padding-top: 35px;
 padding-left: 25px;
 }
 
@@ -508,9 +526,6 @@ margin-right: 40px;
   color: #EE387A;
   padding-top: 20px;
   padding-bottom: 20px;
- /* width: 330px;*/
-  /*margin: 30px;*/
-  /*height: 300px;*/
   vertical-align:top;
 }
 

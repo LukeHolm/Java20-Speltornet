@@ -13,7 +13,7 @@ const Details = () => {
                 <div className="Row">
                     <div className="col-sm-8 offset-sm-2">
                         <Changereceipt/>
-                        <Form />
+                        <Form/>
                     </div>
                 </div>
                 <Topfooter />
