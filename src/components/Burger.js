@@ -2,7 +2,7 @@ import React from 'react'
 
 const hamburger = () => {
     return (
-        <div className="burgerKnapp">
+        <div className="burger Knapp">
             <i className="fas fa-bars burger"/>
         </div>
     )

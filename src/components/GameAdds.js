@@ -1,4 +1,4 @@
-import React from 'react';
+import {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import Footer from './Footer';
 import HeaderThin from './HeaderThin';
@@ -11,8 +11,20 @@ const GameAdds = () => {
         fetch("gamecatalog.json").then(response => response.json().then(data => setGamecards(data)))
     }, [])
 
+    const filterGames = (arr, query) => {
+        return arr.filter(el => el.id.indexOf(query) !== -1).map(game => <><p>{game.title}</p></>)
+    }
+
+    const [gamecard, setGamecards] = useState([]);
+
+
+
     return (
         <>
+
+
+
+        
             <HeaderThin />
             <div className="Container">
                 <div className="row">
@@ -28,7 +40,7 @@ const GameAdds = () => {
                     <div className="row">
                     <div className="col-sm-2 offset-sm-1"><img src="https://anima-uploads.s3.amazonaws.com/projects/6074664a17d10c4e519008cf/releases/60746a0533c6fe6654c155b4/img/ska-rmavbild-2021-03-22-kl--15-31-6@2x.png" alt=" " className="game-modal-cover" /></div>
                         <div className="col-sm-5">
-                            <h4 className="game-modal-title">Om </h4>
+                            <h4 className="game-modal-title">Om {filterGames(gamecard, id)}</h4>
                             <p className="game-modal-description">this is the description atpöäawjrföläaksnföl öalkshdn ölakshdö öaskhfdö lakshdöas hdäöas d</p>
                         </div>
                         <div className="col-sm-2" >
@@ -56,5 +68,6 @@ const GameAdds = () => {
         </>
     )
 }
+
 
 export default GameAdds;

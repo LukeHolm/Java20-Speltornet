@@ -14,7 +14,7 @@ const HeaderThin = () => {
                     <img class="tornlogga-invert" src={Loggainvert} alt="alt" />
                     </Link>
                 </div>
-                <div className="col-sm-2 speltornet-vit">
+                <div className="col-sm-1 speltornet-vit">
                     Speltornet
                         </div>
             </div>
