@@ -23,6 +23,7 @@
 
 .Thin-header {
   height: 104px;
+  width:100%;
   background-color: #1A3455;
 }
 
@@ -309,7 +310,7 @@ padding-left: 25px;
 
 .skapa-annons {
   background-color: #EE387A;
-  border-radius: 15px;
+  border-radius: 38px;
   border-style: none;
   width: 202px;
   height: 52px;
@@ -423,6 +424,8 @@ margin-right: 40px;
   width: 100%;
   background-color: #4DBAB3; 
   padding: 30px;
+  position:absolute;
+
 }
 
 .footer-text {
@@ -524,6 +527,7 @@ margin-right: 40px;
   padding-top: 20px;
   padding-bottom: 20px;
   vertical-align:top;
+  min-width: 250px;
 }
 
 .game-modal-description {
@@ -646,3 +650,28 @@ margin-right: 40px;
   text-align: center;
 }
 
+.addBottom{
+  background-color:#1A3455;
+  color:#FFFFFF;
+  width: 100%;
+  position:relative;
+  bottom:0%;
+
+}
+
+.addBox {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+.left-align{
+  text-align: left;
+}
