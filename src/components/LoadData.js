@@ -15,6 +15,9 @@ const LoadData = () => {
             <p>{game.title}</p>
             <p>{game.condition}</p>
             <p>{game.parts}</p>
+            <p>{game.vbm} </p>
+            <p>{game.conddesc}</p>
+
             <img className="bild" src={game.imageURL} alt={game.title}/>
             </>
             )
@@ -22,7 +25,7 @@ const LoadData = () => {
 
     return (
         <>
-        {filterGames(games, "Catan")}
+        {filterGames(games, "Pandemic")}
         </>
     )
 }
