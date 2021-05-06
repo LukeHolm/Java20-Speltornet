@@ -310,7 +310,7 @@ padding-left: 25px;
 
 .skapa-annons {
   background-color: #EE387A;
-  border-radius: 15px;
+  border-radius: 38px;
   border-style: none;
   width: 202px;
   height: 52px;
@@ -527,6 +527,7 @@ margin-right: 40px;
   padding-top: 20px;
   padding-bottom: 20px;
   vertical-align:top;
+  min-width: 250px;
 }
 
 .game-modal-description {
