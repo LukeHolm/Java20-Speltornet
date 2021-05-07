@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import Camera from "./Camera";
-import { useHistory } from "react-router-dom";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react'
+import Camera from './Camera'
+import { useHistory } from 'react-router-dom'
 
 /*Skapa övre del med bilder (bl.a. en funktion slideshow) och text om spelet som ska bytas bort. 4 olika element*/
 /*Färdigställa formuläret enligt utseende i Figma */

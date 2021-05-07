@@ -1,31 +1,40 @@
-import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router';
+import gamesAvailable from './gamesavailable.json'
 
 
-const LoadData = () => {
+const LoadData = fromGameAdds => {
 
-    const [games, setGames] = useState([]);
+    const gameTitle = JSON.stringify(fromGameAdds).slice(17, -5);
+    let history = useHistory();
 
-    useEffect(() => {
-        fetch("gamesavailable.json").then(response => response.json().then(data => setGames(data)))
-    }, [])
-
-    const filterGames = (arr, query) => {
-        return arr.filter(el => el.title.toLowerCase().indexOf(query.toLowerCase()) !== -1).map(game =>
-            <>
-            <p>{game.title}</p>
-            <p>{game.condition}</p>
-            <p>{game.parts}</p>
-            <p>{game.vbm} </p>
-            <p>{game.conddesc}</p>
-
-            <img className="bild" src={game.imageURL} alt={game.title}/>
-            </>
-            )
-    }
+    console.log(gameTitle);
 
     return (
         <>
-        {filterGames(games, "Pandemic")}
+
+            <div className="container">
+
+                <h3 className=" col-sm-8 offset-sm-1 addPresent">Annonser med {gameTitle}</h3>
+                {gamesAvailable.filter(game => game.title == gameTitle).map(filteredgame =>
+                    <div className="col-sm-5 smallAdd">
+                        <>
+                            <div className="col-sm-5">
+                                <img className="addImg" src={filteredgame.imageURL} alt={filteredgame.title} />
+                            </div>
+                            <div className="col-sm-6">
+                                <div className="location">{filteredgame.title} • {filteredgame.location}</div>
+                                <p className="addDec">{filteredgame.addtitle}</p>
+                                <p className="vbm">Vill byta mot:</p>
+                                <p className="vbm-tag">{filteredgame.vbm}</p>
+                            </div>
+                        </>
+                    </div>
+                )}
+                <div className="col-sm-3 offset-sm-1 tillbaka-knapp">
+                <button className="cancel" onClick={() => history.goBack(-1)}>Tillbaka</button>
+                </div>
+            </div>
+
         </>
     )
 }
