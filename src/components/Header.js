@@ -9,7 +9,7 @@ const Header = () => {
                 <div className="row no-gutter">
                     <div className="col top-bar">
                         <div className="col-sm-1 offset-sm-0 speltornet-logga">
-                            <img class="tornlogga" src="Speltornet_Logga.svg" alt="alt" />
+                            <img className="tornlogga" src="Speltornet_Logga.svg" alt="alt" />
                         </div>
                         <div className="speltornet">
                             Speltornet

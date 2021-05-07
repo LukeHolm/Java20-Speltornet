@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Camera from './Camera'
 import { useHistory } from 'react-router-dom'
-import { Link } from 'react-router-dom';
 
 /*Skapa övre del med bilder (bl.a. en funktion slideshow) och text om spelet som ska bytas bort. 4 olika element*/
 /*Färdigställa formuläret enligt utseende i Figma */
@@ -51,12 +50,11 @@ const Form = () => {
             submitForm är JS-funktion som hämtar värden.   */}
             <form onSubmit={(event) => submitForm(event)}>
                 <div className="col">
-                    <div className="row form">
+                    <div className="form">
+                         {/* TODO: Bryta ut till egen komponent. */}
                         <div className="form-element">
-                            {/* TODO: Bryta ut till egen komponent. */}
                             <h4 className="form-text">Vad du vill byta mot Catan?</h4>
                         </div>
-
                         <div className="row">
                             <div className="col-sm-2 offset-1">
                                 <p className="bold">Du vill ha</p>
@@ -141,7 +139,6 @@ const Form = () => {
                         </div>
 
                         <div className="form-element">
-
                             <button className="cancel" onClick={() => { if (window.confirm('Vill du verkligen avsluta?')) { history.goBack(-1) } }}>Avbryt</button>
                             <input className="send-request" type="submit" id="submitbutton" value="Skicka bytesförfrågan" />
                         </div>

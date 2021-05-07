@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Footer from './Footer';
 import HeaderThin from './HeaderThin';
@@ -8,13 +7,15 @@ import LoadData from './LoadData';
 const GameAdds = () => {
 
     const { gameId } = useParams();
+    const gameTitle = JSON.stringify(gamecatalog.filter(gametitle => gametitle.id == gameId).map(title => title.title));
 
-    console.log(gamecatalog);
+    // console.log(gameTitle);
 
     return (
 
         <>
             <HeaderThin />
+<<<<<<< HEAD
             <div className="Container">
 
                 <div className="row">
@@ -33,14 +34,17 @@ const GameAdds = () => {
                         )} */}
                     </div>
                 </div>
+=======
+            <div className="container">
+                <LoadData gametitle={gameTitle} />
+>>>>>>> 5f7cbc34cb1915fd48ea34d76ccb2019cf7bc684
             </div>
             <div className="addBottom">
-
                 <div className="container">
                     {gamecatalog.filter(game => game.id == gameId).map(filteredgame =>
                         <div className="row">
 
-                            <div className="col-sm-2 offset-sm-1"><img src={filteredgame.imageURL} alt=" " className="game-modal-cover" /></div>
+                            <div className="col-sm-2 offset-sm-1"><img src={filteredgame.imageURL} alt={filteredgame.title} className="game-modal-cover" /></div>
                             <div className="col-sm-5">
                                 <h4 className="game-modal-title">Om {filteredgame.title}</h4>
                                 <p className="game-modal-description">{filteredgame.description}</p>
@@ -48,7 +52,7 @@ const GameAdds = () => {
                             <div className="col-sm-2" >
                                 <div className="left-align">
                                     <h5>Spelets omdöme</h5>
-                                    <h5>{filteredgame.rating}</h5>
+                                    <h4 className="center-align">{filteredgame.rating}</h4>
                                 </div>
 
                             </div>
