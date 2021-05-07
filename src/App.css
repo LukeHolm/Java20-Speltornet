@@ -346,8 +346,9 @@ padding-left: 25px;
   font-weight: bold;
   color: #1A3455;
   background-color: #FFFFFF;
-  padding-top: 40px;
-  padding-bottom: 30px;
+  padding-top: 100px;
+  padding-bottom: 0px;
+  padding-left: 100px;
 }
 
 .tornlogga-inverterad {
@@ -747,4 +748,8 @@ margin-right: 40px;
   font-size: 13px;
   font-weight: 400;
   border: 0px solid #1A3455;
+}
+
+.smallAdd:hover .addDec {
+  text-decoration: underline;
 }
