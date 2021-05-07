@@ -15,29 +15,8 @@ const GameAdds = () => {
 
         <>
             <HeaderThin />
-<<<<<<< HEAD
-            <div className="Container">
-
-                <div className="row">
-                    <div className="col addBox">
-
-                         {gamecatalog.filter(game => game.id == gameId).map(filter =>
-                            // console.log(filter.title) 
-                            <LoadData title={filter.title}/>    
-                        )}
-                        
-                        
-                        {/* {gamecatalog.filter(game => game.id == gameId).map(filteredgame =>
-                        <p>
-                            {filteredgame.title}
-                        </p>
-                        )} */}
-                    </div>
-                </div>
-=======
             <div className="container">
                 <LoadData gametitle={gameTitle} />
->>>>>>> 5f7cbc34cb1915fd48ea34d76ccb2019cf7bc684
             </div>
             <div className="addBottom">
                 <div className="container">

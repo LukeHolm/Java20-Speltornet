@@ -1,41 +1,9 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-import gamesavailable from './gamesavailable.json'
-=======
 import { useHistory } from 'react-router';
 import gamesAvailable from './gamesavailable.json'
->>>>>>> 5f7cbc34cb1915fd48ea34d76ccb2019cf7bc684
 
 
 const LoadData = fromGameAdds => {
 
-<<<<<<< HEAD
-    //console.log(gameTitle)
-
-    const [games, setGames] = useState([]);
-
-    useEffect(() => {
-        fetch("gamesavailable(1).json").then(response => response.json().then(data => setGames(data)))
-    }, [])
-
-    const filterGames = (arr, query) => {
-        return arr.filter(el => el.title.toLowerCase().indexOf(query.toLowerCase()) !== -1).map(game =>
-            <>
-            <p>{game.title}</p>
-            <p>{game.condition}</p>
-            <p>{game.parts}</p>
-            <p>{game.vbm} </p>
-
-            <img className="bild" src={game.imageURL} alt={game.title}/>
-            </>
-            )
-    }
-
-    return (
-        <p>
-        {filterGames(games, "Pandemic")}
-        </p>
-=======
     const gameTitle = JSON.stringify(fromGameAdds).slice(17, -5);
     let history = useHistory();
 
@@ -68,7 +36,6 @@ const LoadData = fromGameAdds => {
             </div>
 
         </>
->>>>>>> 5f7cbc34cb1915fd48ea34d76ccb2019cf7bc684
     )
 }
 
