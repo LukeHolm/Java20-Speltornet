@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import gamesavailable from './gamesavailable.json'
 
 
 const LoadData = () => {
 
+    //console.log(gameTitle)
+
     const [games, setGames] = useState([]);
 
     useEffect(() => {
-        fetch("gamesavailable.json").then(response => response.json().then(data => setGames(data)))
+        fetch("gamesavailable(1).json").then(response => response.json().then(data => setGames(data)))
     }, [])
 
     const filterGames = (arr, query) => {
@@ -16,7 +19,6 @@ const LoadData = () => {
             <p>{game.condition}</p>
             <p>{game.parts}</p>
             <p>{game.vbm} </p>
-            <p>{game.conddesc}</p>
 
             <img className="bild" src={game.imageURL} alt={game.title}/>
             </>
@@ -24,9 +26,9 @@ const LoadData = () => {
     }
 
     return (
-        <>
+        <p>
         {filterGames(games, "Pandemic")}
-        </>
+        </p>
     )
 }
 

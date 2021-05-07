@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import Footer from './Footer';
 import HeaderThin from './HeaderThin';
 import gamecatalog from './gamecatalog.json'
+import LoadData from './LoadData';
 
 const GameAdds = () => {
 
@@ -19,7 +20,12 @@ const GameAdds = () => {
                 <div className="row">
                     <div className="col addBox">
 
-                        this is the first statement
+                         {gamecatalog.filter(game => game.id == gameId).map(filter =>
+                            // console.log(filter.title) 
+                            <LoadData title={filter.title}/>    
+                        )}
+                        
+                        
                         {/* {gamecatalog.filter(game => game.id == gameId).map(filteredgame =>
                         <p>
                             {filteredgame.title}

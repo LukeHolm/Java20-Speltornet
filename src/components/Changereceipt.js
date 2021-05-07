@@ -1,47 +1,32 @@
 import React, { useEffect, useState } from 'react';
 
 
-const Changereceipt = () => {
+const Changereceipt = (gameTitle) => {
 
+    console.log(gameTitle)
     const [games, setGames] = useState([]);
 
     useEffect(() => {
-        fetch("gamesavailable.json").then(response => response.json().then(data => setGames(data)))
+        fetch("gamesavailable(1).json").then(response => response.json().then(data => setGames(data)))
     }, [])
 
     const filterGames = (arr, query) => {
-        return arr.filter(el => el.title.toLowerCase().indexOf(query.toLowerCase()) !== -1)
-    }
+        return arr.filter(el => el.title.toLowerCase().indexOf(query) !== -1).map(game =>
+            <>
+            <p>{game.title}</p>
+            <p>{game.condition}</p>
+            <p>{game.parts}</p>
+            <p>{game.vbm} </p>
 
-    let namn = "catan";
-
-    const resultOfFilter = () => {
-        
+            <img className="bild" src={game.imageURL} alt={game.title}/>
+            </>
+            )
     }
 
     return (
-
-        <div className="changereceipt container align-items-center">
-            <div className="row align-items-center">
-                <div className="col-sm-3 receipt-border col-left">
-                    <img className="userimage" src="https://s3-alpha-sig.figma.com/img/98c6/66ce/8ae82176109dda4c39d3986c6aeb9716?Expires=1620000000&Signature=bLsjnjEg9AWtDHHZaFfCPzaJsuwOt1ZkbHb~XItwqvJYvrSmVDAF28Jnr2JMowlhqcjBhUs7yZttvXAb-ZfBiy1iKkpBh0ajMm2~Dwzj~Llb2SmfrCB-q5muU2Aaw3YUTBVW2X6V-ZXye70-6Hzi41~EuV-ZFl2uYqAfy0YxhvTiLHi8sksRb7YkD97I1XSEOOYMosWb0dQ18uZQIc1RamFYlRn6c47FxdtzbUaHYV0KOZEi5trGIXE9wVEogdCI9NeeUCTx4Gr00kGtHXim9358buu0HWzaMShRsydBHVysgRlYsnSLHA2c4g7Rrej12eGLAyAR71ezkpDPfZXg9g__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="user"/>
-                </div>
-                <div className="col col-mid">
-                    {filterGames(games, "Pandemic").map(game => 
-                        <span>{game.title}</span>
-                    )}
-                    {filterGames(games, "Pandemic").map(game =>
-                    <span>{game.condition}</span>
-                    )}
-                    
-                </div>
-                <div className="col-sm-3 receipt-border col-right">
-                    <h2 className="changegame">Vill byta mot</h2>
-                    <button className="spel">Ticket to ride</button><br/>
-                    <button className="spel">Monopol</button>
-                </div>
-            </div>
-        </div>
+        <p>
+        {filterGames(games, gameTitle)}
+        </p>
     )
 }
 
