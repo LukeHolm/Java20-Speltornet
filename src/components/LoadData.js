@@ -8,6 +8,7 @@ const LoadData = fromGameAdds => {
     const gameTitle = JSON.stringify(fromGameAdds).slice(17, -5);
     let history = useHistory();
 
+    console.log(fromGameAdds)
     console.log(gameTitle);
 
     return (

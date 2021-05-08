@@ -152,6 +152,19 @@ p{
 }
 
 .bold{
+  font-weight: 700;
+}
+
+.tagg {
+  font-family: Poppins;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.tagg-bold {
+  font-family: Poppins;
+  font-size: 13px;
+  font-weight: 600;
   font-weight: 700px;
 }
 
@@ -255,15 +268,6 @@ margin-right: 25px;
   text-align: center;
 }
 
-#radio {
-  margin-right: 10px;
-}
-
-#radio-text {
-  margin-right: 40px;
-}
-
-
 ::-webkit-input-placeholder {
 font-family: Poppins;
 font-style: normal;
@@ -361,6 +365,12 @@ padding-left: 25px;
 .container {
   padding: 20px;
 }
+
+.wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
 .col {
   text-align: center;
   
@@ -682,6 +692,60 @@ margin-right: 40px;
   text-align: left;
 }
 
+/* ------------------------------------------- RADIO BUTTONS -------------------------------------*/
+
+#radio {
+  margin-right: 10px;
+}
+
+/* :root {
+  --color: #E21C64;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.radio {
+  font-size: 1rem;
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-gap: 0.5em;
+}
+
+#radio-text {
+  margin-right: 40px;
+}
+
+/* Gömmer Radio button */
+/* .radio__input input {   
+    opacity: 0;
+    width: 0;
+    height: 0;  
+}
+
+.radio__input {
+  display: flex;
+}
+
+:checked + .radio__control {
+  background: radial-gradient(currentcolor 45%, rgba(226, 28, 100, 0) 55%);
+}
+
+.radio__control {
+  display: block;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  border: 0.1em solid currentColor;
+  transform: translateY(-0.05em);
+}
+
+.radio__label {
+  line-height: 1;
+} */ 
 .center-align{
   text-align: center;
 }
@@ -748,8 +812,4 @@ margin-right: 40px;
   font-size: 13px;
   font-weight: 400;
   border: 0px solid #1A3455;
-}
-
-.smallAdd:hover .addDec {
-  text-decoration: underline;
 }
