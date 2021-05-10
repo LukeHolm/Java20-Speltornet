@@ -5,6 +5,8 @@ import gamecatalog from './gamecatalog.json'
 const Gamecard = () => {
     let history = useHistory();
 
+    
+
     return (
         <div className="container">
             {gamecatalog.map(gamecard => (

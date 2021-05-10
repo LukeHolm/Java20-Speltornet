@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import spelloga from '../img/Speltornet_Logga.svg'
 
 const Header = () => {
 
@@ -9,7 +10,7 @@ const Header = () => {
                 <div className="row no-gutter">
                     <div className="col top-bar">
                         <div className="col-sm-1 offset-sm-0 speltornet-logga">
-                            <img className="tornlogga" src="Speltornet_Logga.svg" alt="alt" />
+                            <img className="tornlogga" src={spelloga} alt="alt" />
                         </div>
                         <div className="speltornet">
                             Speltornet

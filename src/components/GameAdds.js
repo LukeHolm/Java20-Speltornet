@@ -42,7 +42,7 @@ const GameAdds = () => {
             </div>
 
 
-            <Footer />
+           
         </>
     )
 }
