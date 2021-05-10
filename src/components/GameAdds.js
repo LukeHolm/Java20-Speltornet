@@ -9,7 +9,7 @@ const GameAdds = () => {
     const { gameId } = useParams();
     const gameTitle = JSON.stringify(gamecatalog.filter(gametitle => gametitle.id == gameId).map(title => title.title));
 
-     console.log(gameTitle);
+    //console.log(gameTitle);
 
     return (
 
