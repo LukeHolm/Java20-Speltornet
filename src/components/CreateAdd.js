@@ -11,10 +11,7 @@ const CreateAdd = () => {
                 <div className="col-sm-8 offset-sm-2">
                     <Form />
                 </div>
-
             </div>
-
-
             <Topfooter />
             <Footer />
         </>

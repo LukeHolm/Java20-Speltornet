@@ -16,29 +16,16 @@ const Form = () => {
   const [headline, setHeadline] = useState("");
   const [greeting, setGreeting] = useState("");
 
-  const postData = () => {
-    fetch("data.json", {
-      method: "POST",
-      headers: {
-        "data.json": "application/json",
-      },
-      //TODO: Lägg in fler variabler
-      body: JSON.stringify({ headline: headline, greeting: greeting }),
-    }).then((res) => res.json());
-  };
+  const getData = localStorage.getItem("games2");
+  console.log(JSON.parse(getData)[3].title);
 
   const submitForm = (event) => {
     // Hindrar formuläret från att ladda om sidan.
     event.preventDefault();
-    postData();
+    const formObject = {name: headline, description: greeting};
+    localStorage.setItem("games", JSON.stringify(formObject));
     alert(["Rubrik: " + headline, "Hälsning: " + greeting]);
     console.log(greeting);
-
-    //Är denna överflödig?
-    const requestBody = {
-      headline: headline,
-      /*{lägg till fler här}*/
-    };
   };
 
   return (
