@@ -16,14 +16,32 @@ const Form = () => {
   const [headline, setHeadline] = useState("");
   const [greeting, setGreeting] = useState("");
 
-  const getData = localStorage.getItem("games2");
-  console.log(JSON.parse(getData)[3].title);
+  // const setData = localStorage.getItem("games2", JSON.stringify({}));
+  //console.log(JSON.parse(getData)[3].title);
+
+  function addEntry() {
+    // Parse any JSON previously stored in allEntries
+    var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
+    if(existingEntries == null) existingEntries = [];
+    var entryTitle = JSON.parse()
+    var entryText = document.getElementById("entryText").value;
+    var entry = {
+        "name": entryTitle,
+        "description": entryText
+    };
+    localStorage.setItem("entry", JSON.stringify(entry));
+    // Save allEntries back to local storage
+    existingEntries.push(entry);
+    localStorage.setItem("allEntries", JSON.stringify(existingEntries));
+};
+
+
 
   const submitForm = (event) => {
     // Hindrar formuläret från att ladda om sidan.
     event.preventDefault();
     const formObject = {name: headline, description: greeting};
-    localStorage.setItem("games", JSON.stringify(formObject));
+    localStorage.setItem("games1", JSON.stringify(formObject));
     alert(["Rubrik: " + headline, "Hälsning: " + greeting]);
     console.log(greeting);
   };

@@ -7,14 +7,14 @@ import Topfooter from '../components/Topfooter';
 import Footer from '../components/Footer';
 import Changereceipt from './Changereceipt';
 
-const Landingpage = () => {
+const Landingpage = (game) => {
 
     return (
         <>
         <Header />
         <Burger />
         <h1 className="speltorget col-sm-2 offset-sm-2">Speltorget</h1>
-        <Gamecard />
+        <Gamecard title= {game.title} img= {game.imageURL} id= {game.id}/>
         <Topfooter />
     
         </>
