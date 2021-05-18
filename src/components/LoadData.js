@@ -3,13 +3,11 @@ import gamesAvailable from './gamesavailable.json'
 import { Link, useParams } from 'react-router-dom'
 
 
-const LoadData = fromGameAdds => {
+const LoadData = ({gameTitle, gameAdd}) => {
 
-    const gameTitle = JSON.stringify(fromGameAdds).slice(17, -5);
+    console.log(gameTitle)
+    console.log(gameAdd)
     let history = useHistory();
-
-    console.log(fromGameAdds)
-    console.log(gameTitle);
 
     return (
         <>
@@ -17,18 +15,20 @@ const LoadData = fromGameAdds => {
             <div className="container">
 
                 <h3 className=" col-sm-8 offset-sm-1 addPresent">Annonser med {gameTitle}</h3>
-                {gamesAvailable.filter(game => game.title == gameTitle).map(filteredgame =>
+                {gameAdd.filter(game => game.title == gameTitle).map(add =>
                     <Link to="/CreateAdd/">
                     <div className="col-sm-5 smallAdd">
                         <>
+
+                        {/* alla nedanstående "add."-referenser måste fixas i mockapi */}
                             <div className="col-sm-5">
-                                <img className="addImg" src={filteredgame.imageURL} alt={filteredgame.title} />
+                                <img className="addImg" src={add.imageURL} alt={add.title} />
                             </div>
                             <div className="col-sm-6">
-                                <div className="location">{filteredgame.title} • {filteredgame.location}</div>
-                                <p className="addDec">{filteredgame.addtitle}</p>
+                                <div className="location">{add.title} • {add.location}</div>
+                                <p className="addDec">{add.addtitle}</p>
                                 <p className="vbm">Vill byta mot:</p>
-                                <p className="vbm-tag">{filteredgame.vbm}</p>
+                                <p className="vbm-tag">{add.vbm}</p>
                             </div>
                         </>
                     </div>
