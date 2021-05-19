@@ -15,20 +15,20 @@ const LoadData = ({gameTitle, gameAdd}) => {
             <div className="container">
 
                 <h3 className=" col-sm-8 offset-sm-1 addPresent">Annonser med {gameTitle}</h3>
-                {gameAdd.filter(game => game.title == gameTitle).map(add =>
+                {gameAdd.filter(game => game.gameTitle == gameTitle).map(add =>
                     <Link to="/CreateAdd/">
                     <div className="col-sm-5 smallAdd">
                         <>
 
                         {/* alla nedanstående "add."-referenser måste fixas i mockapi */}
                             <div className="col-sm-5">
-                                <img className="addImg" src={add.imageURL} alt={add.title} />
+                                <img className="addImg" src={add.imageURL} alt={add.gameTitle} />
                             </div>
                             <div className="col-sm-6">
-                                <div className="location">{add.title} • {add.location}</div>
-                                <p className="addDec">{add.addtitle}</p>
+                                <div className="location">{add.gameTitle} • {add.location}</div>
+                                <p className="addDec">{add.addTitle}</p>
                                 <p className="vbm">Vill byta mot:</p>
-                                <p className="vbm-tag">{add.vbm}</p>
+                                <p className="vbm-tag">{add.tradeFor}</p>
                             </div>
                         </>
                     </div>

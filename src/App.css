@@ -546,6 +546,10 @@ margin-right: 40px;
   min-width: 250px;
 }
 
+.box :hover {
+  cursor: pointer;
+}
+
 .game-modal-description {
   font-family: Poppins;
   color:white;

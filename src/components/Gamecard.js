@@ -12,7 +12,7 @@ const Gamecard = ({game}) => {
   return (
     <div className="container">
       {game.map( game =>
-        <div className="box col col-md-3">
+        <div className="box col col-md-3" onClick={() => history.push("/GameAdds/" + game.id)}>
           <img className="bild" src={game.imageURL} alt={game.title} />
           <p className="spelnamn">{game.title}</p>
           <button className="knapp" onClick={() => history.push("/GameAdds/" + game.id)}>
