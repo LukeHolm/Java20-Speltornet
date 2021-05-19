@@ -1,16 +1,16 @@
 [
     {
         "id": 1,
-        "title": "Pandemic",
-        "addtitle": "Pandemic i gott skick",
-        "addtext": "Pandemic i fint skick bytes bort Hej, jag säljer mitt begagnade Catan. Det är inte spelat mer än några gånger och alla delar finns kvar. Den lite lite sliten på hörnen.",
+        "game-title": "Pandemic",
+        "add-title": "Pandemic i gott skick",
+        "add-desription": "Pandemic i fint skick bytes bort Hej, jag säljer mitt begagnade Catan. Det är inte spelat mer än några gånger och alla delar finns kvar. Den lite lite sliten på hörnen.",
         "condition": "Nyskick",
-        "conddesc": "Spelet är lite slitet i hörnet men annars är det i bra skick. Jag har tappat bort ena spelbiten och det fattas tre kort och fyra pengar.",
-        "parts": true,
-        "vbm": ["Monopol ", "Catan ", "Diamanten "],
-        "frakt": false,
+        "condition-desription": "Spelet är lite slitet i hörnet men annars är det i bra skick. Jag har tappat bort ena spelbiten och det fattas tre kort och fyra pengar.",
+        "missing-parts": true,
+        "trade-for": ["Monopol ", "Catan ", "Diamanten "],
+        "shipping": false,
         "location": "Stockholm",
-        "imageURL": ["https://media.newyorker.com/photos/5f0392652385d52b037bf56f/master/w_2560%2Cc_limit/Jahromi-Pandemictheboardgame.jpg", "https://npr.brightspotcdn.com/dims4/default/fbee521/2147483647/strip/true/crop/1431x1073+0+0/resize/880x660!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Flegacy%2Fsites%2Fkunc%2Ffiles%2F202006%2Fpandemic_board_game_2020_SW.jpg", "https://cdn.arstechnica.net/wp-content/uploads/2016/03/IMG_9737-1-980x778.jpg", "https://npr.brightspotcdn.com/dims4/default/0909372/2147483647/strip/true/crop/1430x1318+0+0/resize/880x811!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Flegacy%2Fsites%2Fkunc%2Ffiles%2F202006%2Fpandemic_board_game_overhead_2020_SW.jpg"]
+        "image-URL": ["https://media.newyorker.com/photos/5f0392652385d52b037bf56f/master/w_2560%2Cc_limit/Jahromi-Pandemictheboardgame.jpg", "https://npr.brightspotcdn.com/dims4/default/fbee521/2147483647/strip/true/crop/1431x1073+0+0/resize/880x660!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Flegacy%2Fsites%2Fkunc%2Ffiles%2F202006%2Fpandemic_board_game_2020_SW.jpg", "https://cdn.arstechnica.net/wp-content/uploads/2016/03/IMG_9737-1-980x778.jpg", "https://npr.brightspotcdn.com/dims4/default/0909372/2147483647/strip/true/crop/1430x1318+0+0/resize/880x811!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Flegacy%2Fsites%2Fkunc%2Ffiles%2F202006%2Fpandemic_board_game_overhead_2020_SW.jpg"]
     },
     {
         "id": 2,
