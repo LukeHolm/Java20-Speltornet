@@ -16,35 +16,64 @@ const Form = () => {
   const [headline, setHeadline] = useState("");
   const [greeting, setGreeting] = useState("");
 
-  // const setData = localStorage.getItem("games2", JSON.stringify({}));
-  //console.log(JSON.parse(getData)[3].title);
+  const URL = 'https://609a4cbe0f5a13001721a8af.mockapi.io/ContactForm'
+  
+    //   const postData = () => {
+    //     fetch(URL, {
+    //         method: "POST",
+    //         headers: {
+    //             'content-type': 'application/json'
+    //         },
+    //         //TODO: Lägg in fler variabler
+    //         body: JSON.stringify(requestBody)
+    //     }).then(res => res.json())
+         
+    // }
 
-  function addEntry() {
-    // Parse any JSON previously stored in allEntries
-    var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
-    if(existingEntries == null) existingEntries = [];
-    var entryTitle = JSON.parse()
-    var entryText = document.getElementById("entryText").value;
-    var entry = {
-        "name": entryTitle,
-        "description": entryText
-    };
-    localStorage.setItem("entry", JSON.stringify(entry));
-    // Save allEntries back to local storage
-    existingEntries.push(entry);
-    localStorage.setItem("allEntries", JSON.stringify(existingEntries));
-};
+    
+    // const submitForm1 = (event) => {
+    //     // Hindrar formuläret från att ladda om sidan. 
+    //     event.preventDefault();
+    //     postData();
+    //     alert(['Rubrik: ' + headline, 'Hälsning: ' + greeting]); 
+    //     console.log(greeting);
+    //   }
+
+      const submitForm = (event) => {
+        event.preventDefault();
+
+        const requestBody = {
+            headline: headline,
+            gameCondition: "",
+            missingParts: false,
+            partsComment: "",
+            greeting: greeting,
+            image: ""
+        };
+
+        fetch(URL, {
+            method: 'POST',
+            header: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({requestBody})
+        }).then(responseFromAPI => {
+            if(responseFromAPI.status === 404) {
+                alert("Det gick fel, sidan finns inte");
+            }
+            else {
+                alert("Det gick bra!");
+                setHeadline('');
+                setGreeting('');
+            }
+             console.log("HEHEHEEHEHEH", responseFromAPI.status)
+             console.log(requestBody)
+        });
+    }
+        
 
 
 
-  const submitForm = (event) => {
-    // Hindrar formuläret från att ladda om sidan.
-    event.preventDefault();
-    const formObject = {name: headline, description: greeting};
-    localStorage.setItem("games1", JSON.stringify(formObject));
-    alert(["Rubrik: " + headline, "Hälsning: " + greeting]);
-    console.log(greeting);
-  };
 
   return (
     <div className="wrapper">
