@@ -23,21 +23,19 @@ const Form = () => {
     // Hindrar formuläret från att ladda om sidan.
     event.preventDefault();
     const formObject = {name: headline, description: greeting};
-    localStorage.setItem("games", JSON.stringify(formObject));
+    localStorage.setItem(formObject.headline, JSON.stringify(formObject));
     alert(["Rubrik: " + headline, "Hälsning: " + greeting]);
     console.log(greeting);
   };
 
   return (
     <div className="wrapper">
-      {/*Event är det som triggas av ett knapptryck (tex). 
-            onSubmit är ett event i sig som kan säga att något ska triggas, kan skicka iväg sitt egna event.
-            submitForm är JS-funktion som hämtar värden.   */}
       <form onSubmit={(event) => submitForm(event)}>
         <div className="col">
           <div className="form">
             {/* TODO: Bryta ut till egen komponent. */}
             <div className="form-element">
+              {/* TODO: Hämta in spelets namn */}
               <h4 className="form-text">Vad du vill byta mot Catan?</h4>
             </div>
             <div className="row">
