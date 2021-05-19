@@ -1,12 +1,15 @@
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {useEffect, useState} from 'react'
+
 import "./App.css";
+
 import Landingpage from "./components/Landingpage";
 import Details from "./components/Details";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import CreateAdd from "./components/CreateAdd";
 import GameAdds from "./components/GameAdds";
 import LoadData from "./components/LoadData";
 import Footer from './components/Footer'
-import {useEffect, useState} from 'react'
+
 
 function App() {
 
@@ -30,7 +33,9 @@ function App() {
           <Route exact path="/GameAdds/:gameId" component={GameAdds}>
             <GameAdds gamecard={gamecard} gameAdd={gameAdd}/>
           </Route>
-          <Route path="GameAdds/:gameId/:addId" component={Details} />
+          <Route path="/Details/:addId" component={Details}>
+            <Details gameAdd={gameAdd}/>
+          </Route>
           <Route exact path="/LoadData" component={LoadData} />
         </Switch>
       </Router>

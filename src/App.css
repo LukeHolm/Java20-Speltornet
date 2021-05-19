@@ -10,6 +10,10 @@
   pointer-events: none;
 }
 
+body{
+  color: #1A3455;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -766,6 +770,10 @@ margin-right: 40px;
   margin-right: 25px;
 }
 
+.smallAdd:hover{
+  text-decoration: underline;
+}
+
 .addImg{
   width: 160px;
   height: 170px;
@@ -786,6 +794,8 @@ margin-right: 40px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
+
+
 
 .tillbaka-knapp{
   padding-top: 50px;
@@ -816,4 +826,11 @@ margin-right: 40px;
   font-size: 13px;
   font-weight: 400;
   border: 0px solid #1A3455;
+}
+
+
+.testaren{
+  border:1px solid #1A3455;
+  border-radius: 20px 20px 0px 0px;
+  padding:10px;
 }
