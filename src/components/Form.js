@@ -55,71 +55,7 @@ const Form = () => {
             {/* TODO: Bryta ut till egen komponent. */}
             <div className="form-element">
               {/* TODO: Hämta in spelets namn */}
-              <h4 className="form-text">Vad du vill byta mot Catan?</h4>
             </div>
-            <div className="row">
-              <div className="col-sm-2">
-                <p className="bold">Du vill ha</p>
-                <input
-                  type="radio"
-                  id="radio"
-                  name="boardgame"
-                  value="myBoardgame"
-                />
-
-                {/*TODO: Spelnamnen ska ej vara hårdkodade. 
-                        Styla radio buttons, se sparad länk */}
-                <label for="myBoardgame" id="radio">
-                  Catan
-                </label>
-              </div>
-
-              <div className="col-sm-4 offset-1">
-                <p className="bold">Du vill byta bort</p>
-                <div className="tagg">Välj ett av alternativen nedanför:</div>
-                {/*TODO: onClick...fold out function */}
-
-                <input
-                  type="radio"
-                  id="radio"
-                  name="trade"
-                  value="otherBoardgame"
-                />
-                <label for="otherBoardgame">Ticket to ride</label>
-                <input
-                  type="radio"
-                  id="radio"
-                  name="trade"
-                  value="otherBoardgame"
-                />
-                <label for="otherBoardgame">Monopol</label>
-                <br></br>
-                <input
-                  type="radio"
-                  id="radio"
-                  name="trade"
-                  value="otherBoardgame"
-                />
-                <label for="otherBoardgame">Diamanten</label>
-                <input
-                  type="radio"
-                  id="radio"
-                  name="trade"
-                  value="otherBoardgame"
-                />
-                <label for="otherBoardgame">Game of thrones</label>
-                <br></br>
-                <input
-                  type="radio"
-                  id="radio"
-                  name="trade"
-                  value="otherBoardgame"
-                />
-                <label for="otherBoardgame">Risk</label>
-                <br></br>
-              </div>
-            </div>
-
             {/* Delen som ska fällas ut... */}
             <h4 className="form-text form-element">Skicka förfrågan</h4>
             <div className="form-element">
@@ -277,7 +213,7 @@ const Form = () => {
             </p>
 
             <div className="form-element">
-              <button
+              {/* <button
                 className="cancel"
                 onClick={() => {
                   if (window.confirm("Vill du verkligen avsluta?")) {
@@ -286,7 +222,7 @@ const Form = () => {
                 }}
               >
                 Avbryt
-              </button>
+              </button> */}
               <input
                 className="send-request"
                 type="submit"

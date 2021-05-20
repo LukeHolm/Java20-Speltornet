@@ -722,7 +722,7 @@ p {
 }
 
 #radio-text {
-  margin-right: 40px;
+  margin-right: 20px;
   margin-left: 10px;
 }
 
@@ -882,4 +882,15 @@ p {
   font-size: 10px;
   text-align: right;
   padding-top: 3px;
+}
+
+
+/*------------------------------------------------------------- Form foldout -------------------------------------------------------*/
+
+.gamechoice {
+  border: 2px solid #6D85AA;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
