@@ -1,49 +1,47 @@
-import React, { useState } from 'react'
-import Camera from './Camera'
-import { useHistory } from 'react-router-dom'
-
-/*Skapa övre del med bilder (bl.a. en funktion slideshow) och text om spelet som ska bytas bort. 4 olika element*/
-/*Färdigställa formuläret enligt utseende i Figma */
-
-/*1. Spara variabler i en array (det som användaren fyller i) */
-/*2. Skapa en nedfällningsfunktion(fold down?) med onClick (Du vill byta bort)*/
-/*3. Skriva array/objekt till fil (databas)*/
-//Validering
+import React, { useState } from "react";
+import Camera from "./Camera";
+import { useHistory } from "react-router-dom";
 
 const Form = () => {
   let history = useHistory();
 
   const [headline, setHeadline] = useState("");
   const [greeting, setGreeting] = useState("");
+  const [condition, setCondtion] = useState("");
+  const [partsMissing, setPartsMissing] = useState("");
+  const [partsText, setPartsText] = useState("");
 
-  // const setData = localStorage.getItem("games2", JSON.stringify({}));
-  //console.log(JSON.parse(getData)[3].title);
-
-  function addEntry() {
-    // Parse any JSON previously stored in allEntries
-    var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
-    if(existingEntries == null) existingEntries = [];
-    var entryTitle = JSON.parse()
-    var entryText = document.getElementById("entryText").value;
-    var entry = {
-        "name": entryTitle,
-        "description": entryText
-    };
-    localStorage.setItem("entry", JSON.stringify(entry));
-    // Save allEntries back to local storage
-    existingEntries.push(entry);
-    localStorage.setItem("allEntries", JSON.stringify(existingEntries));
-};
-
-
+  const URL = "https://609a4cbe0f5a13001721a8af.mockapi.io/ContactForm";
 
   const submitForm = (event) => {
-    // Hindrar formuläret från att ladda om sidan.
     event.preventDefault();
-    const formObject = {name: headline, description: greeting};
-    localStorage.setItem("games1", JSON.stringify(formObject));
-    alert(["Rubrik: " + headline, "Hälsning: " + greeting]);
-    console.log(greeting);
+
+    const requestBody = {
+      headline: headline,
+      gameCondition: condition,
+      missingParts: partsMissing,
+      partsComment: partsText,
+      greeting: greeting,
+      image: [],
+    };
+
+    fetch(URL, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({ requestBody }),
+    }).then((responseFromAPI) => {
+      if (responseFromAPI.status === 404) {
+        alert("Det gick fel, sidan finns inte");
+      } else {
+        alert("Det gick bra!");
+        setHeadline("");
+        setGreeting("");
+      }
+      console.log("HEHEHEEHEHEH", responseFromAPI.status);
+      console.log(requestBody);
+    });
   };
 
   return (
@@ -137,7 +135,16 @@ const Form = () => {
 
             <div className="form-element">
               <h5>Slitage:</h5>
-              <input type="radio" id="radio" name="gameCondition" value="new" />
+              <input
+                type="radio"
+                id="radio"
+                name="gameCondition"
+                value="new"
+                checked={condition === "new"}
+                onChange={(e) => {
+                  setCondtion(e.target.value);
+                }}
+              />
               <label for="new" id="radio-text">
                 Nyskick
               </label>
@@ -147,6 +154,10 @@ const Form = () => {
                 id="radio"
                 name="gameCondition"
                 value="littleWorn"
+                checked={condition === "littleWorn"}
+                onChange={(e) => {
+                  setCondtion(e.target.value);
+                }}
               />
               <label for="littleWorn" id="radio-text">
                 Lite slitet
@@ -157,50 +168,48 @@ const Form = () => {
                 id="radio"
                 name="gameCondition"
                 value="muchWorn"
+                checked={condition === "muchWorn"}
+                onChange={(e) => {
+                  setCondtion(e.target.value);
+                }}
               />
               <label for="muchWorn" id="radio-text">
                 Mycket slitet
               </label>
             </div>
-{/* 
-            <div>
+
+            {/* Testdel radiobuttons */}
+
+            <div className="form-element">
               <h5>Komponenter:</h5>
               <input
                 type="radio"
                 id="radio"
-                name="gameComponents"
-                value="new"
+                name="components"
+                value="no"
+                checked={partsMissing === "no"}
+                onChange={(e) => {
+                  setPartsMissing(e.target.value);
+                }}
               />
-              <label for="allParts" id="radio-text">
-                Ingen del saknas
+              <label for="no" id="radio-text">
+                Inga delar saknas
               </label>
+
               <input
                 type="radio"
                 id="radio"
-                name="gameComponents"
-                value="littleWorn"
+                name="components"
+                value="yes"
+                checked={partsMissing === "yes"}
+                onChange={(e) => {
+                  setPartsMissing(e.target.value);
+                }}
               />
-              <label for="partsMissing" id="radio-text">
+              <label for="yes" id="radio-text">
                 Delar saknas
               </label>
-            </div> */}
-
-            {/* Testdel radiobuttons */}
-            <label className="radio">
-              <span className="radio__input">
-                <input type="radio" name="components" />
-                <span className="radio__control"></span>
-              </span>
-              <span className="radio__label">Ingen del saknas</span>
-            </label>
-
-            <label className="radio">
-              <span className="radio__input">
-                <input type="radio" name="components" />
-                <span className="radio__control"></span>
-              </span>
-              <span className="radio__label">Delar saknas</span>
-            </label>
+            </div>
 
             <div className="form-element">
               <h5>Kommentarer</h5>
@@ -214,6 +223,8 @@ const Form = () => {
                 rows="5"
                 cols="30"
                 placeholder="Skriv här..."
+                value={partsText}
+                onChange={(e) => setPartsText(e.target.value)}
               ></textarea>
             </div>
 
@@ -223,13 +234,13 @@ const Form = () => {
                 Skriv en kort hälsning till bytaren!{" "}
               </label>
               <br />
-              <input
+              <textarea
                 type="textarea"
                 className="textarea"
                 name="greeting"
                 rows="5"
                 cols="30"
-                placeholder="Skriv här"
+                placeholder="Skriv här..."
                 value={greeting}
                 onChange={(event) => setGreeting(event.target.value)}
               />
@@ -255,6 +266,12 @@ const Form = () => {
                 </div>
               </div>
             </div>
+
+            <p className="text-form-bottom">
+              Läs igenom och skicka din förfrågan.
+              <br />
+              Bytaren kommer därefter bli notifierad om din förfrågan.{" "}
+            </p>
 
             <div className="form-element">
               <button
