@@ -56,6 +56,7 @@ body {
   height: 601px;
   width: 100%;
   display: inline-block;
+  text-align:center;
 }
 
 .no-gutters {
