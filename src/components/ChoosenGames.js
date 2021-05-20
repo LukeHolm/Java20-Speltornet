@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import Form from "./Form";
 
-const ChoosenGames = ({ gameAdd }) => {
+const ChoosenGames = ({ gameAdd, addId}) => {
 
 
-    let addId = 3;
+    //let addId = 3;
 
     const [show, setShow] = useState(false)
 

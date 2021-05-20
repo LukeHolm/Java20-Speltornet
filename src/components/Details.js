@@ -5,6 +5,7 @@ import HeaderThin from "./HeaderThin";
 import Topfooter from "./Topfooter";
 import Footer from "./Footer";
 import Condition from "./Condition";
+import ChoosenGames from "./ChoosenGames";
 
 const Details = ({ gameAdd, users }) => {
 
@@ -56,6 +57,7 @@ const Details = ({ gameAdd, users }) => {
             </div>
           </div>
         </>
+        <ChoosenGames gameAdd={gameAdd} addId={renderAdd.addId} />
         <button className="cancel" onClick={() => history.goBack(-1)}>Tillbaka</button>
       </div>
       <Topfooter />

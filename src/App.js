@@ -41,7 +41,7 @@ function App() {
           </Route>
           <Route exact path="/LoadData" component={LoadData} />
           <Route path="/ChoosenGames" component={ChoosenGames}>
-            <ChoosenGames gameAdd={gameAdd}/>
+            <ChoosenGames gameAdd={gameAdd} addId={2}/>
           </Route>
         </Switch>
       </Router>
