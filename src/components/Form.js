@@ -1,14 +1,6 @@
-import React, { useState } from 'react'
-import Camera from './Camera'
-import { useHistory } from 'react-router-dom'
-
-/*Skapa övre del med bilder (bl.a. en funktion slideshow) och text om spelet som ska bytas bort. 4 olika element*/
-/*Färdigställa formuläret enligt utseende i Figma */
-
-/*1. Spara variabler i en array (det som användaren fyller i) */
-/*2. Skapa en nedfällningsfunktion(fold down?) med onClick (Du vill byta bort)*/
-/*3. Skriva array/objekt till fil (databas)*/
-//Validering
+import React, { useState } from "react";
+import Camera from "./Camera";
+import { useHistory } from "react-router-dom";
 
 const Form = () => {
   let history = useHistory();
@@ -16,46 +8,41 @@ const Form = () => {
   const [headline, setHeadline] = useState("");
   const [greeting, setGreeting] = useState("");
   const [condition, setCondtion] = useState("");
-  const [partsMissing, setPartsMissing] = useState("")
-  const [partsText, setPartsText] = useState("")
+  const [partsMissing, setPartsMissing] = useState("");
+  const [partsText, setPartsText] = useState("");
 
-  const URL = 'https://609a4cbe0f5a13001721a8af.mockapi.io/ContactForm'
+  const URL = "https://609a4cbe0f5a13001721a8af.mockapi.io/ContactForm";
 
-      const submitForm = (event) => {
-        event.preventDefault();
+  const submitForm = (event) => {
+    event.preventDefault();
 
-        const requestBody = {
-            headline: headline,
-            gameCondition: condition,
-            missingParts: partsMissing,
-            partsComment: partsText,
-            greeting: greeting,
-            image: []
-        };
+    const requestBody = {
+      headline: headline,
+      gameCondition: condition,
+      missingParts: partsMissing,
+      partsComment: partsText,
+      greeting: greeting,
+      image: [],
+    };
 
-        fetch(URL, {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify({requestBody})
-        }).then(responseFromAPI => {
-            if(responseFromAPI.status === 404) {
-                alert("Det gick fel, sidan finns inte");
-            }
-            else {
-                alert("Det gick bra!");
-                setHeadline('');
-                setGreeting('');
-            }
-             console.log("HEHEHEEHEHEH", responseFromAPI.status)
-             console.log(requestBody)
-        });
-    }
-        
-
-
-
+    fetch(URL, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({ requestBody }),
+    }).then((responseFromAPI) => {
+      if (responseFromAPI.status === 404) {
+        alert("Det gick fel, sidan finns inte");
+      } else {
+        alert("Det gick bra!");
+        setHeadline("");
+        setGreeting("");
+      }
+      console.log("HEHEHEEHEHEH", responseFromAPI.status);
+      console.log(requestBody);
+    });
+  };
 
   return (
     <div className="wrapper">
@@ -148,13 +135,16 @@ const Form = () => {
 
             <div className="form-element">
               <h5>Slitage:</h5>
-              <input 
+              <input
                 type="radio"
                 id="radio"
                 name="gameCondition"
                 value="new"
-                checked= {condition === "new"}
-                onChange={(e) =>{ setCondtion(e.target.value)}} />
+                checked={condition === "new"}
+                onChange={(e) => {
+                  setCondtion(e.target.value);
+                }}
+              />
               <label for="new" id="radio-text">
                 Nyskick
               </label>
@@ -164,9 +154,11 @@ const Form = () => {
                 id="radio"
                 name="gameCondition"
                 value="littleWorn"
-                checked= {condition === "littleWorn"}
-                onChange={(e) => {setCondtion(e.target.value)}}
-                />
+                checked={condition === "littleWorn"}
+                onChange={(e) => {
+                  setCondtion(e.target.value);
+                }}
+              />
               <label for="littleWorn" id="radio-text">
                 Lite slitet
               </label>
@@ -176,24 +168,30 @@ const Form = () => {
                 id="radio"
                 name="gameCondition"
                 value="muchWorn"
-                checked= {condition === "muchWorn"}
-                onChange={(e) => {setCondtion(e.target.value)}} />
+                checked={condition === "muchWorn"}
+                onChange={(e) => {
+                  setCondtion(e.target.value);
+                }}
+              />
               <label for="muchWorn" id="radio-text">
                 Mycket slitet
               </label>
             </div>
 
             {/* Testdel radiobuttons */}
-            
+
             <div className="form-element">
               <h5>Komponenter:</h5>
-              <input 
+              <input
                 type="radio"
                 id="radio"
                 name="components"
                 value="no"
-                checked= {partsMissing === "no"}
-                onChange={(e) =>{ setPartsMissing(e.target.value)}} />
+                checked={partsMissing === "no"}
+                onChange={(e) => {
+                  setPartsMissing(e.target.value);
+                }}
+              />
               <label for="no" id="radio-text">
                 Inga delar saknas
               </label>
@@ -203,9 +201,11 @@ const Form = () => {
                 id="radio"
                 name="components"
                 value="yes"
-                checked= {partsMissing === "yes"}
-                onChange={(e) => {setPartsMissing(e.target.value)}}
-                />
+                checked={partsMissing === "yes"}
+                onChange={(e) => {
+                  setPartsMissing(e.target.value);
+                }}
+              />
               <label for="yes" id="radio-text">
                 Delar saknas
               </label>
@@ -223,8 +223,8 @@ const Form = () => {
                 rows="5"
                 cols="30"
                 placeholder="Skriv här..."
-                value= {partsText}
-                onChange= {(e) => setPartsText(e.target.value)}
+                value={partsText}
+                onChange={(e) => setPartsText(e.target.value)}
               ></textarea>
             </div>
 
@@ -266,6 +266,12 @@ const Form = () => {
                 </div>
               </div>
             </div>
+
+            <p className="text-form-bottom">
+              Läs igenom och skicka din förfrågan.
+              <br />
+              Bytaren kommer därefter bli notifierad om din förfrågan.{" "}
+            </p>
 
             <div className="form-element">
               <button
