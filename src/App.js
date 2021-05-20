@@ -9,6 +9,7 @@ import CreateAdd from "./components/CreateAdd";
 import GameAdds from "./components/GameAdds";
 import LoadData from "./components/LoadData";
 import Footer from './components/Footer'
+import ChoosenGames from "./components/ChoosenGames";
 
 
 function App() {
@@ -37,6 +38,9 @@ function App() {
             <Details gameAdd={gameAdd}/>
           </Route>
           <Route exact path="/LoadData" component={LoadData} />
+          <Route path="/ChoosenGames" component={ChoosenGames}>
+            <ChoosenGames gameAdd={gameAdd}/>
+          </Route>
         </Switch>
       </Router>
       <Footer />

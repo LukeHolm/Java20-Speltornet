@@ -38,6 +38,9 @@ const Form = () => {
         alert("Det gick bra!");
         setHeadline("");
         setGreeting("");
+        setCondtion("");
+        setPartsMissing("");
+        setPartsText("");
       }
       console.log("HEHEHEEHEHEH", responseFromAPI.status);
       console.log(requestBody);
@@ -137,7 +140,7 @@ const Form = () => {
               <h5>Slitage:</h5>
               <input
                 type="radio"
-                id="radio"
+                id="new"
                 name="gameCondition"
                 value="new"
                 checked={condition === "new"}
@@ -151,7 +154,7 @@ const Form = () => {
 
               <input
                 type="radio"
-                id="radio"
+                id="littleWorn"
                 name="gameCondition"
                 value="littleWorn"
                 checked={condition === "littleWorn"}
@@ -165,7 +168,7 @@ const Form = () => {
 
               <input
                 type="radio"
-                id="radio"
+                id="muchWorn"
                 name="gameCondition"
                 value="muchWorn"
                 checked={condition === "muchWorn"}
@@ -184,7 +187,7 @@ const Form = () => {
               <h5>Komponenter:</h5>
               <input
                 type="radio"
-                id="radio"
+                id="no"
                 name="components"
                 value="no"
                 checked={partsMissing === "no"}
@@ -198,7 +201,7 @@ const Form = () => {
 
               <input
                 type="radio"
-                id="radio"
+                id="yes"
                 name="components"
                 value="yes"
                 checked={partsMissing === "yes"}
