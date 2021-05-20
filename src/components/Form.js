@@ -15,45 +15,27 @@ const Form = () => {
 
   const [headline, setHeadline] = useState("");
   const [greeting, setGreeting] = useState("");
+  const [condition, setCondtion] = useState("");
+  const [partsMissing, setPartsMissing] = useState("")
+  const [partsText, setPartsText] = useState("")
 
   const URL = 'https://609a4cbe0f5a13001721a8af.mockapi.io/ContactForm'
-  
-    //   const postData = () => {
-    //     fetch(URL, {
-    //         method: "POST",
-    //         headers: {
-    //             'content-type': 'application/json'
-    //         },
-    //         //TODO: Lägg in fler variabler
-    //         body: JSON.stringify(requestBody)
-    //     }).then(res => res.json())
-         
-    // }
-
-    
-    // const submitForm1 = (event) => {
-    //     // Hindrar formuläret från att ladda om sidan. 
-    //     event.preventDefault();
-    //     postData();
-    //     alert(['Rubrik: ' + headline, 'Hälsning: ' + greeting]); 
-    //     console.log(greeting);
-    //   }
 
       const submitForm = (event) => {
         event.preventDefault();
 
         const requestBody = {
             headline: headline,
-            gameCondition: "",
-            missingParts: false,
-            partsComment: "",
+            gameCondition: condition,
+            missingParts: partsMissing,
+            partsComment: partsText,
             greeting: greeting,
-            image: ""
+            image: []
         };
 
         fetch(URL, {
             method: 'POST',
-            header: {
+            headers: {
                 'content-type': 'application/json'
             },
             body: JSON.stringify({requestBody})
@@ -166,7 +148,13 @@ const Form = () => {
 
             <div className="form-element">
               <h5>Slitage:</h5>
-              <input type="radio" id="radio" name="gameCondition" value="new" />
+              <input 
+                type="radio"
+                id="radio"
+                name="gameCondition"
+                value="new"
+                checked= {condition === "new"}
+                onChange={(e) =>{ setCondtion(e.target.value)}} />
               <label for="new" id="radio-text">
                 Nyskick
               </label>
@@ -176,7 +164,9 @@ const Form = () => {
                 id="radio"
                 name="gameCondition"
                 value="littleWorn"
-              />
+                checked= {condition === "littleWorn"}
+                onChange={(e) => {setCondtion(e.target.value)}}
+                />
               <label for="littleWorn" id="radio-text">
                 Lite slitet
               </label>
@@ -186,50 +176,40 @@ const Form = () => {
                 id="radio"
                 name="gameCondition"
                 value="muchWorn"
-              />
+                checked= {condition === "muchWorn"}
+                onChange={(e) => {setCondtion(e.target.value)}} />
               <label for="muchWorn" id="radio-text">
                 Mycket slitet
               </label>
             </div>
-{/* 
-            <div>
-              <h5>Komponenter:</h5>
-              <input
-                type="radio"
-                id="radio"
-                name="gameComponents"
-                value="new"
-              />
-              <label for="allParts" id="radio-text">
-                Ingen del saknas
-              </label>
-              <input
-                type="radio"
-                id="radio"
-                name="gameComponents"
-                value="littleWorn"
-              />
-              <label for="partsMissing" id="radio-text">
-                Delar saknas
-              </label>
-            </div> */}
 
             {/* Testdel radiobuttons */}
-            <label className="radio">
-              <span className="radio__input">
-                <input type="radio" name="components" />
-                <span className="radio__control"></span>
-              </span>
-              <span className="radio__label">Ingen del saknas</span>
-            </label>
+            
+            <div className="form-element">
+              <h5>Komponenter:</h5>
+              <input 
+                type="radio"
+                id="radio"
+                name="components"
+                value="no"
+                checked= {partsMissing === "no"}
+                onChange={(e) =>{ setPartsMissing(e.target.value)}} />
+              <label for="no" id="radio-text">
+                Inga delar saknas
+              </label>
 
-            <label className="radio">
-              <span className="radio__input">
-                <input type="radio" name="components" />
-                <span className="radio__control"></span>
-              </span>
-              <span className="radio__label">Delar saknas</span>
-            </label>
+              <input
+                type="radio"
+                id="radio"
+                name="components"
+                value="yes"
+                checked= {partsMissing === "yes"}
+                onChange={(e) => {setPartsMissing(e.target.value)}}
+                />
+              <label for="yes" id="radio-text">
+                Delar saknas
+              </label>
+            </div>
 
             <div className="form-element">
               <h5>Kommentarer</h5>
@@ -243,6 +223,8 @@ const Form = () => {
                 rows="5"
                 cols="30"
                 placeholder="Skriv här..."
+                value= {partsText}
+                onChange= {(e) => setPartsText(e.target.value)}
               ></textarea>
             </div>
 
@@ -252,13 +234,13 @@ const Form = () => {
                 Skriv en kort hälsning till bytaren!{" "}
               </label>
               <br />
-              <input
+              <textarea
                 type="textarea"
                 className="textarea"
                 name="greeting"
                 rows="5"
                 cols="30"
-                placeholder="Skriv här"
+                placeholder="Skriv här..."
                 value={greeting}
                 onChange={(event) => setGreeting(event.target.value)}
               />
