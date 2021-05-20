@@ -16,10 +16,12 @@ function App() {
 
   const [gamecard, setGamecard] = useState([]);
   const [gameAdd, setGameAdd] = useState([]);
+  const [users, setUsers] = useState([]);
 
   useEffect(() => {
       fetch('https://609a4cbe0f5a13001721a8af.mockapi.io/gamecatalog').then(response => response.json()).then(data => setGamecard(data))
       fetch('https://609a4cbe0f5a13001721a8af.mockapi.io/gamesavailable').then(response => response.json()).then(data => setGameAdd(data))
+      fetch('https://609a4cbe0f5a13001721a8af.mockapi.io/users').then(response => response.json()).then(data => setUsers(data))
   }, [])
 
 
@@ -35,7 +37,7 @@ function App() {
             <GameAdds gamecard={gamecard} gameAdd={gameAdd}/>
           </Route>
           <Route path="/Details/:addId" component={Details}>
-            <Details gameAdd={gameAdd}/>
+            <Details gameAdd={gameAdd} users={users}/>
           </Route>
           <Route exact path="/LoadData" component={LoadData} />
           <Route path="/ChoosenGames" component={ChoosenGames}>

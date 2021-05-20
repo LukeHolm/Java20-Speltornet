@@ -1,48 +1,61 @@
 import React from "react";
 import { useHistory, useParams } from 'react-router-dom';
+
 import HeaderThin from "./HeaderThin";
 import Topfooter from "./Topfooter";
 import Footer from "./Footer";
+import Condition from "./Condition";
 
-const Details = ({ gameAdd }) => {
+const Details = ({ gameAdd, users }) => {
 
   const { addId } = useParams();
   let history = useHistory();
+
+  const renderAdd = gameAdd.find(add => add.addId == addId);
+  const renderUser = users.find(user => user.userId == renderAdd.userId);
 
   return (
     <>
       <HeaderThin />
       <div className="container">
-        {gameAdd.filter(add => add.addId == addId).map(add =>
-          <div className="row testaren">
-            <div className="col-sm-4 testaren">
-              <img className="bild" src={add.imageURL} alt={add.gameTitle} />
+        <>
+          <h2 className="detailTitle">{renderAdd.gameTitle}</h2>
+          <div className="row">
+            <div className="col-sm-4">
+              <img className="detailBigImage" src={renderAdd.imageURL} alt={renderAdd.gameTitle} />
             </div>
-            <div className="col-sm-8 testaren">
-              <div className="row testaren">
-                <br />
+            <div className="col-sm-7">
+              <div className="row userInfoBar">
+                <div className="col-sm-1">
+                  <img className="userProfileImg" src={renderUser.img} alt={renderUser.userName} />
+                </div>
+                <div className="col-sm-6 userInfo">
+                  <p className="userName">{renderUser.userName}<br />
+                    <p className="tagg">Omdöme<br />{renderUser.rep}</p>
+                  </p>
+                </div>
+                <div className=" col-sm-5">
+                  <div className="detailLocation">{renderAdd.gameTitle} • {renderAdd.location}</div>
+                </div>
               </div>
-              <div className="row testaren">
-                <div className="col-sm-6 testaren">
-                  <p className="bold">{add.addTitle}</p>
-                  <p>{add.addDescription}</p>
+              <div className="row descriptionBox">
+                <div className="col-sm-6">
+                  <p className="bold">{renderAdd.addTitle}</p>
+                  <p>{renderAdd.addDescription}</p>
                   <p className="bold">Skickbeskrivning</p>
-                  <p>{add.conditionDescription}</p>
+                  <p>{renderAdd.conditionDescription}</p>
                 </div>
-                <div className="col-sm-5 offset-sm-1 testaren">
-                  <p>{add.condition}</p>
-                  {/* <p><MissingParts missingParts={add.missingParts}/></p> */}
+                <div className="col-sm-5 offset-sm-1">
+                  <p><Condition condition={renderAdd.condition} missingParts={renderAdd.missingParts}/></p>
                   <p className="bold">Frakt</p>
-                  <p>{add.shipping}</p>
+                  <p>{renderAdd.shipping}</p>
                   <p className="bold">Vill byta mot</p>
-                  <p>{add.tradeFor}</p>
+                  <p>{renderAdd.tradeFor}</p>
                 </div>
               </div>
             </div>
-
-
           </div>
-        )}
+        </>
         <button className="cancel" onClick={() => history.goBack(-1)}>Tillbaka</button>
       </div>
       <Topfooter />
