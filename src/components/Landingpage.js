@@ -13,7 +13,6 @@ const Landingpage = ({gamecard}) => {
         <>
         <Header />
         <Burger />
-        
         <Gamecard game={gamecard}/>
         <Topfooter />
     
