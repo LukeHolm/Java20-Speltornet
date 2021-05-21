@@ -10,7 +10,7 @@ const LoadData = ({gameTitle, gameAdd}) => {
     return (
         <>
             <div className="container">
-                <h3 className=" col-sm-8 offset-sm-1 addPresent">Annonser med {gameTitle}</h3>
+                <h3 className=" col-sm-8 offset-sm-0 addPresent">Annonser med {gameTitle}</h3>
                 {gameAdd.filter(game => game.gameTitle == gameTitle).map(add =>
                     <div className="col-sm-5 smallAdd" onClick={() => history.push("/Details/" + add.addId)}>
                         <>
@@ -26,7 +26,7 @@ const LoadData = ({gameTitle, gameAdd}) => {
                         </>
                     </div>
                 )}
-                <div className="col-sm-3 offset-sm-1 tillbaka-knapp">
+                <div className="col-sm-3 offset-sm-0 tillbaka-knapp">
                 <button className="cancel" onClick={() => history.goBack(-1)}>Tillbaka</button>
                 </div>
             </div>

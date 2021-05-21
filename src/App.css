@@ -103,7 +103,7 @@ body {
   font-size: 34.3559px;
   line-height: 42px;
   color: #FFFFFF;
-  margin-left: 35px;
+  margin-left: 5px;
   margin-top: 52px;
 }
 
@@ -111,7 +111,7 @@ body {
   border: none;
   height: 1px;
   background-color: #1A3455;
-  margin-left: 100px;
+  margin-left: 00px;
   margin-right: 120px;
 }
 
@@ -357,8 +357,9 @@ p {
   color: #1A3455;
   background-color: #FFFFFF;
   padding-top: 100px;
-  padding-bottom: 0px;
-  padding-left: 100px;
+  padding-bottom: 20px;
+  padding-left: 16px;
+  
 }
 
 .tornlogga-inverterad {
@@ -390,6 +391,8 @@ p {
   font-family: Montserrat;
   font-weight: 600;
   font-size: 22px;
+  color: #1A3455;
+  padding-top: 10px;
 }
 
 .body-bottom {
@@ -643,6 +646,10 @@ p {
   text-transform: uppercase;
 }
 
+.box:hover .knapp {
+  background-color: #CA1758;
+}
+
 .cancel {
   background-color: #FFFFFF;
   color: #E21c64;
@@ -667,6 +674,7 @@ p {
   font-weight: 600;
   font-size: 18px;
   text-align: center;
+  align-items: right;
 }
 
 .addBottom {

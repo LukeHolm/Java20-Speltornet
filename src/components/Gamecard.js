@@ -11,6 +11,7 @@ const Gamecard = ({game}) => {
 
   return (
     <div className="container">
+      <h1 className="speltorget col-sm-4 offset-sm-0">Speltorget</h1>
       {game.map( game =>
         <div className="box col col-md-3" onClick={() => history.push("/GameAdds/" + game.id)}>
           <img className="bild" src={game.imageURL} alt={game.title} />

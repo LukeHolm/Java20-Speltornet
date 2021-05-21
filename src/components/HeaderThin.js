@@ -9,12 +9,12 @@ const HeaderThin = () => {
         <header className="Thin-header">
             <Burger/>
             <div className="row">
-                <div className="col-sm-1">
+                <div className="col-sm-0">
                     <Link to="/">
                     <img className="tornlogga-invert" src={Loggainvert} alt="alt" />
                     </Link>
                 </div>
-                <div className="col-sm-1 speltornet-vit">
+                <div className="col-sm-1 offset-sm-0 speltornet-vit">
                     Speltornet
                         </div>
             </div>

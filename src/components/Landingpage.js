@@ -13,7 +13,7 @@ const Landingpage = ({gamecard}) => {
         <>
         <Header />
         <Burger />
-        <h1 className="speltorget col-sm-2 offset-sm-2">Speltorget</h1>
+        
         <Gamecard game={gamecard}/>
         <Topfooter />
     

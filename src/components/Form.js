@@ -35,7 +35,7 @@ const Form = () => {
       if (responseFromAPI.status === 404) {
         alert("Det gick fel, sidan finns inte");
       } else {
-        alert("Det gick bra!");
+        alert("Bytesförfrågan skickad!");
         setHeadline("");
         setGreeting("");
         setCondtion("");
@@ -54,6 +54,7 @@ const Form = () => {
           <div className="form">
             {/* TODO: Bryta ut till egen komponent. */}
             <div className="form-element">
+              <p className="line col-sm-12 offset-sm-0"></p>
               {/* TODO: Hämta in spelets namn */}
             </div>
             {/* Delen som ska fällas ut... */}
