@@ -179,6 +179,7 @@ p {
 
 .form-text {
   color: #E21C64;
+  margin-bottom: 30px;
 }
 
 .form-h1 {
@@ -226,6 +227,10 @@ p {
 .form {
   display: block;
   text-align: left;
+}
+
+.send-trade-button {
+  text-align: center;
 }
 
 /*.box {

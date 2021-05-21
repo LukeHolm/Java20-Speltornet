@@ -213,7 +213,7 @@ const Form = () => {
               Bytaren kommer därefter bli notifierad om din förfrågan.{" "}
             </p>
 
-            <div className="form-element">
+            <div className="send-trade-button">
               {/* <button
                 className="cancel"
                 onClick={() => {

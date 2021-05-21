@@ -10,7 +10,8 @@ const ChoosenGames = ({ gameAdd, addId}) => {
 
   return (
     <div className="container gamechoice col-sm-11 offset-sm-0">
-        <h4 className="form-text col">Vad du vill byta mot {renderGame.gameTitle}?</h4>
+      <div className="col-sm-11 offset-sm-2">
+        <h4 className="form-text">Vad du vill byta mot {renderGame.gameTitle}?</h4>
       <div className="row">
         <div className="col-sm-2 col">
           <p className="bold">Du vill ha</p>
@@ -23,7 +24,7 @@ const ChoosenGames = ({ gameAdd, addId}) => {
           </label>
         </div>
 
-        <div className="col-sm-4 offset-1" >
+        <div className="col-sm-6 offset-1" >
           <p className="bold">Du vill byta bort</p>
           <div className="tagg">Välj ett av alternativen nedanför:</div>
           {/*TODO: onClick...fold out function */}
@@ -35,6 +36,7 @@ const ChoosenGames = ({ gameAdd, addId}) => {
           <label for={game} id="radio-text">{game}</label>
           </>
           )}
+          </div>
           { show && <Form />}
         </div>
       </div>
