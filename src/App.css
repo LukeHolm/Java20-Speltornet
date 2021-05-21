@@ -898,6 +898,34 @@ p {
   padding-top: 3px;
 }
 
+/*------------------------------------------------------------- Condition -------------------------------------------------------*/
+
+.good{
+width: 82px;
+height: 28px;
+background-color: #DFFAE5;
+color:#1A3455;
+border:1px solid #1A3455;
+text-align: center;
+}
+
+.worn{
+  width: 89px;
+  height: 28px;
+  background-color: #FFEED6;
+  color:#1A3455;
+  border:1px solid #1A3455;
+  text-align: center;
+}
+
+.bad{
+  width: 114px;
+  height: 28px;
+  background-color: #FFD8D8;
+  color:#1A3455;
+  border:1px solid #1A3455; 
+  text-align: center;
+}
 
 /*------------------------------------------------------------- Form foldout -------------------------------------------------------*/
 
