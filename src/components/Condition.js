@@ -4,14 +4,12 @@ const Condition = ({ condition, missingParts }) => {
 
     console.log(condition);
     console.log(missingParts);
-    
 
     if (condition == "Nyskick") {
 
         return (
             <div>
-                <p className="good">{condition}</p>
-                
+                <p className="good">{condition}</p>                
             </div>
         )
     } else if (condition == "Lite slitet") {

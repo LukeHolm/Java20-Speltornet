@@ -246,7 +246,7 @@ p {
   width: 641px;
   height: 108px;
   background-color: #FFFFFF;
-  border: 3px solid #1A3455;
+  border: 2px solid #1A3455;
   box-sizing: border-box;
   border-radius: 10px;
 }
@@ -255,7 +255,7 @@ p {
   width: 641px;
   height: 47px;
   background-color: #FFFFFF;
-  border: 3px solid #1A3455;
+  border: 2px solid #1A3455;
   box-sizing: border-box;
   border-radius: 10px;
 }
@@ -790,6 +790,7 @@ p {
 
 .smallAdd:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .addImg {
@@ -888,7 +889,7 @@ p {
 }
 
 .descriptionBox {
-  border: 1px solid #1A3455;
+  border: 2px solid #6D85AA;
   padding: 30px
 }
 
@@ -912,6 +913,34 @@ p {
   padding-top: 3px;
 }
 
+/*------------------------------------------------------------- Condition -------------------------------------------------------*/
+
+.good{
+width: 82px;
+height: 28px;
+background-color: #DFFAE5;
+color:#1A3455;
+border:1px solid #1A3455;
+text-align: center;
+}
+
+.worn{
+  width: 89px;
+  height: 28px;
+  background-color: #FFEED6;
+  color:#1A3455;
+  border:1px solid #1A3455;
+  text-align: center;
+}
+
+.bad{
+  width: 114px;
+  height: 28px;
+  background-color: #FFD8D8;
+  color:#1A3455;
+  border:1px solid #1A3455; 
+  text-align: center;
+}
 
 /*------------------------------------------------------------- Form foldout -------------------------------------------------------*/
 
