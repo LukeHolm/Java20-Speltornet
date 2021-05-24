@@ -843,19 +843,19 @@ p {
   font-size: 13px;
   font-weight: 400;
   border: 1px solid #1A3455;
-  flex-wrap: wrap;
-  display: inline-block;
   margin-left: 2px;
   margin-right: 2px;
   margin-bottom: 2px;
   padding-left: 3px;
   padding-right: 3px;
-  
+  display: inline-block;
 }
 
 .tryflex {
   display: flex;
-  align-items: flex-end;  
+  align-items: flex-end; 
+  flex-wrap: wrap; 
+  
 }
 
 .testaren {

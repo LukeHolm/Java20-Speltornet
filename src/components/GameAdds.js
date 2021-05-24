@@ -13,7 +13,7 @@ const GameAdds = ({gamecard, gameAdd}) => {
 
         <>
             <HeaderThin />
-            <div className="container">
+            <div className="container tryflex">
                 {gamecard.filter(game => game.id == gameId).map(game => 
                 <LoadData gameTitle={game.title} gameAdd={gameAdd}/>
                 )}
