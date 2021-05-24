@@ -2,14 +2,17 @@ import React, { useState } from "react";
 import Camera from "./Camera";
 import { useHistory } from "react-router-dom";
 
-const Form = () => {
-  let history = useHistory();
+const AddForm = () => {
 
+  // sökruta för att välja spel (från gamecatalog)
   const [headline, setHeadline] = useState("");
-  const [greeting, setGreeting] = useState("");
+  const [salesPitch, setSalesPitch] = useState("");
   const [condition, setCondtion] = useState("");
   const [partsMissing, setPartsMissing] = useState("");
   const [partsText, setPartsText] = useState("");
+  // leverans sätt (checkboxes)
+  // spelet du vill bytabort
+  // vad vill du ha i utbyte (sökruta från gamecatlog eller öppen för förslag)
 
   const URL = "https://609a4cbe0f5a13001721a8af.mockapi.io/ContactForm";
 
@@ -21,7 +24,7 @@ const Form = () => {
       gameCondition: condition,
       missingParts: partsMissing,
       partsComment: partsText,
-      greeting: greeting,
+      greeting: salesPitch,
       image: [],
     };
 
@@ -37,7 +40,7 @@ const Form = () => {
       } else {
         alert("Bytesförfrågan skickad!");
         setHeadline("");
-        setGreeting("");
+        setSalesPitch("");
         setCondtion("");
         setPartsMissing("");
         setPartsText("");
@@ -181,8 +184,8 @@ const Form = () => {
                 rows="5"
                 cols="30"
                 placeholder="Skriv här..."
-                value={greeting}
-                onChange={(event) => setGreeting(event.target.value)}
+                value={salesPitch}
+                onChange={(event) => setSalesPitch(event.target.value)}
               />
             </div>
 
@@ -214,16 +217,7 @@ const Form = () => {
             </p>
 
             <div className="send-trade-button col-sm-11 offset-sm-0">
-              {/* <button
-                className="cancel"
-                onClick={() => {
-                  if (window.confirm("Vill du verkligen avsluta?")) {
-                    history.goBack(-1);
-                  }
-                }}
-              >
-                Avbryt
-              </button> */}
+
               <input
                 className="send-request"
                 type="submit"
@@ -238,4 +232,8 @@ const Form = () => {
   );
 };
 
-export default Form;
+/*
+Knapp för att avbryta och granska annons
+*/
+
+export default AddForm;
