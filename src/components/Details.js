@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { useHistory, useParams } from 'react-router-dom';
 
 import HeaderThin from "./HeaderThin";
@@ -6,6 +6,7 @@ import Topfooter from "./Topfooter";
 import Footer from "./Footer";
 import Condition from "./Condition";
 import ChoosenGames from "./ChoosenGames";
+import ImageGallery from "./ImageGallery";
 
 const Details = ({ gameAdd, users }) => {
 
@@ -23,7 +24,7 @@ const Details = ({ gameAdd, users }) => {
           <h2 className="detailTitle">{renderAdd.gameTitle}</h2>
           <div className="row">
             <div className="col-sm-4">
-              <img className="detailBigImage" src={renderAdd.imageURL} alt={renderAdd.gameTitle} />
+              <ImageGallery add={renderAdd}/>
             </div>
             <div className="col-sm-7">
               <div className="row userInfoBar">

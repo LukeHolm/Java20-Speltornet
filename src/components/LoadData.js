@@ -1,10 +1,8 @@
 import { useHistory } from 'react-router';
 
 
-const LoadData = ({gameTitle, gameAdd}) => {
+const LoadData = ({ gameTitle, gameAdd }) => {
 
-    console.log(gameTitle)
-    console.log(gameAdd)
     let history = useHistory();
 
     return (
@@ -18,16 +16,18 @@ const LoadData = ({gameTitle, gameAdd}) => {
                                 <img className="addImg" src={add.imageURL} alt={add.gameTitle} />
                             </div>
                             <div className="col-sm-6">
-                                <div className="location">{add.gameTitle} • {add.location}</div>
-                                <p className="addDec">{add.addTitle}</p>
-                                <p className="vbm">Vill byta mot:</p>
-                                <p className="vbm-tag">{add.tradeFor}</p>
+                                    <div className="location">{add.gameTitle} • {add.location}</div>
+                                    <p className="addDec">{add.addTitle}</p>
+                                    <p className="vbm">Vill byta mot:</p>
+                                    {add.tradeFor.map(trade => 
+                                    <p className="vbm-tag">{trade}</p>
+                                    )}
                             </div>
                         </>
                     </div>
                 )}
                 <div className="col-sm-3 offset-sm-0 tillbaka-knapp">
-                <button className="cancel" onClick={() => history.goBack(-1)}>Tillbaka</button>
+                    <button className="cancel" onClick={() => history.goBack(-1)}>Tillbaka</button>
                 </div>
             </div>
         </>
