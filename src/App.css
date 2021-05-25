@@ -171,6 +171,20 @@ p {
   font-weight: 700px;
 }
 
+.detailText {
+  font-family: Poppins;
+  font-size: 9px;
+  font-weight: 400;
+}
+
+#create-add {
+  color: #E21C64;
+}
+
+#createAdd {
+  margin-top: 50px;
+}
+
 .text-form-bottom {
   display: flex;
   justify-content: center;
@@ -208,6 +222,19 @@ p {
   border-radius: 10px;
 }
 
+#gamesWanted {
+  width: 304px;
+  height: 33px;
+  border: 2px solid #1A3455;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.wanted-games {
+  display: flex;
+  flex-direction: column;
+}
+
 .closeButton {
   width: 125px;
   height: 59px;
@@ -226,13 +253,13 @@ p {
   height: 59px;
   border: 3px solid #7D7D7D;
   border-radius: 30px;
-  background-color: #7D7D7D;
+  background-color: white;
   border-radius: 40px;
   font-family: Poppins;
   font-weight: 600;
   font-size: 15px;
   text-transform: uppercase;
-  color: white;
+  color: #7D7D7D;
 }
 
 .addFormButtons {
@@ -257,7 +284,7 @@ p {
 }
 
 .checkbox {
-  padding-right: 20px;
+  margin-right: 50px;
 }
 
 .form {
@@ -773,6 +800,11 @@ p {
 
 #radio-text {
   margin-right: 20px;
+  margin-left: 10px;
+}
+
+#checkbox-text {
+  margin-right: 100px;
   margin-left: 10px;
 }
 

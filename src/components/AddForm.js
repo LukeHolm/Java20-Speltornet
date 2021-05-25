@@ -2,51 +2,56 @@ import React, { useState } from "react";
 import Camera from "./Camera";
 import { useHistory } from "react-router-dom";
 
-const AddForm = () => {
-  // sökruta för att välja spel (från gamecatalog)
+const AddForm = ({ gamecard }) => {
+  const [chooseGame, setChooseGame] = useState("");
   const [headline, setHeadline] = useState("");
   const [salesPitch, setSalesPitch] = useState("");
   const [condition, setCondtion] = useState("");
   const [partsMissing, setPartsMissing] = useState("");
   const [partsText, setPartsText] = useState("");
-  // leverans sätt (checkboxes)
+  const [delivery, setDelivery] = useState("");
+  const [gamesWanted, setGamesWanted] = useState("");
+
   // spelet du vill bytabort
   // vad vill du ha i utbyte (sökruta från gamecatlog eller öppen för förslag)
 
-  const URL = "https://609a4cbe0f5a13001721a8af.mockapi.io/ContactForm";
+  // const URL = "https://609a4cbe0f5a13001721a8af.mockapi.io/ContactForm";
 
   const submitForm = (event) => {
-    event.preventDefault();
+    //   event.preventDefault();
 
     const requestBody = {
+      chooseGame: chooseGame,
       headline: headline,
+      salesPitch: salesPitch,
       gameCondition: condition,
       missingParts: partsMissing,
-      partsComment: partsText,
-      salesPitch: salesPitch,
+      partsComment: partsText,      
       image: [],
+      delivery: delivery,
+      gamesWanted: gamesWanted
     };
 
-    fetch(URL, {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify({ requestBody }),
-    }).then((responseFromAPI) => {
-      if (responseFromAPI.status === 404) {
-        alert("Det gick fel, sidan finns inte");
-      } else {
-        alert("Bytesförfrågan skickad!");
-        setHeadline("");
-        setSalesPitch("");
-        setCondtion("");
-        setPartsMissing("");
-        setPartsText("");
-      }
-      console.log("HEHEHEEHEHEH", responseFromAPI.status);
-      console.log(requestBody);
-    });
+    //   fetch(URL, {
+    //     method: "POST",
+    //     headers: {
+    //       "content-type": "application/json",
+    //     },
+    //     body: JSON.stringify({ requestBody }),
+    //   }).then((responseFromAPI) => {
+    //     if (responseFromAPI.status === 404) {
+    //       alert("Det gick fel, sidan finns inte");
+    //     } else {
+    //       alert("Bytesförfrågan skickad!");
+    //       setHeadline("");
+    //       setSalesPitch("");
+    //       setCondtion("");
+    //       setPartsMissing("");
+    //       setPartsText("");
+    //     }
+    //     console.log("HEHEHEEHEHEH", responseFromAPI.status);
+    //     console.log(requestBody);
+    //   });
   };
 
   return (
@@ -54,30 +59,40 @@ const AddForm = () => {
       <form onSubmit={(event) => submitForm(event)}>
         <div className="col">
           <div className="form">
-            <h2>Skapa annons</h2>
+            <h2 id="createAdd">Skapa annons</h2>
             <p>
-              Ladda upp ditt spel på Speltornet. Du kommer därefter få<br/>
-              bytesförfrågningar från andra användare. Efter att du godkänt en<br/>
+              Ladda upp ditt spel på Speltornet. Du kommer därefter få
+              <br />
+              bytesförfrågningar från andra användare. Efter att du godkänt en
+              <br />
               bytesförfrågan genomför ni bytet!
             </p>
             <div className="onetwothree">
-              <p className="bold">1. Skapa annons</p>
+              <p className="bold" id="create-add">
+                1. Skapa annons
+              </p>
               <p className="bold">2. Granska annons</p>
               <p className="bold">3. Publicera</p>
             </div>
             <h5 className="form-element">Vilket spel vill du byta bort?</h5>
-            {/* Lägg till rullista */}
             <div className="form-element">
-              <select id="chooseGame">
-                <option>Othello</option>
-                <option>Labyrint</option>
-                <option>Minecraft</option>
+              <select
+                id="chooseGame"
+                value={chooseGame}
+                onChange={(event) => setChooseGame(event.target.value)}
+              >
+                <option>Välj spel...</option>
+                {gamecard.map((title) => (
+                  <option>{title.title}</option>
+                ))}
               </select>
             </div>
+
             {/* Nedan ska bara synas när man valt spel. Bytas ut mot rullistan */}
             <p className="bold">
               Valt spel (ska bara synas efter man valt spel)
             </p>
+            {/* Lägg in valt spel här */}
 
             <div className="form-element">
               <h5>Rubrik</h5>
@@ -153,8 +168,6 @@ const AddForm = () => {
               </label>
             </div>
 
-            {/* Testdel radiobuttons */}
-
             <div className="form-element">
               <h5>Komponenter:</h5>
               <input
@@ -223,19 +236,23 @@ const AddForm = () => {
               </div>
             </div>
 
-            <div className="form-element">
+            <div className="form-element checkbox">
               <h5>Hur vill du genomföra bytet?</h5>
-              {/* Checkboxes här */}
               <div>
-                <input type="checkbox" id="postnord"></input>
-                <label for="postnord">Postnord</label>                
+                <input type="checkbox" id="postnord" value="postnord" 
+                checked={delivery === "postnord"} onChange={(e) => setDelivery(e.target.value)}></input>
+                <label for="postnord" id="checkbox-text">Postnord</label>
+                <tagg>(fr. 36 SEK)</tagg>
+                <p className="detailText">Vid byte bokar du frakten genom postnord.se</p>
               </div>
               <div>
-                <input type="checkbox" id="avhämtning"></input>
-                <label for="avhämtning">Avhämtning</label>                
+                <input type="checkbox" id="avhämtning" value="avhämtning"
+                checked={delivery === "avhämtning"} onChange={(e) => setDelivery(e.target.value)}></input>
+                <label for="avhämtning" id="checkbox-text">Avhämtning</label>
+                <tagg>(Gratis)</tagg>
+                <p className="detailText">Vid byte bestämmer du träff med bytaren.</p>
               </div>
             </div>
-
 
             <h4 className="form-text form-element">
               Vad vill du ha i utbyte mot ditt spel?
@@ -244,8 +261,19 @@ const AddForm = () => {
               <h5>Du har</h5>
               {/* Lägg till element (som liknar radio button) */}
               {/* Lägg till symbol frågetecken */}
+              <div className="wanted-games">
               <h5>Du vill ha</h5>
               {/* Lägg till sökruta + radiobutton */}
+              <select
+                id="gamesWanted"
+                value={gamesWanted}
+                onChange={(event) => setGamesWanted(event.target.value)}              >
+                <option>Välj spel...</option>
+                {gamecard.map((title) => (
+                  <option>{title.title}</option>
+                ))}
+              </select>
+              </div>
             </div>
 
             {/* Lägg in vilket spel du har och vilket/vilka du vill byta mot */}
