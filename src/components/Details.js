@@ -52,7 +52,9 @@ const Details = ({ gameAdd, users }) => {
                   <p className="bold">Frakt</p>
                   <p>{renderAdd.shipping}</p>
                   <p className="bold">Vill byta mot</p>
-                  <p>{renderAdd.tradeFor}</p>
+                  {renderAdd.tradeFor.map(trade =>
+                  <p>{trade}</p>
+                  )}
                 </div>
               </div>
             </div>

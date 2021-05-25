@@ -2,14 +2,16 @@ import React, { useState } from "react";
 import Camera from "./Camera";
 import { useHistory } from "react-router-dom";
 
-const Form = () => {
-  let history = useHistory();
-
+const AddForm = () => {
+  // sökruta för att välja spel (från gamecatalog)
   const [headline, setHeadline] = useState("");
-  const [greeting, setGreeting] = useState("");
+  const [salesPitch, setSalesPitch] = useState("");
   const [condition, setCondtion] = useState("");
   const [partsMissing, setPartsMissing] = useState("");
   const [partsText, setPartsText] = useState("");
+  // leverans sätt (checkboxes)
+  // spelet du vill bytabort
+  // vad vill du ha i utbyte (sökruta från gamecatlog eller öppen för förslag)
 
   const URL = "https://609a4cbe0f5a13001721a8af.mockapi.io/ContactForm";
 
@@ -21,7 +23,7 @@ const Form = () => {
       gameCondition: condition,
       missingParts: partsMissing,
       partsComment: partsText,
-      greeting: greeting,
+      salesPitch: salesPitch,
       image: [],
     };
 
@@ -37,7 +39,7 @@ const Form = () => {
       } else {
         alert("Bytesförfrågan skickad!");
         setHeadline("");
-        setGreeting("");
+        setSalesPitch("");
         setCondtion("");
         setPartsMissing("");
         setPartsText("");
@@ -52,15 +54,33 @@ const Form = () => {
       <form onSubmit={(event) => submitForm(event)}>
         <div className="col">
           <div className="form">
-            {/* TODO: Bryta ut till egen komponent. */}
-            <div className="form-element">
-              <p className="line col-sm-11 offset-sm-0"></p>
-              {/* TODO: Hämta in spelets namn */}
+            <h2>Skapa annons</h2>
+            <p>
+              Ladda upp ditt spel på Speltornet. Du kommer därefter få<br/>
+              bytesförfrågningar från andra användare. Efter att du godkänt en<br/>
+              bytesförfrågan genomför ni bytet!
+            </p>
+            <div className="onetwothree">
+              <p className="bold">1. Skapa annons</p>
+              <p className="bold">2. Granska annons</p>
+              <p className="bold">3. Publicera</p>
             </div>
-            {/* Delen som ska fällas ut... */}
-            <h4 className="form-text form-element">Skicka förfrågan</h4>
+            <h5 className="form-element">Vilket spel vill du byta bort?</h5>
+            {/* Lägg till rullista */}
             <div className="form-element">
-              <h5>Rubrik på bytesformulär</h5>
+              <select id="chooseGame">
+                <option>Othello</option>
+                <option>Labyrint</option>
+                <option>Minecraft</option>
+              </select>
+            </div>
+            {/* Nedan ska bara synas när man valt spel. Bytas ut mot rullistan */}
+            <p className="bold">
+              Valt spel (ska bara synas efter man valt spel)
+            </p>
+
+            <div className="form-element">
+              <h5>Rubrik</h5>
               <input
                 className="thin-textarea"
                 type="text"
@@ -68,6 +88,21 @@ const Form = () => {
                 placeholder="Skriv här..."
                 value={headline}
                 onChange={(event) => setHeadline(event.target.value)}
+              />
+            </div>
+            <div className="form-element">
+              <h5>Text</h5>
+              <label for="greeting"></label>
+              <br />
+              <textarea
+                type="textarea"
+                className="textarea"
+                name="greeting"
+                rows="5"
+                cols="30"
+                placeholder="Skriv här..."
+                value={salesPitch}
+                onChange={(event) => setSalesPitch(event.target.value)}
               />
             </div>
 
@@ -118,6 +153,8 @@ const Form = () => {
               </label>
             </div>
 
+            {/* Testdel radiobuttons */}
+
             <div className="form-element">
               <h5>Komponenter:</h5>
               <input
@@ -150,7 +187,7 @@ const Form = () => {
             </div>
 
             <div className="form-element">
-              <h5>Kommentarer</h5>
+              <h5>Kommentar om spelets skick</h5>
               <label for="comment" className="p">
                 Beskriv skick och vilka delar som saknas.{" "}
               </label>
@@ -165,25 +202,6 @@ const Form = () => {
                 onChange={(e) => setPartsText(e.target.value)}
               ></textarea>
             </div>
-
-            <div className="form-element">
-              <h5>Hälsning</h5>
-              <label for="greeting" className="p">
-                Skriv en kort hälsning till bytaren!{" "}
-              </label>
-              <br />
-              <textarea
-                type="textarea"
-                className="textarea"
-                name="greeting"
-                rows="5"
-                cols="30"
-                placeholder="Skriv här..."
-                value={greeting}
-                onChange={(event) => setGreeting(event.target.value)}
-              />
-            </div>
-
             <div className="form-element">
               <h5>Ladda upp bilder på ditt spel:</h5>
               <div className="row">
@@ -205,30 +223,46 @@ const Form = () => {
               </div>
             </div>
 
-            <p className="text-form-bottom">
-              Läs igenom och skicka din förfrågan.
-              <br />
-              Bytaren kommer därefter bli notifierad om din förfrågan.{" "}
-            </p>
+            <div className="form-element">
+              <h5>Hur vill du genomföra bytet?</h5>
+              {/* Checkboxes här */}
+              <div>
+                <input type="checkbox" id="postnord"></input>
+                <label for="postnord">Postnord</label>                
+              </div>
+              <div>
+                <input type="checkbox" id="avhämtning"></input>
+                <label for="avhämtning">Avhämtning</label>                
+              </div>
+            </div>
 
-            <div className="send-trade-button col-sm-11 offset-sm-0">
-              {/* <button
-                className="cancel"
-                onClick={() => {
-                  if (window.confirm("Vill du verkligen avsluta?")) {
-                    history.goBack(-1);
-                  }
-                }}
-              >
-                Avbryt
-              </button> */}
+
+            <h4 className="form-text form-element">
+              Vad vill du ha i utbyte mot ditt spel?
+            </h4>
+            <div className="formExchange">
+              <h5>Du har</h5>
+              {/* Lägg till element (som liknar radio button) */}
+              {/* Lägg till symbol frågetecken */}
+              <h5>Du vill ha</h5>
+              {/* Lägg till sökruta + radiobutton */}
+            </div>
+
+            {/* Lägg in vilket spel du har och vilket/vilka du vill byta mot */}
+
+            <div className="addFormButtons">
+              <button className="closeButton">Avbryt</button>
+              <button className="reviewButton">Granska annons</button>
+            </div>
+
+            {/* <div className="send-trade-button col-sm-12 offset-sm-0">
               <input
                 className="send-request"
                 type="submit"
                 id="submitbutton"
                 value="Skicka bytesförfrågan"
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </form>
@@ -236,4 +270,8 @@ const Form = () => {
   );
 };
 
-export default Form;
+/*
+Knapp för att avbryta och granska annons
+*/
+
+export default AddForm;
