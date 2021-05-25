@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Camera from "./Camera";
 import { useHistory } from "react-router-dom";
 
-const AddForm = () => {
+const AddForm = (gamecard) => {
   // sökruta för att välja spel (från gamecatalog)
   const [headline, setHeadline] = useState("");
   const [salesPitch, setSalesPitch] = useState("");
@@ -11,7 +11,7 @@ const AddForm = () => {
   const [partsText, setPartsText] = useState("");
   // leverans sätt (checkboxes)
   // spelet du vill bytabort
-  // vad vill du ha i utbyte (sökruta från gamecatlog eller öppen för förslag)
+  // vad vill du ha i utbyte (sökruta från gamecatalog eller öppen för förslag)
 
   const URL = "https://609a4cbe0f5a13001721a8af.mockapi.io/ContactForm";
 

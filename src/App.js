@@ -42,7 +42,7 @@ function App() {
           </Route>
           <Route exact path="/LoadData" component={LoadData} />
           <Route path="/ChoosenGames" component={AddForm}>
-            <AddForm />
+            <AddForm gamecard={gamecard}/>
           </Route>
         </Switch>
       </Router>

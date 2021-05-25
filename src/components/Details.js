@@ -15,6 +15,8 @@ const Details = ({ gameAdd, users }) => {
   const renderAdd = gameAdd.find(add => add.addId == addId);
   const renderUser = users.find(user => user.userId == renderAdd.userId);
 
+  console.log(renderAdd)
+
   return (
     <>
       <HeaderThin />
