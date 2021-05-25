@@ -183,31 +183,6 @@ p {
   margin-bottom: 30px;
 }
 
-.form-h1 {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 48px;
-  line-height: 59px;
-  color: #1A3455;
-  margin-top: 30px;
-}
-
-.form-h2 {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 29px;
-  color: #1A3455;
-}
-
-.form-h5 {
-  font-style: normal;
-  font-weight: 600;
-  line-height: 24px;
-  color: #1A3455;
-}
 
 .body-text {
   font-family: Poppins;
@@ -223,6 +198,66 @@ p {
   margin-top: 30px;
   margin-bottom: 30px;
   display: block;
+}
+
+#chooseGame {
+  width: 304px;
+  height: 33px;
+  border: 2px solid #1A3455;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.closeButton {
+  width: 125px;
+  height: 59px;
+  border: 3px solid #E21C64;
+  border-radius: 30px;
+  background-color: white;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #E21C64;
+}
+
+.reviewButton {
+  width: 265px;
+  height: 59px;
+  border: 3px solid #7D7D7D;
+  border-radius: 30px;
+  background-color: #7D7D7D;
+  border-radius: 40px;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.addFormButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 150px;
+  margin-top: 50px;
+}
+
+.formExchange {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.onetwothree {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.checkbox {
+  padding-right: 20px;
 }
 
 .form {
