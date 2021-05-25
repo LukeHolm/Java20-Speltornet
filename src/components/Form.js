@@ -118,8 +118,6 @@ const Form = () => {
               </label>
             </div>
 
-            {/* Testdel radiobuttons */}
-
             <div className="form-element">
               <h5>Komponenter:</h5>
               <input

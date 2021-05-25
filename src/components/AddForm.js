@@ -54,15 +54,31 @@ const AddForm = () => {
       <form onSubmit={(event) => submitForm(event)}>
         <div className="col">
           <div className="form">
-            {/* TODO: Bryta ut till egen komponent. */}
-            <div className="form-element">
-              <p className="line col-sm-11 offset-sm-0"></p>
-              {/* TODO: Hämta in spelets namn */}
+            <h2>Skapa annons</h2>
+            <p>
+              Ladda upp ditt spel på Speltornet. Du kommer därefter få<br/>
+              bytesförfrågningar från andra användare. Efter att du godkänt en<br/>
+              bytesförfrågan genomför ni bytet!
+            </p>
+            <div className="onetwothree">
+              <p className="bold">1. Skapa annons</p>
+              <p className="bold">2. Granska annons</p>
+              <p className="bold">3. Publicera</p>
             </div>
-            {/* Delen som ska fällas ut... */}
             <h5 className="form-element">Vilket spel vill du byta bort?</h5>
-            <p className="bold">Valt spel</p>
-            {/* Lägg till sökruta */}
+            {/* Lägg till rullista */}
+            <div className="form-element">
+              <select id="chooseGame">
+                <option>Othello</option>
+                <option>Labyrint</option>
+                <option>Minecraft</option>
+              </select>
+            </div>
+            {/* Nedan ska bara synas när man valt spel. Bytas ut mot rullistan */}
+            <p className="bold">
+              Valt spel (ska bara synas efter man valt spel)
+            </p>
+
             <div className="form-element">
               <h5>Rubrik</h5>
               <input
@@ -210,12 +226,21 @@ const AddForm = () => {
             <div className="form-element">
               <h5>Hur vill du genomföra bytet?</h5>
               {/* Checkboxes här */}
+              <div>
+                <input type="checkbox" id="postnord"></input>
+                <label for="postnord">Postnord</label>                
+              </div>
+              <div>
+                <input type="checkbox" id="avhämtning"></input>
+                <label for="avhämtning">Avhämtning</label>                
+              </div>
             </div>
 
-            <div>
-              <h4 className="form-text form-element">
-                Vad vill du ha i utbyte mot ditt spel?
-              </h4>
+
+            <h4 className="form-text form-element">
+              Vad vill du ha i utbyte mot ditt spel?
+            </h4>
+            <div className="formExchange">
               <h5>Du har</h5>
               {/* Lägg till element (som liknar radio button) */}
               {/* Lägg till symbol frågetecken */}
@@ -225,8 +250,10 @@ const AddForm = () => {
 
             {/* Lägg in vilket spel du har och vilket/vilka du vill byta mot */}
 
-            <button>Avbryt</button>
-            <button>Granska annons</button>
+            <div className="addFormButtons">
+              <button className="closeButton">Avbryt</button>
+              <button className="reviewButton">Granska annons</button>
+            </div>
 
             {/* <div className="send-trade-button col-sm-12 offset-sm-0">
               <input
