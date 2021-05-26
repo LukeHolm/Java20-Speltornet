@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import { useHistory, useParams } from 'react-router-dom';
 
 import HeaderThin from "./HeaderThin";
@@ -8,7 +8,6 @@ import Condition from "./Condition";
 import ChoosenGames from "./ChoosenGames";
 import ImageGallery from "./ImageGallery";
 import StarRating from "./StarRating"
-import CancelButton from "./CancelButton";
 
 const Details = ({ gameAdd, users }) => {
 
