@@ -1,10 +1,8 @@
 import { useHistory } from 'react-router';
 
 
-const LoadData = ({gameTitle, gameAdd}) => {
+const LoadData = ({ gameTitle, gameAdd }) => {
 
-    console.log(gameTitle)
-    console.log(gameAdd)
     let history = useHistory();
 
     return (
@@ -31,7 +29,7 @@ const LoadData = ({gameTitle, gameAdd}) => {
                     </div>
                 )}
                 <div className="col-sm-3 offset-sm-0 tillbaka-knapp">
-                <button className="cancel" onClick={() => history.goBack(-1)}>Tillbaka</button>
+                    <button className="cancel" onClick={() => history.goBack(-1)}>Tillbaka</button>
                 </div>
             </div>
         </>

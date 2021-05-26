@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { useHistory, useParams } from 'react-router-dom';
 
 import HeaderThin from "./HeaderThin";
@@ -6,6 +6,9 @@ import Topfooter from "./Topfooter";
 import Footer from "./Footer";
 import Condition from "./Condition";
 import ChoosenGames from "./ChoosenGames";
+import ImageGallery from "./ImageGallery";
+import StarRating from "./StarRating"
+import CancelButton from "./CancelButton";
 
 const Details = ({ gameAdd, users }) => {
 
@@ -25,7 +28,7 @@ const Details = ({ gameAdd, users }) => {
           <h2 className="detailTitle">{renderAdd.gameTitle}</h2>
           <div className="row">
             <div className="col-sm-4">
-              <img className="detailBigImage" src={renderAdd.imageURL} alt={renderAdd.gameTitle} />
+              <ImageGallery add={renderAdd}/>
             </div>
             <div className="col-sm-7">
               <div className="row userInfoBar">
@@ -34,7 +37,7 @@ const Details = ({ gameAdd, users }) => {
                 </div>
                 <div className="col-sm-6 userInfo">
                   <p className="userName">{renderUser.userName}<br />
-                    <p className="tagg">Omdöme<br />{renderUser.rep}</p>
+                    <p className="tagg omdome">Omdöme<br /><StarRating rep={renderUser.rep}/></p>
                   </p>
                 </div>
                 <div className=" col-sm-5">
@@ -49,12 +52,13 @@ const Details = ({ gameAdd, users }) => {
                   <p>{renderAdd.conditionDescription}</p>
                 </div>
                 <div className="col-sm-5 offset-sm-1">
+                  <br/>
                   <p><Condition condition={renderAdd.condition} missingParts={renderAdd.missingParts}/></p>
-                  <p className="bold">Frakt</p>
-                  <p>{renderAdd.shipping}</p>
-                  <p className="bold">Vill byta mot</p>
+                  <p className="tagg-bold five-margin-bottom">Frakt</p>
+                  <p className="tagg">{renderAdd.shipping}</p>
+                  <p className="bold five-margin-bottom">Vill byta mot</p>
                   {renderAdd.tradeFor.map(trade =>
-                  <p>{trade}</p>
+                  <p className="vbm-tag">{trade}</p>
                   )}
                 </div>
               </div>

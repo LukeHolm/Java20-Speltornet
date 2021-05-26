@@ -6,7 +6,6 @@ const Gamecard = ({game}) => {
   let history = useHistory();
 
   <GameAdds game={game} />
-  console.log(game)
 
 
   return (
