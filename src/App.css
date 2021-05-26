@@ -1060,9 +1060,9 @@ margin-bottom:5px;
 
 }
 
-/*------------------------------------------------------------- Cancel Popup -------------------------------------------------------*/
+/*------------------------------------------------------------- Modal General -------------------------------------------------------*/
 
-.cancel-modal {
+.modal-background {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.8);
   left: 0px;
@@ -1074,6 +1074,10 @@ margin-bottom:5px;
   justify-content: center;
   z-index: 1;
 }
+
+/*------------------------------------------------------------- Cancel Modal -------------------------------------------------------*/
+
+
 
 .cancel-modal-content {
   width: 340px;
@@ -1127,4 +1131,57 @@ margin-bottom:5px;
   text-transform: uppercase;
   border: 2px solid #E21C64;
   font-weight: 600;
+}
+
+/*------------------------------------------------------------- publish Modal -------------------------------------------------------*/
+
+.publish-modal-content {
+  width: 750px;
+  height: 450px;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  padding-top:25px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.publish-modal-body {
+  padding: 10px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.publish-modal-confirm{
+  width:40px;
+  height:40px;
+  margin-top:10px;
+}
+
+.publish-modal-back{
+  background-color:#FFFFFF;
+  border-radius: 90px;
+  border-style: none;
+  width: 255px;
+  height: 60px;
+  color: #E21C64;
+  font-family: Poppins;
+  font-size: 15px;
+  text-transform: uppercase;
+  border: 2px solid #E21C64;
+  font-weight: 600;
+  margin-top:50px;
+}
+
+.publish-modal-button{
+  background-color: #E21C64;
+  border-radius: 90px; 
+  border-style: none;
+  width: 270px;
+  height: 60px;
+  color: #FFFFFF;
+  font-family: Poppins;
+  font-size: 15px;
+  text-transform: uppercase;
+  border: 2px solid #E21C64;
 }
