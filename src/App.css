@@ -262,6 +262,14 @@ p {
   color: #7D7D7D;
 }
 
+.formFrame {
+  width: 860px;
+  height: auto;
+  border: 2px solid #6D85AA;
+  border-radius: 20px;
+  padding: 50px;
+}
+
 .addFormButtons {
   display: flex;
   justify-content: space-between;

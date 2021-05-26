@@ -74,14 +74,14 @@ const AddForm = ({ gamecard }) => {
               <p className="bold">2. Granska annons</p>
               <p className="bold">3. Publicera</p>
             </div>
+            <div className="formFrame">
             <h5 className="form-element">Vilket spel vill du byta bort?</h5>
             <div className="form-element">
               <select
-                id="chooseGame"
+                id="chooseGame" required
                 value={chooseGame}
-                onChange={(event) => setChooseGame(event.target.value)}
-              >
-                <option>Välj spel...</option>
+                onChange={(event) => setChooseGame(event.target.value)}>
+                <option value="">Välj spel...</option>
                 {gamecard.map((title) => (
                   <option>{title.title}</option>
                 ))}
@@ -265,10 +265,10 @@ const AddForm = ({ gamecard }) => {
               <h5>Du vill ha</h5>
               {/* Lägg till sökruta + radiobutton */}
               <select
-                id="gamesWanted"
+                id="gamesWanted" required
                 value={gamesWanted}
                 onChange={(event) => setGamesWanted(event.target.value)}              >
-                <option>Välj spel...</option>
+                <option value="">Välj spel...</option>
                 {gamecard.map((title) => (
                   <option>{title.title}</option>
                 ))}
@@ -277,6 +277,8 @@ const AddForm = ({ gamecard }) => {
             </div>
 
             {/* Lägg in vilket spel du har och vilket/vilka du vill byta mot */}
+
+            </div>
 
             <div className="addFormButtons">
               <button className="closeButton">Avbryt</button>
