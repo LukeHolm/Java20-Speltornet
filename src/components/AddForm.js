@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Camera from "./Camera";
 import { useHistory } from "react-router-dom";
+import ReviewAddForm from "./ReviewAddForm";
 
 const AddForm = ({ gamecard }) => {
   const [chooseGame, setChooseGame] = useState("");
@@ -18,22 +19,24 @@ const AddForm = ({ gamecard }) => {
   // const URL = "https://609a4cbe0f5a13001721a8af.mockapi.io/ContactForm";
 
   let history = useHistory();
+  const [show, setShow] = useState(false)
 
+  const requestBody = {
+    chooseGame: chooseGame,
+    headline: headline,
+    salesPitch: salesPitch,
+    gameCondition: condition,
+    missingParts: partsMissing,
+    partsComment: partsText,      
+    image: [],
+    delivery: delivery,
+    gamesWanted: gamesWanted
+  };
 
   const submitForm = (event) => {
-    //   event.preventDefault();
+       event.preventDefault();
 
-    const requestBody = {
-      chooseGame: chooseGame,
-      headline: headline,
-      salesPitch: salesPitch,
-      gameCondition: condition,
-      missingParts: partsMissing,
-      partsComment: partsText,      
-      image: [],
-      delivery: delivery,
-      gamesWanted: gamesWanted
-    };
+
 
     //   fetch(URL, {
     //     method: "POST",
@@ -58,6 +61,7 @@ const AddForm = ({ gamecard }) => {
   };
 
   return (
+    <div className="container">
     <div className="wrapper">
       <form onSubmit={(event) => submitForm(event)}>
         <div className="col">
@@ -283,7 +287,7 @@ const AddForm = ({ gamecard }) => {
               <select
                 id="gamesWanted"
                 value={gamesWanted}
-                onChange={(event) => setGamesWanted(event.target.value)}              >
+                onChange={(event) => setGamesWanted(event.target.value)}>
                 <option>Välj spel...</option>
                 {gamecard.map((title) => (
                   <option>{title.title}</option>
@@ -315,14 +319,15 @@ const AddForm = ({ gamecard }) => {
             </button>
             <button
               className="reviewButton"
-              onClick={() => history.push("/ReviewAddForm")}
+              onClick={() => setShow(true)}
             >
               Granska annons
             </button>
           </div>
         </form>
       </div>
-    
+    {show && <ReviewAddForm formData={requestBody}/>}
+    </div>
   );
 };
 

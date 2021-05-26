@@ -18,7 +18,6 @@ const ReviewAddForm = ({formData}) => {
 
     return (
         <>
-            <HeaderThin />
             <div className="container">
         <>
           <h2 className="detailTitle">Förhandsgranska annons</h2>
@@ -67,7 +66,6 @@ const ReviewAddForm = ({formData}) => {
         <button className="" onClick={true}>REDIGERA</button>
         <button className="" onClick={true}>GODKÄNN OCH PUBLICERA</button>
       </div>
-      <Footer />
         </>
     )
 }
