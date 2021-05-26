@@ -21,7 +21,7 @@ const PublishPopup = props => {
                         <img className="publish-modal-confirm" src={Confirm} alt="check"></img>
                     </div>
                     <div className="row">
-                        <div className="col-sm-8">
+                        <div className="col-sm-8 left-align">
                             <p className="bold">Vad händer nu?</p>
                             <p>
                                 1. Annonsen publiceras<br />
@@ -30,7 +30,7 @@ const PublishPopup = props => {
                                 4. Spelen skickas/levereras<br />
                                 5. Du tar ner annonsen från Speltornet</p>
                         </div>
-                        <div className="col-sm-3 offset-sm-1">
+                        <div className="col-sm-3 offset-sm-1 left-align">
                             <br/><br/>
                             <p className="tagg-bold five-margin-bottom">Du har:</p>
                             <p className="vbm-tag">{props.trading}</p>

@@ -37,6 +37,10 @@ const Condition = ({ condition, missingParts }) => {
                 <MissingParts />
             </div>
         )
+    } else {
+        return (
+            <p></p>
+        )
     }
 
 }
