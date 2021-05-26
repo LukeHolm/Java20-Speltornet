@@ -171,6 +171,20 @@ p {
   font-weight: 700px;
 }
 
+.detailText {
+  font-family: Poppins;
+  font-size: 9px;
+  font-weight: 400;
+}
+
+#create-add {
+  color: #E21C64;
+}
+
+#createAdd {
+  margin-top: 50px;
+}
+
 .text-form-bottom {
   display: flex;
   justify-content: center;
@@ -183,31 +197,6 @@ p {
   margin-bottom: 30px;
 }
 
-.form-h1 {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 48px;
-  line-height: 59px;
-  color: #1A3455;
-  margin-top: 30px;
-}
-
-.form-h2 {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 29px;
-  color: #1A3455;
-}
-
-.form-h5 {
-  font-style: normal;
-  font-weight: 600;
-  line-height: 24px;
-  color: #1A3455;
-}
 
 .body-text {
   font-family: Poppins;
@@ -223,6 +212,87 @@ p {
   margin-top: 30px;
   margin-bottom: 30px;
   display: block;
+}
+
+#chooseGame {
+  width: 304px;
+  height: 33px;
+  border: 2px solid #1A3455;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+#gamesWanted {
+  width: 304px;
+  height: 33px;
+  border: 2px solid #1A3455;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.wanted-games {
+  display: flex;
+  flex-direction: column;
+}
+
+.closeButton {
+  width: 125px;
+  height: 59px;
+  border: 3px solid #E21C64;
+  border-radius: 30px;
+  background-color: white;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #E21C64;
+}
+
+.reviewButton {
+  width: 265px;
+  height: 59px;
+  border: 3px solid #7D7D7D;
+  border-radius: 30px;
+  background-color: white;
+  border-radius: 40px;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #7D7D7D;
+}
+
+.formFrame {
+  width: 860px;
+  height: auto;
+  border: 2px solid #6D85AA;
+  border-radius: 20px;
+  padding: 50px;
+}
+
+.addFormButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 150px;
+  margin-top: 50px;
+}
+
+.formExchange {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.onetwothree {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.checkbox {
+  margin-right: 50px;
 }
 
 .form {
@@ -246,7 +316,7 @@ p {
   width: 641px;
   height: 108px;
   background-color: #FFFFFF;
-  border: 3px solid #1A3455;
+  border: 2px solid #1A3455;
   box-sizing: border-box;
   border-radius: 10px;
 }
@@ -255,7 +325,7 @@ p {
   width: 641px;
   height: 47px;
   background-color: #FFFFFF;
-  border: 3px solid #1A3455;
+  border: 2px solid #1A3455;
   box-sizing: border-box;
   border-radius: 10px;
 }
@@ -741,6 +811,11 @@ p {
   margin-left: 10px;
 }
 
+#checkbox-text {
+  margin-right: 100px;
+  margin-left: 10px;
+}
+
 /* Gömmer Radio button */
 
 /* .radio__input input {   
@@ -790,6 +865,7 @@ p {
 
 .smallAdd:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .addImg {
@@ -839,9 +915,28 @@ p {
 }
 
 .vbm-tag {
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 2px;
+  margin-bottom: 0px;
+  margin-top:0px;
   font-size: 13px;
   font-weight: 400;
-  border: 0px solid #1A3455;
+  border: 1px solid #1A3455;
+  flex-wrap: wrap;
+  display: inline-block;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-bottom: 2px;
+  padding-left: 3px;
+  padding-right: 3px;
+  
+}
+
+.tryflex {
+  display: flex;
+  align-items: flex-end;  
 }
 
 .testaren {
@@ -875,7 +970,7 @@ p {
 }
 
 .descriptionBox {
-  border: 1px solid #1A3455;
+  border: 2px solid #6D85AA;
   padding: 30px
 }
 
@@ -899,6 +994,39 @@ p {
   padding-top: 3px;
 }
 
+.imageSwitcher{
+  height: 58px;
+  width: 58px;
+}
+
+/*------------------------------------------------------------- Condition -------------------------------------------------------*/
+
+.good{
+width: 82px;
+height: 28px;
+background-color: #DFFAE5;
+color:#1A3455;
+border:1px solid #1A3455;
+text-align: center;
+}
+
+.worn{
+  width: 89px;
+  height: 28px;
+  background-color: #FFEED6;
+  color:#1A3455;
+  border:1px solid #1A3455;
+  text-align: center;
+}
+
+.bad{
+  width: 114px;
+  height: 28px;
+  background-color: #FFD8D8;
+  color:#1A3455;
+  border:1px solid #1A3455; 
+  text-align: center;
+}
 
 /*------------------------------------------------------------- Form foldout -------------------------------------------------------*/
 
@@ -908,4 +1036,13 @@ p {
   border-bottom-right-radius: 25px;
   margin-bottom: 20px;
   margin-top: 20px;
+}
+
+.flexaren{
+  display: inline-block;
+  display: flex;
+  border: 1px solid #333;
+  align-items: flex-end;
+  flex-wrap: wrap;
+
 }

@@ -10,6 +10,8 @@ import GameAdds from "./components/GameAdds";
 import LoadData from "./components/LoadData";
 import Footer from './components/Footer'
 import ChoosenGames from "./components/ChoosenGames";
+import AddForm from "./components/AddForm";
+import Dropdown from "./components/Dropdown";
 
 
 function App() {
@@ -32,7 +34,9 @@ function App() {
           <Route exact path="/" component={Landingpage}>
             <Landingpage gamecard={gamecard}/>
           </Route>
-          <Route path="/CreateAdd" component={CreateAdd} />
+          <Route path="/CreateAdd" component={CreateAdd}>
+            <CreateAdd gamecard={gamecard}/>            
+            </Route> 
           <Route exact path="/GameAdds/:gameId" component={GameAdds}>
             <GameAdds gamecard={gamecard} gameAdd={gameAdd}/>
           </Route>
@@ -40,8 +44,11 @@ function App() {
             <Details gameAdd={gameAdd} users={users}/>
           </Route>
           <Route exact path="/LoadData" component={LoadData} />
-          <Route path="/ChoosenGames" component={ChoosenGames}>
-            <ChoosenGames gameAdd={gameAdd} addId={2}/>
+          <Route path="/ChoosenGames" component={AddForm}>
+            <AddForm />
+          </Route>
+          <Route path="/Dropdown" component={Dropdown}>
+            <Dropdown gamecard={gamecard}/>
           </Route>
         </Switch>
       </Router>

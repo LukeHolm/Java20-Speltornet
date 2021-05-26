@@ -6,8 +6,6 @@ import LoadData from './LoadData';
 const GameAdds = ({gamecard, gameAdd}) => {
 
     const { gameId } = useParams();
-    console.log(gamecard);
-    console.log(gameAdd);
 
     return (
 

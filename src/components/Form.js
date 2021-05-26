@@ -54,7 +54,7 @@ const Form = () => {
           <div className="form">
             {/* TODO: Bryta ut till egen komponent. */}
             <div className="form-element">
-              <p className="line col-sm-12 offset-sm-0"></p>
+              <p className="line col-sm-11 offset-sm-0"></p>
               {/* TODO: Hämta in spelets namn */}
             </div>
             {/* Delen som ska fällas ut... */}
@@ -117,8 +117,6 @@ const Form = () => {
                 Mycket slitet
               </label>
             </div>
-
-            {/* Testdel radiobuttons */}
 
             <div className="form-element">
               <h5>Komponenter:</h5>
