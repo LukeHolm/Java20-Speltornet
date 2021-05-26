@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Camera from "./Camera";
-import { useHistory } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, useHistory } from "react-router-dom";
 import ReviewAddForm from "./ReviewAddForm";
 
 const AddForm = ({ gamecard }) => {
@@ -12,68 +12,79 @@ const AddForm = ({ gamecard }) => {
   const [partsText, setPartsText] = useState("");
   const [delivery, setDelivery] = useState("");
   const [gamesWanted, setGamesWanted] = useState("");
+  const [show, setShow] = useState(false);
+
 
   // spelet du vill bytabort
   // vad vill du ha i utbyte (sökruta från gamecatalog eller öppen för förslag)
 
-   const URL = "https://609a4cbe0f5a13001721a8af.mockapi.io/ContactForm";
+  // const URL = "https://609a4cbe0f5a13001721a8af.mockapi.io/ContactForm";
 
   let history = useHistory();
-  const [show, setShow] = useState(false)
 
-  // const requestBody = {
-  //   chooseGame: chooseGame,
-  //   headline: headline,
-  //   salesPitch: salesPitch,
-  //   gameCondition: condition,
-  //   missingParts: partsMissing,
-  //   partsComment: partsText,      
-  //   image: [],
-  //   delivery: delivery,
-  //   gamesWanted: gamesWanted
+   const requestBody = {
+     chooseGame: chooseGame,
+     headline: headline,
+     salesPitch: salesPitch,
+     gameCondition: condition,
+     missingParts: partsMissing,
+     partsComment: partsText,      
+     image: [],
+     delivery: delivery,
+     gamesWanted: gamesWanted
+   };
+
+   console.log(requestBody);
+
+//    <Router>
+//    <Switch>
+//      <Route path="/ReviewAddForm" component={ReviewAddForm}>
+//        <ReviewAddForm formData={requestBody} />
+//      </Route>
+//    </Switch>
+//  </Router>
+
+  // const submitForm = (event) => {
+  //      event.preventDefault();
+
+  //   const requestBody = {
+  //     chooseGame: chooseGame,
+  //     headline: headline,
+  //     salesPitch: salesPitch,
+  //     gameCondition: condition,
+  //     missingParts: partsMissing,
+  //     partsComment: partsText,
+  //     image: [],
+  //     delivery: delivery,
+  //     gamesWanted: gamesWanted,
+  //   };
+
+  //      fetch(URL, {
+  //        method: "POST",
+  //        headers: {
+  //          "content-type": "application/json",
+  //        },
+  //       body: JSON.stringify({ requestBody }),
+  //      }).then((responseFromAPI) => {
+  //        if (responseFromAPI.status === 404) {
+  //          alert("Det gick fel, sidan finns inte");
+  //        } else {
+  //          alert("Bytesförfrågan skickad!");
+  //          setHeadline("");
+  //          setSalesPitch("");
+  //          setCondtion("");
+  //          setPartsMissing("");
+  //          setPartsText("");
+  //        }
+  //        console.log("HEHEHEEHEHEH", responseFromAPI.status);
+  //        console.log(requestBody);
+  //      });
   // };
-
-  const submitForm = (event) => {
-       event.preventDefault();
-
-    const requestBody = {
-      chooseGame: chooseGame,
-      headline: headline,
-      salesPitch: salesPitch,
-      gameCondition: condition,
-      missingParts: partsMissing,
-      partsComment: partsText,
-      image: [],
-      delivery: delivery,
-      gamesWanted: gamesWanted,
-    };
-
-       fetch(URL, {
-         method: "POST",
-         headers: {
-           "content-type": "application/json",
-         },
-        body: JSON.stringify({ requestBody }),
-       }).then((responseFromAPI) => {
-         if (responseFromAPI.status === 404) {
-           alert("Det gick fel, sidan finns inte");
-         } else {
-           alert("Bytesförfrågan skickad!");
-           setHeadline("");
-           setSalesPitch("");
-           setCondtion("");
-           setPartsMissing("");
-           setPartsText("");
-         }
-         console.log("HEHEHEEHEHEH", responseFromAPI.status);
-         console.log(requestBody);
-       });
-  };
 
   return (
     <div className="container">
     <div className="wrapper">
-      <form onSubmit={(event) => submitForm(event)}>
+      <div>
         <div className="col">
           <div className="form">
             <h2 id="createAdd">Skapa annons</h2>
@@ -322,7 +333,8 @@ const AddForm = ({ gamecard }) => {
 
             <div className="addFormButtons">
               <button className="closeButton">Avbryt</button>
-              <button className="reviewButton">Granska annons</button>
+              <button className="reviewButton" onClick={() => setShow(true)}>Granska annons</button>
+
             </div>
 
               {/* <div className="send-trade-button col-sm-12 offset-sm-0">
@@ -335,23 +347,8 @@ const AddForm = ({ gamecard }) => {
             </div> */}
             </div>
           </div>
-          <div className="addFormButtons">
-            <button
-              className="closeButton"
-              onClick={() => history.goBack("/Landingpage/")}
-            >
-              Avbryt
-            </button>
-            <button
-              className="reviewButton"
-              onClick={() => setShow(true)}
-            >
-              Granska annons
-            </button>
-          </div>
-        </form>
+        </div>
       </div>
-    {show && <ReviewAddForm formData={"fel"}/>}
     </div>
   );
 };
