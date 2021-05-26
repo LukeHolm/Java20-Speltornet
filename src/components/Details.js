@@ -66,7 +66,6 @@ const Details = ({ gameAdd, users }) => {
         <ChoosenGames gameAdd={gameAdd} addId={renderAdd.addId} />
         <button className="cancel" onClick={() => history.goBack(-1)}>Tillbaka</button>
       </div>
-      <CancelButton/>
       <Topfooter />
       <Footer />
     </>
