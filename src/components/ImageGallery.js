@@ -13,12 +13,17 @@ const ImageGallery = ({ add }) => {
 
     console.log(numberOfImages);
 
+    useEffect(() => {
+        if(numberOfImages === 0){
+            setNextImage(0)
+        }
+    }, [])
+
     const Backwards = () => {
         if(imageNumber === 0) {
             setImageNumber(numberOfImages);
         } else {
             setImageNumber(imageNumber -1);
-
         }
     }
 
@@ -30,8 +35,6 @@ const ImageGallery = ({ add }) => {
             setImageNumber(imageNumber + 1);
         }
     }
-
-
 
     return (
         <>
