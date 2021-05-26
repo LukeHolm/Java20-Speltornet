@@ -9,7 +9,7 @@ const CreateAdd = () => {
     <>
       <HeaderThin />
       <div className="Row">
-        <div className="col-sm-8 offset-sm-2">
+        <div className="col-sm-7 offset-sm-3">
           <AddForm />
         </div>
       </div>

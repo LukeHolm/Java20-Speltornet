@@ -11,6 +11,7 @@ import LoadData from "./components/LoadData";
 import Footer from './components/Footer'
 import ChoosenGames from "./components/ChoosenGames";
 import AddForm from "./components/AddForm";
+import ReviewAddForm from "./components/ReviewAddForm";
 
 
 function App() {
@@ -43,6 +44,9 @@ function App() {
           <Route exact path="/LoadData" component={LoadData} />
           <Route path="/ChoosenGames" component={AddForm}>
             <AddForm gamecard={gamecard}/>
+          </Route>
+          <Route path="/ReviewAddForm" component={ReviewAddForm}>
+            <ReviewAddForm />
           </Route>
         </Switch>
       </Router>
