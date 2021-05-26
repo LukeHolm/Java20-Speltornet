@@ -41,7 +41,7 @@ const ImageGallery = ({ add }) => {
             <img className="detailBigImage" src={add.imageURL[imageNumber]} alt={add.addTitle} />
             <img className="imageSwitcher" src={Back} alt="back" onClick={Backwards}/>
             <img className="imageSwitcher" src={add.imageURL[prevImage]} alt={add.addTitle} />
-            <img className="imageSwitcher" src={add.imageURL[imageNumber]} alt={add.addTitle} />
+            <img className="imageSwitcher" src={add.imageURL[0]} alt={add.addTitle} />
             <img className="imageSwitcher" src={add.imageURL[nextImage]} alt={add.addTitle} />
             <img className="imageSwitcher" src={Next} alt="next" onClick={Forwards} />
         </>
