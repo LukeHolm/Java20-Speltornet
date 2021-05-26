@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 import { useHistory } from 'react-router';
 
 
