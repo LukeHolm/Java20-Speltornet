@@ -18,7 +18,7 @@ const LoadData = ({ gameTitle, gameAdd }) => {
                             <div className="col-sm-6">
                                 <div className="location">{add.gameTitle} • {add.location}</div>
                                 <p className="addDec">{add.addTitle}</p>
-                                <div className="tryflex">
+                                <div className="">
                                 <p className="vbm">Vill byta mot:</p>
                                 {add.tradeFor.map(trade =>
                                 <p className="vbm-tag">{trade}</p>
