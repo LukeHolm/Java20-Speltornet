@@ -11,7 +11,7 @@ const CancelPopup = props => {
 
 
     return (
-        <div className="cancel-modal" onClick={props.onClose}>
+        <div className="modal-background" onClick={props.onClose}>
             <div className="cancel-modal-content" onClick={e => e.stopPropagation()}>
                 <span onClick={props.onClose} className="close">&times;</span>
                 <div className="cancel-modal-body">
