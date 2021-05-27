@@ -1191,7 +1191,6 @@ p {
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
   border-radius: 20px 20px 0px 0px;
-  border-style: none;
 }
 
 .cancel-modal-text {
@@ -1249,7 +1248,6 @@ p {
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
   border-radius: 20px 20px 0px 0px;
-  border-style: none;
 }
 
 .publish-modal-confirm {
