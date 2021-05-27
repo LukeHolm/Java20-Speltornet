@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Camera from "./Camera";
-import { useHistory } from "react-router-dom";
 import AddReview from "./AddReview";
 import CancelButton from "./CancelButton";
 import PublishButton from "./PublishButton";
@@ -44,35 +43,33 @@ const AddForm = ({ gamecard }) => {
     imageURL: ["https://media.jw-it.se/a/large/000/005/202/000005202876.jpg"],
   };
 
+  const Form = (event) => {
+    //   event.preventDefault();
+
+    //   fetch(URL, {
+    //     method: "POST",
+    //     headers: {
+    //       "content-type": "application/json",
+    //     },
+    //     body: JSON.stringify({ requestBody }),
+    //   }).then((responseFromAPI) => {
+    //     if (responseFromAPI.status === 404) {
+    //       alert("Det gick fel, sidan finns inte");
+    //     } else {
+    //       alert("Bytesförfrågan skickad!");
+    //       setHeadline("");
+    //       setSalesPitch("");
+    //       setCondtion("");
+    //       setPartsMissing("");
+    //       setPartsText("");
+    //     }
+    //     console.log("HEHEHEEHEHEH", responseFromAPI.status);
+    //     console.log(requestBody);
+    //   });
+  };
+
 
   if (show === "form") {
-    const Form = (event) => {
-      //   event.preventDefault();
-
-
-
-      //   fetch(URL, {
-      //     method: "POST",
-      //     headers: {
-      //       "content-type": "application/json",
-      //     },
-      //     body: JSON.stringify({ requestBody }),
-      //   }).then((responseFromAPI) => {
-      //     if (responseFromAPI.status === 404) {
-      //       alert("Det gick fel, sidan finns inte");
-      //     } else {
-      //       alert("Bytesförfrågan skickad!");
-      //       setHeadline("");
-      //       setSalesPitch("");
-      //       setCondtion("");
-      //       setPartsMissing("");
-      //       setPartsText("");
-      //     }
-      //     console.log("HEHEHEEHEHEH", responseFromAPI.status);
-      //     console.log(requestBody);
-      //   });
-    };
-
     return (
       <div className="wrapper">
         <div className="container">
@@ -206,7 +203,6 @@ const AddForm = ({ gamecard }) => {
                   <label for="no" id="radio-text">
                     Inga delar saknas
               </label>
-
                   <input
                     type="radio"
                     id="yes"
@@ -279,13 +275,18 @@ const AddForm = ({ gamecard }) => {
                 <hr />
                 <h4 className="form-text form-element">Vad vill du ha i utbyte mot ditt spel?</h4>
                 <div className="formExchange">
-                  <div className="col-sm-6">
+                  <div className="col-sm-4">
                     <h5>Du har</h5>
                     <p className="vbm-tag">{requestBody.gameTitle}</p>
-                    {/* Lägg till element (som liknar radio button) */}
-                    {/* Lägg till symbol frågetecken */}
                   </div>
-                  <div className="col-sm-6 wanted-games">
+                  <div className="col-sm-1">
+                    <div>
+                      <div className="greyElement"></div>
+                      <div className="smallGreyElement"></div>
+                    </div>
+                  </div>
+                  <div className="col-sm-7 wanted-games">
+
                     <h5>Du vill ha</h5>
                     {/* Lägg till sökruta + radiobutton */}
                     <select
@@ -301,8 +302,6 @@ const AddForm = ({ gamecard }) => {
                 </div>
 
                 {/* Lägg in vilket spel du har och vilket/vilka du vill byta mot */}
-
-
 
                 {/* <div className="send-trade-button col-sm-12 offset-sm-0">
               <input
@@ -320,7 +319,6 @@ const AddForm = ({ gamecard }) => {
             <button className="reviewButton" onClick={() => setShow("review")}>Granska annons</button>
           </div>
         </div >
-
       </div >
     );
   } else if (show === "review") {
@@ -338,10 +336,10 @@ const AddForm = ({ gamecard }) => {
         <AddReview addData={requestBody} user={testUser} />
         <div className="container">
           <div className="row">
-            <div className="col-sm-3"><CancelButton/></div>
+            <div className="col-sm-3"><CancelButton /></div>
             <div className="col-sm-8 right-align">
               <button className="editButton" onClick={() => setShow("form")}> Redigera</button>
-              <button className="no-button"><PublishButton trading={requestBody.gameTitle} tradingFor={requestBody.tradeFor} /></button>
+              <button className="no-button" /*onClick={()=> Form(event)}*/><PublishButton trading={requestBody.gameTitle} tradingFor={requestBody.tradeFor} /></button>
             </div>
           </div>
         </div>
