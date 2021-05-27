@@ -289,7 +289,7 @@ const AddForm = ({ gamecard }) => {
                     onChange={(event) => setPicURL2(event.target.value)}
                   />
 
-                  <button onClick={handlePicURL}>Save</button>
+                  <button type="button" onClick={handlePicURL}>Save</button>
                   </>
                   }
                 </div>
@@ -403,8 +403,9 @@ const AddForm = ({ gamecard }) => {
                       </div>
                     )}
                     <br />
-                    <button className="cross"><div className="x-mark">x</div></button>
+                    <button type="button" className="cross"><div className="x-mark">x</div></button>
                     <button
+                    type="button"
                       className="cancel"
                       onClick={() => setGamesWanted([])}>
                       Rensa spel

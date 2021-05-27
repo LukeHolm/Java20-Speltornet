@@ -9,9 +9,7 @@ import CreateAdd from "./components/CreateAdd";
 import GameAdds from "./components/GameAdds";
 import LoadData from "./components/LoadData";
 import Footer from './components/Footer'
-import ChoosenGames from "./components/ChoosenGames";
 import AddForm from "./components/AddForm";
-import Dropdown from "./components/Dropdown";
 
 
 function App() {
