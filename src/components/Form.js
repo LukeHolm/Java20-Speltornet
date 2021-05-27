@@ -30,7 +30,7 @@ const Form = () => {
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify({ requestBody }),
+      body: JSON.stringify(requestBody),
     }).then((responseFromAPI) => {
       if (responseFromAPI.status === 404) {
         alert("Det gick fel, sidan finns inte");
