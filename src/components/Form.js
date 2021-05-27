@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import Camera from "./Camera";
 import { useHistory } from "react-router-dom";
+import RequestButton from "./RequestButton";
 
-const Form = () => {
+const Form = ({trading, tradingFor}) => {
   let history = useHistory();
 
   const [headline, setHeadline] = useState("");
@@ -12,6 +13,7 @@ const Form = () => {
   const [partsText, setPartsText] = useState("");
 
   const URL = "https://609a4cbe0f5a13001721a8af.mockapi.io/ContactForm";
+  console.log(tradingFor);
 
   const submitForm = (event) => {
     event.preventDefault();
@@ -222,12 +224,7 @@ const Form = () => {
               >
                 Avbryt
               </button> */}
-              <input
-                className="send-request"
-                type="submit"
-                id="submitbutton"
-                value="Skicka bytesförfrågan"
-              />
+              <button className="no-button" onClick={(event) => submitForm(event)}><RequestButton trading={trading} tradingFor={tradingFor}/></button>
             </div>
           </div>
         </div>
