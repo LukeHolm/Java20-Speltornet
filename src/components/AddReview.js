@@ -46,7 +46,9 @@ const AddReview = ({ addData, user }) => {
                   <p className="tagg-bold five-margin-bottom">Frakt</p>
                   <p className="tagg">{addData.shipping}</p>
                   <p className="bold five-margin-bottom">Vill byta mot</p>
-                  <p className="vbm-tag">{addData.tradeFor}</p>
+                  {addData.tradeFor.map(trade =>
+                  <p className="vbm-tag">{trade}</p>
+                  )}
                 </div>
               </div>
             </div>
