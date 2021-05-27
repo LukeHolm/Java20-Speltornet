@@ -279,7 +279,20 @@ const AddForm = ({ gamecard }) => {
                 <div className="formExchange">
                   <div className="col-sm-4">
                     <h5>Du har</h5>
-                    <p className="vbm-tag">{requestBody.gameTitle}</p>
+                    {chooseGame.length > 1 && (
+                        <div>
+                          <input
+                            type="radio"
+                            id="radio"
+                            name="boardgame"
+                            value="myBoardgame"
+                            checked={true}
+                          />
+                          <label for="myBoardgame" id="radio">
+                            {chooseGame}
+                          </label>
+                        </div>
+                      )}
                   </div>
                   <div className="col-sm-1">
                     <div>
@@ -292,14 +305,27 @@ const AddForm = ({ gamecard }) => {
                     <h5>Du vill ha</h5>
                     {/* Lägg till sökruta + radiobutton */}
                     <select
-                      id="gamesWanted"
-                      value={gamesWanted}
-                      onChange={(event) => setGamesWanted(event.target.value)}              >
-                      <option>Välj spel...</option>
-                      {gamecard.map((title) => (
-                        <option>{title.title}</option>
-                      ))}
-                    </select>
+                        id="gamesWanted"
+                        required
+                        value={[gamesWanted]}
+                        onChange={(event) =>
+                          setGamesWanted([...gamesWanted, event.target.value])
+                        }
+                      >
+                        <option value="">Välj spel...</option>
+                        {gamecard.map((title) => (
+                          <option>{title.title}</option>
+                        ))}
+                      </select>
+                      <p className="vbmform">Valda spel:</p>
+                      {gamesWanted.length > 0 && (
+                        <div className="">
+                          {gamesWanted.map(title =>
+                            <p className="vbm-tag">{title}</p>
+                          )}
+                        </div>
+                      )}
+                      <button onClick={() => setGamesWanted([])}></button>
                   </div>
                 </div>
 
