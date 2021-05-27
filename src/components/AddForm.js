@@ -9,7 +9,7 @@ const AddForm = ({ gamecard }) => {
   const [chooseGame, setChooseGame] = useState("");
   const [headline, setHeadline] = useState("");
   const [salesPitch, setSalesPitch] = useState("");
-  const [condition, setCondtion] = useState("");
+  const [gameCondition, setCondtion] = useState("");
   const [partsMissing, setPartsMissing] = useState("");
   const [partsText, setPartsText] = useState("");
   const [delivery, setDelivery] = useState("");
@@ -29,19 +29,20 @@ const AddForm = ({ gamecard }) => {
     location: "Stockholm"
   };
 
-  const requestBody = {
-    userId: testUser.userId,
-    gameTitle: chooseGame,
-    addTitle: headline,
-    addDescription: salesPitch,
-    condition: condition,
-    conditionDescription: partsText,
-    missingParts: partsMissing,
-    tradeFor: gamesWanted,
-    shipping: delivery,
-    location: testUser.location,
-    imageURL: ["https://media.jw-it.se/a/large/000/005/202/000005202876.jpg"],
-  };
+   const requestBody = {
+     userId: testUser.userId,
+     gameTitle: chooseGame,
+     addTitle: headline,
+     addDescription: salesPitch,
+     condition: gameCondition,
+     conditionDescription: partsText,
+     missingParts: partsMissing,
+     tradeFor: gamesWanted,
+     shipping: delivery,
+     location: testUser.location,
+     imageURL: ["https://media.jw-it.se/a/large/000/005/202/000005202876.jpg"],
+   };
+
 
   const URL = "https://609a4cbe0f5a13001721a8af.mockapi.io/gamesavailable";
 
@@ -57,14 +58,7 @@ const AddForm = ({ gamecard }) => {
     }).then((responseFromAPI) => {
       if (responseFromAPI.status === 404) {
         alert("Det gick fel, sidan finns inte");
-    } //   else {
-      //   alert("Bytesförfrågan skickad!");
-      //   setHeadline("");
-      //   setSalesPitch("");
-      //   setCondtion("");
-      //   setPartsMissing("");
-      //   setPartsText("");
-      // }
+    }
       console.log("HEHEHEEHEHEH", responseFromAPI.status);
       console.log(requestBody);
     });
@@ -152,7 +146,7 @@ const AddForm = ({ gamecard }) => {
                     id="Nyskick"
                     name="gameCondition"
                     value="Nyskick"
-                    checked={condition === "Nyskick"}
+                    checked={gameCondition === "Nyskick"}
                     onChange={(e) => {
                       setCondtion(e.target.value);
                     }}
@@ -166,7 +160,7 @@ const AddForm = ({ gamecard }) => {
                     id="Lite slitet"
                     name="gameCondition"
                     value="Lite slitet"
-                    checked={condition === "Lite slitet"}
+                    checked={gameCondition === "Lite slitet"}
                     onChange={(e) => {
                       setCondtion(e.target.value);
                     }}
@@ -180,7 +174,7 @@ const AddForm = ({ gamecard }) => {
                     id="Mycket slitet"
                     name="gameCondition"
                     value="Mycket slitet"
-                    checked={condition === "Mycket slitet"}
+                    checked={gameCondition === "Mycket slitet"}
                     onChange={(e) => {
                       setCondtion(e.target.value);
                     }}
@@ -325,20 +319,10 @@ const AddForm = ({ gamecard }) => {
                           )}
                         </div>
                       )}
-                      <button onClick={() => setGamesWanted([])}>Rensa</button>
+                      <br/>
+                      <button className="cancel" onClick={() => setGamesWanted([])}>Rensa spel</button>
                   </div>
                 </div>
-
-                {/* Lägg in vilket spel du har och vilket/vilka du vill byta mot */}
-
-                {/* <div className="send-trade-button col-sm-12 offset-sm-0">
-              <input
-                className="send-request"
-                type="submit"
-                id="submitbutton"
-                value="Skicka bytesförfrågan"
-              />
-            </div> */}
               </div>
             </div>
           </form>
