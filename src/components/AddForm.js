@@ -105,9 +105,9 @@ const AddForm = ({ gamecard }) => {
                 </div>
 
                 {/* Nedan ska bara synas när man valt spel. Bytas ut mot rullistan */}
-                <p className="bold">
+                {/* <p className="bold">
                   Valt spel (ska bara synas efter man valt spel)
-            </p>
+            </p> */}
                 {/* Lägg in valt spel här */}
 
                 <div className="form-element">
