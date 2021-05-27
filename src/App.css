@@ -967,6 +967,14 @@ p {
   text-decoration: underline;
 }
 
+.vbmform {
+  font-weight: bold;
+  font-style: normal;
+  font-size: 13px;
+  text-transform: uppercase;
+  position: relative;
+}
+
 .vbm {
   font-weight: bold;
   font-style: normal;
