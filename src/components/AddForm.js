@@ -281,16 +281,18 @@ const AddForm = ({ gamecard }) => {
                 <div className="formExchange">
                   <h5>Du har</h5>
                   {/* Lägg till element (som liknar radio button) */}
-                  {/* Lägg till symbol frågetecken */}
+                  <div>
+                    <div className="greyElement"></div>
+                    <div className="smallGreyElement"></div>
+                  </div>
                   <div className="wanted-games">
                     <h5>Du vill ha</h5>
-                    {/* Lägg till sökruta + radiobutton */}
+                    {/* Lägg till radiobutton */}
                     <select
                       id="gamesWanted"
                       required
                       value={gamesWanted}
-                      onChange={(event) => setGamesWanted(event.target.value)}
-                    >
+                      onChange={(event) => setGamesWanted(event.target.value)}>
                       <option value="">Välj spel...</option>
                       {gamecard.map((title) => (
                         <option>{title.title}</option>

@@ -233,6 +233,7 @@ p {
 .wanted-games {
   display: flex;
   flex-direction: column;
+  margin-left: 30px;
 }
 
 .closeButton {
@@ -274,6 +275,10 @@ p {
   padding-top: 25px;
 }
 
+.formContainer {
+  padding-left: 10px;
+}
+
 .addFormButtons {
   display: flex;
   justify-content: space-between;
@@ -284,7 +289,27 @@ p {
 .formExchange {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin-right: 140px;
+  
+}
+
+.greyElement {
+  width: 9px;
+  height: 229px;
+  background-color: #E0E0E0;
+  border-radius: 10px 0px 0px 10px;
+  margin-top: 50px;
+  margin-left: 130px;
+}
+
+.smallGreyElement {
+  width: 9px;
+  height: 85px;
+  background-color: #E0E0E0;
+  border-radius: 10px 0px 0px 10px;
+  margin-top: 30px;
+  margin-left: 130px;
 }
 
 .onetwothree {
