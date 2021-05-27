@@ -13,12 +13,17 @@ const ImageGallery = ({ add }) => {
 
     console.log(numberOfImages);
 
+    useEffect(() => {
+        if(numberOfImages === 0){
+            setNextImage(0)
+        }
+    }, [])
+
     const Backwards = () => {
         if(imageNumber === 0) {
             setImageNumber(numberOfImages);
         } else {
             setImageNumber(imageNumber -1);
-
         }
     }
 
@@ -31,14 +36,12 @@ const ImageGallery = ({ add }) => {
         }
     }
 
-
-
     return (
         <>
             <img className="detailBigImage" src={add.imageURL[imageNumber]} alt={add.addTitle} />
             <img className="imageSwitcher" src={Back} alt="back" onClick={Backwards}/>
             <img className="imageSwitcher" src={add.imageURL[prevImage]} alt={add.addTitle} />
-            <img className="imageSwitcher" src={add.imageURL[imageNumber]} alt={add.addTitle} />
+            <img className="imageSwitcher" src={add.imageURL[0]} alt={add.addTitle} />
             <img className="imageSwitcher" src={add.imageURL[nextImage]} alt={add.addTitle} />
             <img className="imageSwitcher" src={Next} alt="next" onClick={Forwards} />
         </>

@@ -43,7 +43,7 @@ const Form = () => {
         setPartsMissing("");
         setPartsText("");
       }
-      console.log("HEHEHEEHEHEH", responseFromAPI.status);
+      console.log(responseFromAPI.status);
       console.log(requestBody);
     });
   };

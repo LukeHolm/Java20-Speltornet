@@ -32,7 +32,7 @@ const ChoosenGames = ({ gameAdd, addId}) => {
 
           {vmb.map(game =>
           <>
-          <input type="radio" id={game} name="trade" value="otherBoardgame" onClick={() => setShow(!show) }>
+          <input type="radio" id={game} name="trade" value="otherBoardgame" onClick={() => setShow(true) }>
           </input>
           <label for={game} id="radio-text">{game}</label>
           </>
