@@ -93,7 +93,7 @@ const AddForm = ({ gamecard }) => {
                 <div className="form-element">
                   <h5>Vilket spel vill du byta bort?</h5>
                   <select
-                    id="chooseGame"
+                    id="chooseGame" required
                     value={chooseGame}
                     onChange={(event) => setChooseGame(event.target.value)}
                   >
@@ -115,7 +115,7 @@ const AddForm = ({ gamecard }) => {
                   <input
                     className="thin-textarea"
                     type="text"
-                    id="headline"
+                    id="headline" required
                     placeholder="Skriv här..."
                     value={headline}
                     onChange={(event) => setHeadline(event.target.value)}
@@ -127,7 +127,7 @@ const AddForm = ({ gamecard }) => {
                   <textarea
                     type="textarea"
                     className="textarea"
-                    name="greeting"
+                    name="greeting" required
                     rows="5"
                     cols="30"
                     placeholder="Skriv här..."
@@ -144,8 +144,8 @@ const AddForm = ({ gamecard }) => {
                   <input
                     type="radio"
                     id="Nyskick"
-                    name="gameCondition"
-                    value="Nyskick"
+                    name="gameCondition" required
+                    value="Nyskick" 
                     checked={gameCondition === "Nyskick"}
                     onChange={(e) => {
                       setCondtion(e.target.value);
@@ -189,8 +189,8 @@ const AddForm = ({ gamecard }) => {
                   <input
                     type="radio"
                     id="no"
-                    name="components"
-                    value="no"
+                    name="components" required
+                    value="no" 
                     checked={partsMissing === false}
                     onChange={() => {
                       setPartsMissing(false);
@@ -222,7 +222,7 @@ const AddForm = ({ gamecard }) => {
                   <br />
                   <textarea
                     className="textarea"
-                    name="comment"
+                    name="comment" required
                     rows="5"
                     cols="30"
                     placeholder="Skriv här..."
@@ -254,10 +254,10 @@ const AddForm = ({ gamecard }) => {
                 <h5>Föredraget leveranssätt för byte av spel</h5>
                 <div className="form-element checkbox row">
                   <div className="col-sm-4">
-                    <input type="checkbox" id="postnord" value="postnord"
+                    <input type="checkbox" name="delivery" id="postnord" value="postnord" required
                       checked={delivery === "postnord"} onChange={(e) => setDelivery(e.target.value)}></input>
                     <label for="postnord" id="checkbox-text">Postnord</label><br /><br />
-                    <input type="checkbox" id="avhämtning" value="avhämtning"
+                    <input type="checkbox" name="delivery" id="avhämtning" value="avhämtning" required
                       checked={delivery === "avhämtning"} onChange={(e) => setDelivery(e.target.value)}></input>
                     <label for="avhämtning" id="checkbox-text">Avhämtning</label>
                   </div>

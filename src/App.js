@@ -47,9 +47,6 @@ function App() {
           <Route path="/ChoosenGames" component={AddForm}>
             <AddForm />
           </Route>
-          <Route path="/Dropdown" component={Dropdown}>
-            <Dropdown gamecard={gamecard}/>
-          </Route>
         </Switch>
       </Router>
       <Footer />
