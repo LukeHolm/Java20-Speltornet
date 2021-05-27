@@ -13,6 +13,7 @@ const AddForm = ({ gamecard }) => {
   const [partsMissing, setPartsMissing] = useState("");
   const [partsText, setPartsText] = useState("");
   const [delivery, setDelivery] = useState("");
+  const [desiredGame, setDesiredGame] = useState("");
   const [gamesWanted, setGamesWanted] = useState([]);
   const [show, setShow] = useState("form");
 
@@ -40,7 +41,7 @@ const AddForm = ({ gamecard }) => {
     userName: "DummyUser",
     rep: 5,
     img: "https://i.ebayimg.com/images/g/RSkAAOSwd0ha-yKd/s-l400.jpg",
-    location: "Stockholm"
+    location: "Stockholm",
   };
 
    const requestBody = {
@@ -72,12 +73,11 @@ const AddForm = ({ gamecard }) => {
     }).then((responseFromAPI) => {
       if (responseFromAPI.status === 404) {
         alert("Det gick fel, sidan finns inte");
-    }
+      }
       console.log("HEHEHEEHEHEH", responseFromAPI.status);
       console.log(requestBody);
     });
   };
-
 
   if (show === "form") {
     return (
@@ -88,13 +88,15 @@ const AddForm = ({ gamecard }) => {
               <h2 id="createAdd">Skapa annons</h2>
               <p>
                 Ladda upp ditt spel på Speltornet. Du kommer därefter få
-              <br />
-              bytesförfrågningar från andra användare. Efter att du godkänt en
-              <br />
-              bytesförfrågan genomför ni bytet!
-            </p>
+                <br />
+                bytesförfrågningar från andra användare. Efter att du godkänt en
+                <br />
+                bytesförfrågan genomför ni bytet!
+              </p>
               <div className="onetwothree">
-                <p className="bold spacer-thirtyfive" id="create-add">1. Skapa annons</p>
+                <p className="bold spacer-thirtyfive" id="create-add">
+                  1. Skapa annons
+                </p>
                 <p className="bold spacer-thirtyfive">2. Granska annons</p>
                 <p className="bold spacer-thirtyfive">3. Publicera</p>
               </div>
@@ -102,12 +104,17 @@ const AddForm = ({ gamecard }) => {
 
             <div className="formCol" id="form-box">
               <div className="col-sm-9 form">
-                <div className="form-element">{/*Tom div som skapar space*/}</div>
-                <div className="form-element">{/*Tom div som skapar space*/}</div>
+                <div className="form-element">
+                  {/*Tom div som skapar space*/}
+                </div>
+                <div className="form-element">
+                  {/*Tom div som skapar space*/}
+                </div>
                 <div className="form-element">
                   <h5>Vilket spel vill du byta bort?</h5>
                   <select
-                    id="chooseGame" required
+                    id="chooseGame"
+                    required
                     value={chooseGame}
                     onChange={(event) => setChooseGame(event.target.value)}
                   >
@@ -129,7 +136,8 @@ const AddForm = ({ gamecard }) => {
                   <input
                     className="thin-textarea"
                     type="text"
-                    id="headline" required
+                    id="headline"
+                    required
                     placeholder="Skriv här..."
                     value={headline}
                     onChange={(event) => setHeadline(event.target.value)}
@@ -141,7 +149,8 @@ const AddForm = ({ gamecard }) => {
                   <textarea
                     type="textarea"
                     className="textarea"
-                    name="greeting" required
+                    name="greeting"
+                    required
                     rows="5"
                     cols="30"
                     placeholder="Skriv här..."
@@ -158,8 +167,9 @@ const AddForm = ({ gamecard }) => {
                   <input
                     type="radio"
                     id="Nyskick"
-                    name="gameCondition" required
-                    value="Nyskick" 
+                    name="gameCondition"
+                    required
+                    value="Nyskick"
                     checked={gameCondition === "Nyskick"}
                     onChange={(e) => {
                       setCondtion(e.target.value);
@@ -167,7 +177,7 @@ const AddForm = ({ gamecard }) => {
                   />
                   <label for="Nyskick" id="radio-text">
                     Nyskick
-              </label>
+                  </label>
 
                   <input
                     type="radio"
@@ -181,7 +191,7 @@ const AddForm = ({ gamecard }) => {
                   />
                   <label for="Lite slitet" id="radio-text">
                     Lite slitet
-              </label>
+                  </label>
 
                   <input
                     type="radio"
@@ -195,7 +205,7 @@ const AddForm = ({ gamecard }) => {
                   />
                   <label for="Mycket slitet" id="radio-text">
                     Mycket slitet
-              </label>
+                  </label>
                 </div>
 
                 <div className="form-element">
@@ -203,8 +213,9 @@ const AddForm = ({ gamecard }) => {
                   <input
                     type="radio"
                     id="no"
-                    name="components" required
-                    value="no" 
+                    name="components"
+                    required
+                    value="no"
                     checked={partsMissing === false}
                     onChange={() => {
                       setPartsMissing(false);
@@ -212,7 +223,7 @@ const AddForm = ({ gamecard }) => {
                   />
                   <label for="no" id="radio-text">
                     Inga delar saknas
-              </label>
+                  </label>
                   <input
                     type="radio"
                     id="yes"
@@ -225,7 +236,7 @@ const AddForm = ({ gamecard }) => {
                   />
                   <label for="yes" id="radio-text">
                     Delar saknas
-              </label>
+                  </label>
                 </div>
 
                 <div className="form-element">
@@ -236,7 +247,8 @@ const AddForm = ({ gamecard }) => {
                   <br />
                   <textarea
                     className="textarea"
-                    name="comment" required
+                    name="comment"
+                    required
                     rows="5"
                     cols="30"
                     placeholder="Skriv här..."
@@ -286,39 +298,65 @@ const AddForm = ({ gamecard }) => {
                 <h5>Föredraget leveranssätt för byte av spel</h5>
                 <div className="form-element checkbox row">
                   <div className="col-sm-4">
-                    <input type="checkbox" name="delivery" id="postnord" value="postnord" required
-                      checked={delivery === "postnord"} onChange={(e) => setDelivery(e.target.value)}></input>
-                    <label for="postnord" id="checkbox-text">Postnord</label><br /><br />
-                    <input type="checkbox" name="delivery" id="avhämtning" value="avhämtning" required
-                      checked={delivery === "avhämtning"} onChange={(e) => setDelivery(e.target.value)}></input>
-                    <label for="avhämtning" id="checkbox-text">Avhämtning</label>
+                    <input
+                      type="checkbox"
+                      name="delivery"
+                      id="postnord"
+                      value="postnord"
+                      required
+                      checked={delivery === "postnord"}
+                      onChange={(e) => setDelivery(e.target.value)}
+                    ></input>
+                    <label for="postnord" id="checkbox-text">
+                      Postnord
+                    </label>
+                    <br />
+                    <br />
+                    <input
+                      type="checkbox"
+                      name="delivery"
+                      id="avhämtning"
+                      value="avhämtning"
+                      required
+                      checked={delivery === "avhämtning"}
+                      onChange={(e) => setDelivery(e.target.value)}
+                    ></input>
+                    <label for="avhämtning" id="checkbox-text">
+                      Avhämtning
+                    </label>
                   </div>
                   <div className="col-sm-6">
                     <tagg>(fr. 36 SEK)</tagg>
-                    <p className="detailText">Vid byte bokar du frakten genom postnord.se</p>
+                    <p className="detailText">
+                      Vid byte bokar du frakten genom postnord.se
+                    </p>
                     <tagg>(Gratis)</tagg>
-                    <p className="detailText">Vid byte bestämmer du träff med bytaren.</p>
+                    <p className="detailText">
+                      Vid byte bestämmer du träff med bytaren.
+                    </p>
                   </div>
                 </div>
                 <hr />
-                <h4 className="form-text form-element">Vad vill du ha i utbyte mot ditt spel?</h4>
+                <h4 className="form-text form-element">
+                  Vad vill du ha i utbyte mot ditt spel?
+                </h4>
                 <div className="formExchange">
                   <div className="col-sm-4">
                     <h5>Du har</h5>
                     {chooseGame.length > 1 && (
-                        <div>
-                          <input
-                            type="radio"
-                            id="radio"
-                            name="boardgame"
-                            value="myBoardgame"
-                            checked={true}
-                          />
-                          <label for="myBoardgame" id="radio">
-                            {chooseGame}
-                          </label>
-                        </div>
-                      )}
+                      <div>
+                        <input className="radio-special"
+                          type="radio"
+                          id="radio"
+                          name="boardgame"
+                          value="myBoardgame"
+                          checked={true}
+                        />
+                        <label for="myBoardgame" id="radio">
+                          {chooseGame}
+                        </label>
+                      </div>
+                    )}
                   </div>
                   <div className="col-sm-1">
                     <div>
@@ -326,33 +364,65 @@ const AddForm = ({ gamecard }) => {
                       <div className="smallGreyElement"></div>
                     </div>
                   </div>
-                  <div className="col-sm-7 wanted-games">
-
+                  <div className="col-sm-7 wanted-games" >
                     <h5>Du vill ha</h5>
-                    {/* Lägg till radiobutton */}
+                    <input className="radio-special"
+                      type="radio"
+                      id="Önska specifikt spel"
+                      name="desiredGame"
+                      required
+                      value="Önska specifikt spel"
+                      checked={desiredGame === false}
+                      onChange={() => {
+                        setDesiredGame(false);
+                      }}
+                    />
+                    <label for="no" id="radio-text" className="radio-special-text">
+                      Önska specifika spel
+                    </label>
+                    <div className="detailText bold specificGame">Max 5 specifika spel</div>
                     <select
-                        id="gamesWanted"
-                        required
-                        value={[gamesWanted]}
-                        onChange={(event) =>
-                          setGamesWanted([...gamesWanted, event.target.value])
-                        }
-                      >
-                        <option value="">Välj spel...</option>
-                        {gamecard.map((title) => (
-                          <option>{title.title}</option>
+                      id="gamesWanted"
+                      required
+                      value={[gamesWanted]}
+                      onChange={(event) =>
+                        setGamesWanted([...gamesWanted, event.target.value])
+                      }
+                    >
+                      <option value="">Välj spel...</option>
+                      {gamecard.map((title) => (
+                        <option>{title.title}</option>
+                      ))}
+                    </select>
+                    <p className="vbmform">Valda spel:</p>
+                    {gamesWanted.length > 0 && (
+                      <div className="">
+                        {gamesWanted.map((title) => (
+                          <p className="vbm-tag">{title}</p>
                         ))}
-                      </select>
-                      <p className="vbmform">Valda spel:</p>
-                      {gamesWanted.length > 0 && (
-                        <div className="">
-                          {gamesWanted.map(title =>
-                            <p className="vbm-tag">{title}</p>
-                          )}
-                        </div>
-                      )}
-                      <br/>
-                      <button className="cancel" onClick={() => setGamesWanted([])}>Rensa spel</button>
+                      </div>
+                    )}
+                    <br />
+                    <button className="cross"><div className="x-mark">x</div></button>
+                    <button
+                      className="cancel"
+                      onClick={() => setGamesWanted([])}>
+                      Rensa spel
+                    </button>
+                    <input className="radio-special"
+                      type="radio"
+                      id="Förslag på spel"
+                      name="desiredGame"
+                      value="Förslag på spel"
+                      checked={desiredGame === true}
+                      onChange={() => {
+                        setDesiredGame(true);
+                      }}
+
+                    />
+                    <label for="yes" id="radio-text" className="radio-special-text">
+                      Jag vill få förslag på spel
+                    </label>
                   </div>
                 </div>
               </div>
@@ -360,36 +430,52 @@ const AddForm = ({ gamecard }) => {
           </form>
           <div className="row separate">
             <CancelButton id="closeButton" />
-            <button className="reviewButton" onClick={() => setShow("review")}>Granska annons</button>
+            <button className="reviewButton" onClick={() => setShow("review")}>
+              Granska annons
+            </button>
           </div>
-        </div >
-      </div >
+        </div>
+      </div>
     );
   } else if (show === "review") {
-
     return (
       <div className="container">
         <div className="col-sm-12 form">
           <h2 id="createAdd">Förhandsgranska annons</h2>
           <div className="onetwothree-two">
             <p className="bold spacer-thirtyfive">1. Skapa annons</p>
-            <p className="bold spacer-thirtyfive" id="create-add">2. Granska annons</p>
+            <p className="bold spacer-thirtyfive" id="create-add">
+              2. Granska annons
+            </p>
             <p className="bold spacer-thirtyfive">3. Publicera</p>
           </div>
         </div>
         <AddReview addData={requestBody} user={testUser} />
         <div className="container">
           <div className="row">
-            <div className="col-sm-3"><CancelButton /></div>
+            <div className="col-sm-3">
+              <CancelButton />
+            </div>
             <div className="col-sm-8 right-align">
-              <button className="editButton" onClick={() => setShow("form")}> Redigera</button>
-              <button className="no-button" onClick={(event)=> submitForm(event)}><PublishButton trading={requestBody.gameTitle} tradingFor={requestBody.tradeFor} /></button>
+              <button className="editButton" onClick={() => setShow("form")}>
+                {" "}
+                Redigera
+              </button>
+              <button
+                className="no-button"
+                onClick={(event) => submitForm(event)}
+              >
+                <PublishButton
+                  trading={requestBody.gameTitle}
+                  tradingFor={requestBody.tradeFor}
+                />
+              </button>
             </div>
           </div>
         </div>
         <div className="form-element">{/*Tom div som skapar space*/}</div>
       </div>
-    )
+    );
   }
 };
 

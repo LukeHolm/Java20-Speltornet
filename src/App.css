@@ -10,10 +10,11 @@
 }
 
 body {
-  color: #1A3455;
+  color: #1a3455;
 }
 
-hr {width: 100%;
+hr {
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   height: 2px;
@@ -34,7 +35,7 @@ hr {width: 100%;
 .Thin-header {
   height: 104px;
   width: 100%;
-  background-color: #1A3455;
+  background-color: #1a3455;
 }
 
 .App-link {
@@ -51,7 +52,7 @@ hr {width: 100%;
 }
 
 .top-bar {
-  background-image: url('https://s3-alpha-sig.figma.com/img/09ed/b2e4/d9be4540864c52136e85d2db324a0d14?Expires=1622419200&Signature=h2eyKK-JO8j9GapWKnjwk~xd1lmvZaDcuenoQGngx3qDkLQ6IkIYhIa5e8rKd~GtAIDkSTrXZ~vBNgvlJ3nt9X21KxuFo7EswL6zzVmFy5Bs6wpFlcvw9C4QtOwWzCAFiqPBVEZe3AC6Li3sFTn33iB4FO7yi-aKzlDkVS6uh8ubyugQ432E72o4uQN~FlSu9QdJ9yUoohEqhkqe5LAS7sL54c1HngU~FMdkJ3k~qeRWqOkEwCqvxlP8LMVWlCqPp4jh10fgaoGtbkim1NqLol5kiJSc924WBNtTQtL0s0VujsXwxF6kj1KyqF4r8ggsgInix5~52XnFSId1Htd8BQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA');
+  background-image: url("https://s3-alpha-sig.figma.com/img/09ed/b2e4/d9be4540864c52136e85d2db324a0d14?Expires=1622419200&Signature=h2eyKK-JO8j9GapWKnjwk~xd1lmvZaDcuenoQGngx3qDkLQ6IkIYhIa5e8rKd~GtAIDkSTrXZ~vBNgvlJ3nt9X21KxuFo7EswL6zzVmFy5Bs6wpFlcvw9C4QtOwWzCAFiqPBVEZe3AC6Li3sFTn33iB4FO7yi-aKzlDkVS6uh8ubyugQ432E72o4uQN~FlSu9QdJ9yUoohEqhkqe5LAS7sL54c1HngU~FMdkJ3k~qeRWqOkEwCqvxlP8LMVWlCqPp4jh10fgaoGtbkim1NqLol5kiJSc924WBNtTQtL0s0VujsXwxF6kj1KyqF4r8ggsgInix5~52XnFSId1Htd8BQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA");
   background-size: 100% 100%;
   background-color: #d4d2d2;
   width: 100%;
@@ -59,7 +60,7 @@ hr {width: 100%;
 }
 
 .top-bar-overlap {
-  background-color: #1A3455;
+  background-color: #1a3455;
   height: 601px;
   width: 100%;
   display: inline-block;
@@ -71,7 +72,8 @@ hr {width: 100%;
   margin-left: 0;
 }
 
-.col, [class*="col-"] {
+.col,
+[class*="col-"] {
   padding-right: 0;
   padding-left: 0;
 }
@@ -109,7 +111,7 @@ hr {width: 100%;
   font-weight: 600;
   font-size: 34.3559px;
   line-height: 42px;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-left: 5px;
   margin-top: 52px;
 }
@@ -117,7 +119,7 @@ hr {width: 100%;
 .line {
   border: none;
   height: 1px;
-  background-color: #1A3455;
+  background-color: #1a3455;
   margin-left: 00px;
   margin-right: 120px;
 }
@@ -192,13 +194,13 @@ p {
   text-align: right;
 }
 
-.separate{
+.separate {
   display: flex;
   justify-content: space-between;
 }
 
 #create-add {
-  color: #E21C64;
+  color: #e21c64;
 }
 
 #createAdd {
@@ -213,13 +215,13 @@ p {
   margin-top: 70px;
 }
 
-#form-box{
-  border:2px solid #6D85AA;
+#form-box {
+  border: 2px solid #6d85aa;
   border-radius: 20px;
 }
 
 .form-text {
-  color: #E21C64;
+  color: #e21c64;
   margin-bottom: 30px;
 }
 
@@ -229,7 +231,7 @@ p {
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
-  color: #1A3455;
+  color: #1a3455;
 }
 
 .form-element {
@@ -241,7 +243,7 @@ p {
 .greyElement {
   width: 9px;
   height: 229px;
-  background-color: #E0E0E0;
+  background-color: #e0e0e0;
   border-radius: 10px 0px 0px 10px;
   margin-top: 50px;
   margin-left: 0px;
@@ -249,16 +251,21 @@ p {
 .smallGreyElement {
   width: 9px;
   height: 85px;
-  background-color: #E0E0E0;
+  background-color: #e0e0e0;
   border-radius: 10px 0px 0px 10px;
   margin-top: 30px;
   margin-left: 0px;
 }
 
+.specificGame {
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
 #chooseGame {
   width: 304px;
   height: 33px;
-  border: 2px solid #1A3455;
+  border: 2px solid #1a3455;
   box-sizing: border-box;
   border-radius: 10px;
 }
@@ -266,7 +273,7 @@ p {
 #gamesWanted {
   width: 280px;
   height: 33px;
-  border: 2px solid #1A3455;
+  border: 2px solid #1a3455;
   box-sizing: border-box;
   border-radius: 10px;
 }
@@ -285,15 +292,15 @@ p {
 .reviewButton {
   width: 265px;
   height: 59px;
-  border: 4px solid #E21C64;
+  border: 4px solid #e21c64;
   border-radius: 30px;
-  background-color: #E21C64;
+  background-color: #e21c64;
   border-radius: 40px;
   font-family: Poppins;
   font-weight: 600;
   font-size: 15px;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-top: 58px;
   margin-bottom: 150px;
 }
@@ -301,7 +308,7 @@ p {
 .editButton {
   width: 265px;
   height: 59px;
-  border: 4px solid #E21C64;
+  border: 4px solid #e21c64;
   border-radius: 30px;
   background-color: white;
   border-radius: 40px;
@@ -309,7 +316,7 @@ p {
   font-weight: 600;
   font-size: 15px;
   text-transform: uppercase;
-  color: #E21C64;
+  color: #e21c64;
 }
 
 .formFrame {
@@ -317,7 +324,7 @@ p {
   justify-content: center;
   width: 860px;
   height: auto;
-  border: 2px solid #6D85AA;
+  border: 2px solid #6d85aa;
   border-radius: 20px;
   padding-left: 20px;
   padding-bottom: 50px;
@@ -333,6 +340,21 @@ p {
   justify-content: space-between;
   margin-bottom: 150px;
   margin-top: 50px;
+}
+
+.cross {
+  width: 15px;
+  height: 15px;
+  border: 1.5px solid #e21c64;
+  background-color: white;
+  border-radius: 100%;
+}
+
+.x-mark {
+  color: #e21c64;
+  z-index: -1;
+  padding-bottom: 20px;
+  padding-right: 10px;
 }
 
 .formExchange {
@@ -373,18 +395,18 @@ p {
 .textarea {
   width: 100%;
   height: 108px;
-  background-color: #FFFFFF;
-  border: 2px solid #1A3455;
+  background-color: #ffffff;
+  border: 2px solid #1a3455;
   box-sizing: border-box;
   border-radius: 10px;
-  padding:10px;
+  padding: 10px;
 }
 
 .thin-textarea {
   width: 100%;
   height: 47px;
-  background-color: #FFFFFF;
-  border: 2px solid #1A3455;
+  background-color: #ffffff;
+  border: 2px solid #1a3455;
   box-sizing: border-box;
   border-radius: 10px;
   padding-left: 10px;
@@ -393,8 +415,8 @@ p {
 .camera-box {
   width: 112px;
   height: 118px;
-  background-color: #FFFFFF;
-  border: 3px solid #1A3455;
+  background-color: #ffffff;
+  border: 3px solid #1a3455;
   box-sizing: border-box;
   border-radius: 10px;
   margin-right: 25px;
@@ -417,7 +439,7 @@ p {
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
-  color: #1A3455;
+  color: #1a3455;
   padding-top: 35px;
   padding-left: 25px;
 }
@@ -428,7 +450,7 @@ p {
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
-  color: #1A3455;
+  color: #1a3455;
   padding-top: 15px;
   padding-left: 25px;
 }
@@ -439,7 +461,7 @@ p {
   font-size: 48px;
   text-align: center;
   margin-top: 150px;
-  color: #EE387A;
+  color: #ee387a;
   height: 74px;
 }
 
@@ -460,12 +482,12 @@ p {
 }
 
 .skapa-annons {
-  background-color: #EE387A;
+  background-color: #ee387a;
   border-radius: 38px;
   border-style: none;
   width: 202px;
   height: 52px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: Montserrat;
 }
 
@@ -474,15 +496,15 @@ p {
 }
 
 .plus {
-  background-color: #EE387A;
-  color: #FFFFFF;
+  background-color: #ee387a;
+  color: #ffffff;
   font-family: Montserrata;
   font-weight: bold;
 }
 
 .pink {
-  color: #EE387A;
-  background-color: #1A3455;
+  color: #ee387a;
+  background-color: #1a3455;
   padding: 0;
 }
 
@@ -490,8 +512,8 @@ p {
   font-family: Montserrat;
   font-size: 48px;
   font-weight: bold;
-  color: #1A3455;
-  background-color: #FFFFFF;
+  color: #1a3455;
+  background-color: #ffffff;
   padding-top: 100px;
   padding-bottom: 20px;
   padding-left: 16px;
@@ -533,15 +555,15 @@ p {
   font-family: Montserrat;
   font-weight: 600;
   font-size: 22px;
-  color: #1A3455;
+  color: #1a3455;
   padding-top: 10px;
 }
 
 .body-bottom {
   width: 100%;
   padding-bottom: 100px;
-  background-color: #1A3455;
-  color: #FFFFFF;
+  background-color: #1a3455;
+  color: #ffffff;
   margin-top: 100px;
 }
 
@@ -550,7 +572,7 @@ p {
   padding: 70px;
   font-weight: bold;
   font-family: Montserrat;
-  color: #EE387A
+  color: #ee387a;
 }
 
 .body-bottom-text {
@@ -587,7 +609,7 @@ p {
 
 .App-footer {
   width: 100%;
-  background-color: #4DBAB3;
+  background-color: #4dbab3;
   padding: 30px;
   position: absolute;
 }
@@ -617,11 +639,11 @@ p {
   right: 20px;
   top: 20px;
   padding: 10px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .burger:hover {
-  color: #EE387A;
+  color: #ee387a;
   cursor: pointer;
   border-radius: 5px;
 }
@@ -658,12 +680,12 @@ p {
 .game-modal-content {
   width: 70%;
   height: 90%;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 20px;
 }
 
 .game-modal-header {
-  background-color: #1A3455;
+  background-color: #1a3455;
   padding: 10px;
   padding-top: 40px;
   border-radius: 20px 20px 0px 0px;
@@ -687,7 +709,7 @@ p {
 
 .box {
   display: inline-block;
-  color: #EE387A;
+  color: #ee387a;
   padding-top: 20px;
   padding-bottom: 20px;
   vertical-align: top;
@@ -733,7 +755,7 @@ p {
 .receipt-border {
   width: 264px;
   height: 252px;
-  background-color: #1A3455;
+  background-color: #1a3455;
 }
 
 .col-left {
@@ -744,8 +766,8 @@ p {
 .col-mid {
   width: 544px;
   height: 252px;
-  border: 3px solid #1A3455;
-  background-color: #FFFFFF;
+  border: 3px solid #1a3455;
+  background-color: #ffffff;
 }
 
 .col-right {
@@ -754,7 +776,7 @@ p {
   font-family: Montserrat;
   font-size: 14px;
   padding-top: 43px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .userimage {
@@ -766,7 +788,7 @@ p {
 
 .spel {
   height: 33px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 17px;
   color: #565656;
   margin: 5px;
@@ -779,32 +801,32 @@ p {
 /* ---------------------------------------------- KNAPPAR ----------------------------------------*/
 
 .knapp {
-  background-color: #EE387A;
+  background-color: #ee387a;
   border-radius: 21px;
   border-style: none;
   width: 144px;
   height: 33px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: Poppins;
   font-size: 15px;
   text-transform: uppercase;
 }
 
 .box:hover .knapp {
-  background-color: #CA1758;
+  background-color: #ca1758;
 }
 
 .cancel {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 50px;
   border-style: none;
   width: 130px;
   height: 60px;
-  color: #E21C64;
+  color: #e21c64;
   font-family: Poppins;
   font-size: 15px;
   text-transform: uppercase;
-  border: 4px solid #E21C64;
+  border: 4px solid #e21c64;
   font-weight: 600;
 }
 
@@ -812,9 +834,9 @@ p {
   width: 272px;
   height: 52px;
   border-radius: 50px;
-  background-color: #E21C64;
-  border: 4px solid #E21C64;
-  color: #FFFFFF;
+  background-color: #e21c64;
+  border: 4px solid #e21c64;
+  color: #ffffff;
   font-family: Montserrat;
   font-weight: 600;
   font-size: 18px;
@@ -823,13 +845,13 @@ p {
 }
 
 .no-button {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-style: none;
 }
 
 .addBottom {
-  background-color: #1A3455;
-  color: #FFFFFF;
+  background-color: #1a3455;
+  color: #ffffff;
   width: 100%;
   position: relative;
   bottom: 0%;
@@ -856,10 +878,12 @@ p {
 }
 
 :root {
-  --color: #E21C64;
+  --color: #e21c64;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
@@ -873,6 +897,15 @@ p {
 #radio-text {
   margin-right: 20px;
   margin-left: 10px;
+}
+
+.radio-special {
+  margin-top: 20px;
+  margin-bottom: -20px;
+}
+
+.radio-special-text {
+  padding-left: 15px;
 }
 
 #checkbox-text {
@@ -916,13 +949,12 @@ p {
 .smallAdd {
   display: inline-flex;
   flex-wrap: wrap;
-  color: #1A3455, 100%;
+  color: #1a3455, 100%;
   vertical-align: top;
   width: 420px;
   height: 170px;
-  border: 0px solid #E21C64;
+  border: 0px solid #e21c64;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  ;
   text-align: left;
   margin-right: 25px;
   margin-bottom: 25px;
@@ -948,7 +980,7 @@ p {
 }
 
 .addPresent {
-  color: #1A3455;
+  color: #1a3455;
   text-align: left;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -976,6 +1008,7 @@ p {
   font-size: 13px;
   text-transform: uppercase;
   position: relative;
+  padding-top: 20px;
 }
 
 .vbm {
@@ -996,7 +1029,7 @@ p {
   margin-top: 0px;
   font-size: 13px;
   font-weight: 400;
-  border: 1px solid #1A3455;
+  border: 1px solid #1a3455;
   margin-left: 2px;
   margin-right: 2px;
   margin-bottom: 2px;
@@ -1010,8 +1043,8 @@ p {
 }
 
 .testaren {
-  border: 1px solid #E21c64;
-  color: #FFFFFF;
+  border: 1px solid #e21c64;
+  color: #ffffff;
   /* border-radius: 20px 20px 0px 0px; */
   /* padding:10px; */
 }
@@ -1025,8 +1058,8 @@ p {
 }
 
 .userInfoBar {
-  background-color: #1A3455;
-  color: #FFFFFF;
+  background-color: #1a3455;
+  color: #ffffff;
   border-radius: 0px 20px 0px 0px;
   height: 70px;
   margin-bottom: 20px;
@@ -1040,8 +1073,8 @@ p {
 }
 
 .descriptionBox {
-  border: 2px solid #6D85AA;
-  padding: 30px
+  border: 2px solid #6d85aa;
+  padding: 30px;
 }
 
 .userProfileImg {
@@ -1099,7 +1132,7 @@ p {
   margin-right: 35px;
 }
 
-#reviewDescription{
+#reviewDescription {
   border-radius: 0px 0px 20px 0px;
 }
 
@@ -1108,9 +1141,9 @@ p {
 .good {
   width: 82px;
   height: 28px;
-  background-color: #DFFAE5;
-  color: #1A3455;
-  border: 1px solid #1A3455;
+  background-color: #dffae5;
+  color: #1a3455;
+  border: 1px solid #1a3455;
   text-align: center;
   margin-bottom: 5px;
 }
@@ -1118,9 +1151,9 @@ p {
 .worn {
   width: 89px;
   height: 28px;
-  background-color: #FFEED6;
-  color: #1A3455;
-  border: 1px solid #1A3455;
+  background-color: #ffeed6;
+  color: #1a3455;
+  border: 1px solid #1a3455;
   text-align: center;
   margin-bottom: 5px;
 }
@@ -1128,9 +1161,9 @@ p {
 .bad {
   width: 114px;
   height: 28px;
-  background-color: #FFD8D8;
-  color: #1A3455;
-  border: 1px solid #1A3455;
+  background-color: #ffd8d8;
+  color: #1a3455;
+  border: 1px solid #1a3455;
   text-align: center;
   margin-bottom: 5px;
 }
@@ -1143,7 +1176,7 @@ p {
 /*------------------------------------------------------------- Form foldout -------------------------------------------------------*/
 
 .gamechoice {
-  border: 2px solid #6D85AA;
+  border: 2px solid #6d85aa;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
   margin-bottom: 20px;
@@ -1178,7 +1211,7 @@ p {
 .cancel-modal-content {
   width: 340px;
   height: 225px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 20px;
   padding-top: 25px;
   padding-left: 50px;
@@ -1205,29 +1238,29 @@ p {
 }
 
 .cancel-modal-no {
-  background-color: #E21C64;
+  background-color: #e21c64;
   border-radius: 90px;
   border-style: none;
   width: 90px;
   height: 60px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: Poppins;
   font-size: 15px;
   text-transform: uppercase;
-  border: 2px solid #E21C64;
+  border: 2px solid #e21c64;
 }
 
 .cancel-modal-yes {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 90px;
   border-style: none;
   width: 90px;
   height: 60px;
-  color: #E21C64;
+  color: #e21c64;
   font-family: Poppins;
   font-size: 15px;
   text-transform: uppercase;
-  border: 2px solid #E21C64;
+  border: 2px solid #e21c64;
   font-weight: 600;
 }
 
@@ -1236,7 +1269,7 @@ p {
 .publish-modal-content {
   width: 750px;
   height: 450px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 20px;
   padding-top: 25px;
   padding-left: 50px;
@@ -1259,31 +1292,31 @@ p {
 }
 
 .publish-modal-back {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 90px;
   border-style: none;
   width: 255px;
   height: 60px;
-  color: #E21C64;
+  color: #e21c64;
   font-family: Poppins;
   font-size: 15px;
   text-transform: uppercase;
-  border: 2px solid #E21C64;
+  border: 2px solid #e21c64;
   font-weight: 600;
   margin-top: 50px;
 }
 
 .publish-modal-button {
-  background-color: #E21C64;
+  background-color: #e21c64;
   border-radius: 90px;
   border-style: none;
   width: 270px;
   height: 60px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: Poppins;
   font-size: 15px;
   text-transform: uppercase;
-  border: 2px solid #E21C64;
+  border: 2px solid #e21c64;
 }
 
 /*------------------------------------------------------------- request Modal -------------------------------------------------------*/
@@ -1291,7 +1324,7 @@ p {
 .request-modal-content {
   width: 743px;
   height: 434px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 20px;
   padding-top: 25px;
   padding-left: 50px;
@@ -1314,29 +1347,29 @@ p {
 }
 
 .request-modal-back {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 90px;
   border-style: none;
   width: 255px;
   height: 60px;
-  color: #E21C64;
+  color: #e21c64;
   font-family: Poppins;
   font-size: 15px;
   text-transform: uppercase;
-  border: 2px solid #E21C64;
+  border: 2px solid #e21c64;
   font-weight: 600;
   margin-top: 50px;
 }
 
 .request-modal-button {
-  background-color: #E21C64;
+  background-color: #e21c64;
   border-radius: 90px;
   border-style: none;
   width: 270px;
   height: 60px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: Poppins;
   font-size: 15px;
   text-transform: uppercase;
-  border: 2px solid #E21C64;
+  border: 2px solid #e21c64;
 }
