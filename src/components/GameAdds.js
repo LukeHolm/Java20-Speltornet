@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
-import Footer from './Footer';
 import HeaderThin from './HeaderThin';
 import LoadData from './LoadData';
+import StarRating from './StarRating';
 
 const GameAdds = ({gamecard, gameAdd}) => {
 
@@ -26,10 +26,10 @@ const GameAdds = ({gamecard, gameAdd}) => {
                                 <h4 className="game-modal-title">Om {game.title}</h4>
                                 <p className="game-modal-description">{game.description}</p>
                             </div>
-                            <div className="col-sm-2" >
+                            <div className="col-sm-2 offset-sm-1" >
                                 <div className="left-align">
                                     <h5>Spelets omdöme</h5>
-                                    <h4 className="center-align">{game.rating}</h4>
+                                    <h4 className="left-align"><StarRating rep={game.rating}/></h4>
                                 </div>
 
                             </div>
