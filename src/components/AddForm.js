@@ -319,7 +319,8 @@ const AddForm = ({ gamecard }) => {
                           )}
                         </div>
                       )}
-                      <button onClick={() => setGamesWanted([])}></button>
+                      <br/>
+                      <button className="cancel" onClick={() => setGamesWanted([])}>Rensa spel</button>
                   </div>
                 </div>
               </div>
