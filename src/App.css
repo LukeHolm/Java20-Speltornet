@@ -311,6 +311,18 @@ p {
   color: #E21C64;
 }
 
+.formFrame {
+  display: flex;
+  justify-content: center;
+  width: 860px;
+  height: auto;
+  border: 2px solid #6D85AA;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-bottom: 50px;
+  padding-top: 25px;
+}
+
 .addFormButtons {
   display: flex;
   justify-content: space-between;
@@ -969,8 +981,6 @@ p {
   font-size: 13px;
   font-weight: 400;
   border: 1px solid #1A3455;
-  flex-wrap: wrap;
-  display: inline-block;
   margin-left: 2px;
   margin-right: 2px;
   margin-bottom: 2px;
