@@ -17,6 +17,20 @@ const AddForm = ({ gamecard }) => {
   const [gamesWanted, setGamesWanted] = useState([]);
   const [show, setShow] = useState("form");
 
+  const [showURL, setShowURL] = useState(false);
+  const [showURL2, setShowURL2] = useState(false);
+  const [showURL3, setShowURL3] = useState(false);
+  const [showURL4, setShowURL4] = useState(false);
+  const [showURL5, setShowURL5] = useState(false);
+  const [picURL, setPicURL] = useState();
+  const [picURL2, setPicURL2] = useState();
+  const [picURL3, setPicURL3] = useState();
+  const [picURL4, setPicURL4] = useState();
+  const [picURL5, setPicURL5] = useState();
+
+
+
+
   const testUser = {
     userId: 7,
     firstName: "Dummy",
@@ -242,22 +256,94 @@ const AddForm = ({ gamecard }) => {
                 <div className="form-element">
                   <h5>Ladda upp bilder på ditt spel:</h5>
                   <div className="row">
-                    <div className="camera-box">
+                    <div className="camera-box" onClick={() => setShowURL(true)}>
                       <Camera />
                     </div>
-                    <div className="camera-box">
+                    <div className="camera-box" onClick={() => setShowURL2(true)}>
                       <Camera />
                     </div>
-                    <div className="camera-box">
+                    <div className="camera-box" onClick={() => setShowURL3(true)}>
                       <Camera />
                     </div>
-                    <div className="camera-box">
+                    <div className="camera-box" onClick={() => setShowURL4(true)}>
                       <Camera />
                     </div>
-                    <div className="camera-box">
+                    <div className="camera-box" onClick={() => setShowURL5(true)}>
                       <Camera />
                     </div>
                   </div>
+                  <div className="form-element">
+                  {showURL && 
+                    <>
+                  <h5>Bild-URL</h5>
+                  <input
+                    className="thin-textarea"
+                    type="text"
+                    id="headline"
+                    placeholder="URL..."
+                    value={picURL}
+                    onChange={(event) => setPicURL(event.target.value)}
+                  />
+                  <button onClick={() => setShowURL(false)}>Save</button>
+                  </>
+                  }
+                                    {showURL2 && 
+                    <>
+                  <h5>Bild-URL</h5>
+                  <input
+                    className="thin-textarea"
+                    type="text"
+                    id="headline"
+                    placeholder="URL..."
+                    value={picURL2}
+                    onChange={(event) => setPicURL2(event.target.value)}
+                  />
+                  <button onClick={() => setShowURL2(false)}>Save</button>
+                  </>
+                  }
+                                    {showURL3 && 
+                    <>
+                  <h5>Bild-URL</h5>
+                  <input
+                    className="thin-textarea"
+                    type="text"
+                    id="headline"
+                    placeholder="URL..."
+                    value={picURL3}
+                    onChange={(event) => setPicURL3(event.target.value)}
+                  />
+                  <button onClick={() => setShowURL3(false)}>Save</button>
+                  </>
+                  }
+                                    {showURL4 && 
+                    <>
+                  <h5>Bild-URL</h5>
+                  <input
+                    className="thin-textarea"
+                    type="text"
+                    id="headline"
+                    placeholder="URL..."
+                    value={picURL4}
+                    onChange={(event) => setPicURL4(event.target.value)}
+                  />
+                  <button onClick={() => setShowURL4(false)}>Save</button>
+                  </>
+                  }
+                                    {showURL5 && 
+                    <>
+                  <h5>Bild-URL</h5>
+                  <input
+                    className="thin-textarea"
+                    type="text"
+                    id="headline"
+                    placeholder="URL..."
+                    value={picURL5}
+                    onChange={(event) => setPicURL5(event.target.value)}
+                  />
+                  <button onClick={() => setShowURL5(false)}>Save</button>
+                  </>
+                  }
+                </div>
                 </div>
                 <hr />
                 <h5>Föredraget leveranssätt för byte av spel</h5>
