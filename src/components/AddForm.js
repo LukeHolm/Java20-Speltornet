@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import Camera from "./Camera";
 import AddReview from "./AddReview";
 import CancelButton from "./CancelButton";
@@ -12,13 +13,11 @@ const AddForm = ({ gamecard }) => {
   const [partsMissing, setPartsMissing] = useState("");
   const [partsText, setPartsText] = useState("");
   const [delivery, setDelivery] = useState("");
-  const [gamesWanted, setGamesWanted] = useState("");
+  const [gamesWanted, setGamesWanted] = useState([]);
   const [show, setShow] = useState("form");
 
-  // spelet du vill bytabort
-  // vad vill du ha i utbyte (sökruta från gamecatlog eller öppen för förslag)
 
-  // const URL = "https://609a4cbe0f5a13001721a8af.mockapi.io/ContactForm";
+
 
   const testUser = {
     userId: 7,
@@ -31,6 +30,7 @@ const AddForm = ({ gamecard }) => {
   };
 
   const requestBody = {
+    userId: testUser.userId,
     gameTitle: chooseGame,
     addTitle: headline,
     addDescription: salesPitch,
@@ -43,29 +43,31 @@ const AddForm = ({ gamecard }) => {
     imageURL: ["https://media.jw-it.se/a/large/000/005/202/000005202876.jpg"],
   };
 
-  const Form = (event) => {
-    //   event.preventDefault();
+  const URL = "https://609a4cbe0f5a13001721a8af.mockapi.io/gamesavailable";
 
-    //   fetch(URL, {
-    //     method: "POST",
-    //     headers: {
-    //       "content-type": "application/json",
-    //     },
-    //     body: JSON.stringify({ requestBody }),
-    //   }).then((responseFromAPI) => {
-    //     if (responseFromAPI.status === 404) {
-    //       alert("Det gick fel, sidan finns inte");
-    //     } else {
-    //       alert("Bytesförfrågan skickad!");
-    //       setHeadline("");
-    //       setSalesPitch("");
-    //       setCondtion("");
-    //       setPartsMissing("");
-    //       setPartsText("");
-    //     }
-    //     console.log("HEHEHEEHEHEH", responseFromAPI.status);
-    //     console.log(requestBody);
-    //   });
+  const submitForm = (event) => {
+    event.preventDefault();
+
+    fetch(URL, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({ requestBody }),
+    }).then((responseFromAPI) => {
+      if (responseFromAPI.status === 404) {
+        alert("Det gick fel, sidan finns inte");
+    } //   else {
+      //   alert("Bytesförfrågan skickad!");
+      //   setHeadline("");
+      //   setSalesPitch("");
+      //   setCondtion("");
+      //   setPartsMissing("");
+      //   setPartsText("");
+      // }
+      console.log("HEHEHEEHEHEH", responseFromAPI.status);
+      console.log(requestBody);
+    });
   };
 
 
@@ -73,7 +75,7 @@ const AddForm = ({ gamecard }) => {
     return (
       <div className="wrapper">
         <div className="container">
-          <form onSubmit={(event) => Form(event)}>
+          <form onSubmit={(event) => submitForm(event)}>
             <div className="col-sm-12 form">
               <h2 id="createAdd">Skapa annons</h2>
               <p>
@@ -339,7 +341,7 @@ const AddForm = ({ gamecard }) => {
             <div className="col-sm-3"><CancelButton /></div>
             <div className="col-sm-8 right-align">
               <button className="editButton" onClick={() => setShow("form")}> Redigera</button>
-              <button className="no-button" /*onClick={()=> Form(event)}*/><PublishButton trading={requestBody.gameTitle} tradingFor={requestBody.tradeFor} /></button>
+              <button className="no-button" onClick={(event)=> submitForm(event)}><PublishButton trading={requestBody.gameTitle} tradingFor={requestBody.tradeFor} /></button>
             </div>
           </div>
         </div>
