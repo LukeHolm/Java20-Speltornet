@@ -10,12 +10,23 @@ const AddForm = ({ gamecard }) => {
   const [chooseGame, setChooseGame] = useState("");
   const [headline, setHeadline] = useState("");
   const [salesPitch, setSalesPitch] = useState("");
-  const [condition, setCondtion] = useState("");
+  const [gameCondition, setCondtion] = useState("");
   const [partsMissing, setPartsMissing] = useState("");
   const [partsText, setPartsText] = useState("");
   const [delivery, setDelivery] = useState("");
   const [gamesWanted, setGamesWanted] = useState([]);
   const [show, setShow] = useState("form");
+
+  const [showURL, setShowURL] = useState(false);
+  const [showURL2, setShowURL2] = useState(false);
+  const [showURL3, setShowURL3] = useState(false);
+  const [showURL4, setShowURL4] = useState(false);
+  const [showURL5, setShowURL5] = useState(false);
+  const [picURL, setPicURL] = useState();
+  const [picURL2, setPicURL2] = useState();
+  const [picURL3, setPicURL3] = useState();
+  const [picURL4, setPicURL4] = useState();
+  const [picURL5, setPicURL5] = useState();
 
 
 
@@ -30,19 +41,20 @@ const AddForm = ({ gamecard }) => {
     location: "Stockholm"
   };
 
-  const requestBody = {
-    userId: testUser.userId,
-    gameTitle: chooseGame,
-    addTitle: headline,
-    addDescription: salesPitch,
-    condition: condition,
-    conditionDescription: partsText,
-    missingParts: partsMissing,
-    tradeFor: gamesWanted,
-    shipping: delivery,
-    location: testUser.location,
-    imageURL: ["https://media.jw-it.se/a/large/000/005/202/000005202876.jpg"],
-  };
+   const requestBody = {
+     userId: testUser.userId,
+     gameTitle: chooseGame,
+     addTitle: headline,
+     addDescription: salesPitch,
+     condition: gameCondition,
+     conditionDescription: partsText,
+     missingParts: partsMissing,
+     tradeFor: gamesWanted,
+     shipping: delivery,
+     location: testUser.location,
+     imageURL: [picURL, picURL2, picURL3, picURL4, picURL5],
+   };
+
 
   const URL = "https://609a4cbe0f5a13001721a8af.mockapi.io/gamesavailable";
 
@@ -54,18 +66,11 @@ const AddForm = ({ gamecard }) => {
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify({ requestBody }),
+      body: JSON.stringify(requestBody),
     }).then((responseFromAPI) => {
       if (responseFromAPI.status === 404) {
         alert("Det gick fel, sidan finns inte");
-    } //   else {
-      //   alert("Bytesförfrågan skickad!");
-      //   setHeadline("");
-      //   setSalesPitch("");
-      //   setCondtion("");
-      //   setPartsMissing("");
-      //   setPartsText("");
-      // }
+    }
       console.log("HEHEHEEHEHEH", responseFromAPI.status);
       console.log(requestBody);
     });
@@ -100,7 +105,7 @@ const AddForm = ({ gamecard }) => {
                 <div className="form-element">
                   <h5>Vilket spel vill du byta bort?</h5>
                   <select
-                    id="chooseGame"
+                    id="chooseGame" required
                     value={chooseGame}
                     onChange={(event) => setChooseGame(event.target.value)}
                   >
@@ -112,9 +117,9 @@ const AddForm = ({ gamecard }) => {
                 </div>
 
                 {/* Nedan ska bara synas när man valt spel. Bytas ut mot rullistan */}
-                <p className="bold">
+                {/* <p className="bold">
                   Valt spel (ska bara synas efter man valt spel)
-            </p>
+            </p> */}
                 {/* Lägg in valt spel här */}
 
                 <div className="form-element">
@@ -122,7 +127,7 @@ const AddForm = ({ gamecard }) => {
                   <input
                     className="thin-textarea"
                     type="text"
-                    id="headline"
+                    id="headline" required
                     placeholder="Skriv här..."
                     value={headline}
                     onChange={(event) => setHeadline(event.target.value)}
@@ -134,7 +139,7 @@ const AddForm = ({ gamecard }) => {
                   <textarea
                     type="textarea"
                     className="textarea"
-                    name="greeting"
+                    name="greeting" required
                     rows="5"
                     cols="30"
                     placeholder="Skriv här..."
@@ -151,9 +156,9 @@ const AddForm = ({ gamecard }) => {
                   <input
                     type="radio"
                     id="Nyskick"
-                    name="gameCondition"
-                    value="Nyskick"
-                    checked={condition === "Nyskick"}
+                    name="gameCondition" required
+                    value="Nyskick" 
+                    checked={gameCondition === "Nyskick"}
                     onChange={(e) => {
                       setCondtion(e.target.value);
                     }}
@@ -167,7 +172,7 @@ const AddForm = ({ gamecard }) => {
                     id="Lite slitet"
                     name="gameCondition"
                     value="Lite slitet"
-                    checked={condition === "Lite slitet"}
+                    checked={gameCondition === "Lite slitet"}
                     onChange={(e) => {
                       setCondtion(e.target.value);
                     }}
@@ -181,7 +186,7 @@ const AddForm = ({ gamecard }) => {
                     id="Mycket slitet"
                     name="gameCondition"
                     value="Mycket slitet"
-                    checked={condition === "Mycket slitet"}
+                    checked={gameCondition === "Mycket slitet"}
                     onChange={(e) => {
                       setCondtion(e.target.value);
                     }}
@@ -196,8 +201,8 @@ const AddForm = ({ gamecard }) => {
                   <input
                     type="radio"
                     id="no"
-                    name="components"
-                    value="no"
+                    name="components" required
+                    value="no" 
                     checked={partsMissing === false}
                     onChange={() => {
                       setPartsMissing(false);
@@ -229,7 +234,7 @@ const AddForm = ({ gamecard }) => {
                   <br />
                   <textarea
                     className="textarea"
-                    name="comment"
+                    name="comment" required
                     rows="5"
                     cols="30"
                     placeholder="Skriv här..."
@@ -240,31 +245,103 @@ const AddForm = ({ gamecard }) => {
                 <div className="form-element">
                   <h5>Ladda upp bilder på ditt spel:</h5>
                   <div className="row">
-                    <div className="camera-box">
+                    <div className="camera-box" onClick={() => setShowURL(true)}>
                       <Camera />
                     </div>
-                    <div className="camera-box">
+                    <div className="camera-box" onClick={() => setShowURL2(true)}>
                       <Camera />
                     </div>
-                    <div className="camera-box">
+                    <div className="camera-box" onClick={() => setShowURL3(true)}>
                       <Camera />
                     </div>
-                    <div className="camera-box">
+                    <div className="camera-box" onClick={() => setShowURL4(true)}>
                       <Camera />
                     </div>
-                    <div className="camera-box">
+                    <div className="camera-box" onClick={() => setShowURL5(true)}>
                       <Camera />
                     </div>
                   </div>
+                  <div className="form-element">
+                  {showURL && 
+                    <>
+                  <h5>Bild-URL</h5>
+                  <input
+                    className="thin-textarea"
+                    type="text"
+                    id="headline"
+                    placeholder="URL..."
+                    value={picURL}
+                    onChange={(event) => setPicURL(event.target.value)}
+                  />
+                  <button onClick={() => setShowURL(false)}>Save</button>
+                  </>
+                  }
+                                    {showURL2 && 
+                    <>
+                  <h5>Bild-URL</h5>
+                  <input
+                    className="thin-textarea"
+                    type="text"
+                    id="headline"
+                    placeholder="URL..."
+                    value={picURL2}
+                    onChange={(event) => setPicURL2(event.target.value)}
+                  />
+                  <button onClick={() => setShowURL2(false)}>Save</button>
+                  </>
+                  }
+                                    {showURL3 && 
+                    <>
+                  <h5>Bild-URL</h5>
+                  <input
+                    className="thin-textarea"
+                    type="text"
+                    id="headline"
+                    placeholder="URL..."
+                    value={picURL3}
+                    onChange={(event) => setPicURL3(event.target.value)}
+                  />
+                  <button onClick={() => setShowURL3(false)}>Save</button>
+                  </>
+                  }
+                                    {showURL4 && 
+                    <>
+                  <h5>Bild-URL</h5>
+                  <input
+                    className="thin-textarea"
+                    type="text"
+                    id="headline"
+                    placeholder="URL..."
+                    value={picURL4}
+                    onChange={(event) => setPicURL4(event.target.value)}
+                  />
+                  <button onClick={() => setShowURL4(false)}>Save</button>
+                  </>
+                  }
+                                    {showURL5 && 
+                    <>
+                  <h5>Bild-URL</h5>
+                  <input
+                    className="thin-textarea"
+                    type="text"
+                    id="headline"
+                    placeholder="URL..."
+                    value={picURL5}
+                    onChange={(event) => setPicURL5(event.target.value)}
+                  />
+                  <button onClick={() => setShowURL5(false)}>Save</button>
+                  </>
+                  }
+                </div>
                 </div>
                 <hr />
                 <h5>Föredraget leveranssätt för byte av spel</h5>
                 <div className="form-element checkbox row">
                   <div className="col-sm-4">
-                    <input type="checkbox" id="postnord" value="postnord"
+                    <input type="checkbox" name="delivery" id="postnord" value="postnord" required
                       checked={delivery === "postnord"} onChange={(e) => setDelivery(e.target.value)}></input>
                     <label for="postnord" id="checkbox-text">Postnord</label><br /><br />
-                    <input type="checkbox" id="avhämtning" value="avhämtning"
+                    <input type="checkbox" name="delivery" id="avhämtning" value="avhämtning" required
                       checked={delivery === "avhämtning"} onChange={(e) => setDelivery(e.target.value)}></input>
                     <label for="avhämtning" id="checkbox-text">Avhämtning</label>
                   </div>
@@ -304,7 +381,7 @@ const AddForm = ({ gamecard }) => {
                   <div className="col-sm-7 wanted-games">
 
                     <h5>Du vill ha</h5>
-                    {/* Lägg till sökruta + radiobutton */}
+                    {/* Lägg till radiobutton */}
                     <select
                         id="gamesWanted"
                         required
@@ -326,20 +403,10 @@ const AddForm = ({ gamecard }) => {
                           )}
                         </div>
                       )}
-                      <button onClick={() => setGamesWanted([])}></button>
+                      <br/>
+                      <button className="cancel" onClick={() => setGamesWanted([])}>Rensa spel</button>
                   </div>
                 </div>
-
-                {/* Lägg in vilket spel du har och vilket/vilka du vill byta mot */}
-
-                {/* <div className="send-trade-button col-sm-12 offset-sm-0">
-              <input
-                className="send-request"
-                type="submit"
-                id="submitbutton"
-                value="Skicka bytesförfrågan"
-              />
-            </div> */}
               </div>
             </div>
           </form>
@@ -376,7 +443,6 @@ const AddForm = ({ gamecard }) => {
       </div>
     )
   }
-
 };
 
 export default AddForm;
