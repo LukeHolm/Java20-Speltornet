@@ -12,7 +12,6 @@ import Footer from './components/Footer'
 import ChoosenGames from "./components/ChoosenGames";
 import AddForm from "./components/AddForm";
 import Dropdown from "./components/Dropdown";
-import ReviewAddForm from './components/ReviewAddForm'
 
 
 function App() {
@@ -20,7 +19,6 @@ function App() {
   const [gamecard, setGamecard] = useState([]);
   const [gameAdd, setGameAdd] = useState([]);
   const [users, setUsers] = useState([]);
-  const [formData, setFromData] = useState({});
 
   useEffect(() => {
       fetch('https://609a4cbe0f5a13001721a8af.mockapi.io/gamecatalog').then(response => response.json()).then(data => setGamecard(data))
@@ -47,10 +45,7 @@ function App() {
           </Route>
           <Route exact path="/LoadData" component={LoadData} />
           <Route path="/ChoosenGames" component={AddForm}>
-            <AddForm gamecard={gamecard}/>
-          </Route>
-          <Route path="/ReviewAddForm" component={ReviewAddForm}>
-            <ReviewAddForm />
+            <AddForm />
           </Route>
           <Route path="/Dropdown" component={Dropdown}>
             <Dropdown gamecard={gamecard}/>

@@ -15,7 +15,7 @@ const LoadData = ({ gameTitle, gameAdd }) => {
                             <div className="col-sm-5">
                                 <img className="addImg" src={add.imageURL} alt={add.gameTitle} />
                             </div>
-                            <div className="col-sm-6 tryflex">
+                            <div className="col-sm-6">
                                 <div className="location">{add.gameTitle} • {add.location}</div>
                                 <p className="addDec">{add.addTitle}</p>
                                 <div className="">

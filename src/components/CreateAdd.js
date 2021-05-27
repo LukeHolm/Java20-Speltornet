@@ -15,9 +15,6 @@ const CreateAdd = ({gamecard}) => {
           {/* <Dropdown gamecard={gamecard}/> */}
         </div>
       </div>
-
-      <Topfooter />
-      <Footer />
     </>
   );
 };

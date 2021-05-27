@@ -13,6 +13,13 @@ body {
   color: #1A3455;
 }
 
+hr {width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 2px;
+  margin-bottom: 45px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -56,7 +63,7 @@ body {
   height: 601px;
   width: 100%;
   display: inline-block;
-  text-align:center;
+  text-align: center;
 }
 
 .no-gutters {
@@ -177,12 +184,26 @@ p {
   font-weight: 400;
 }
 
+.left-align {
+  text-align: left;
+}
+
+.right-align {
+  text-align: right;
+}
+
+.separate{
+  display: flex;
+  justify-content: space-between;
+}
+
 #create-add {
   color: #E21C64;
 }
 
 #createAdd {
   margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 .text-form-bottom {
@@ -192,11 +213,15 @@ p {
   margin-top: 70px;
 }
 
+#form-box{
+  border:2px solid #6D85AA;
+  border-radius: 20px;
+}
+
 .form-text {
   color: #E21C64;
   margin-bottom: 30px;
 }
-
 
 .body-text {
   font-family: Poppins;
@@ -209,9 +234,25 @@ p {
 
 .form-element {
   text-align: left;
-  margin-top: 30px;
   margin-bottom: 30px;
   display: block;
+}
+
+.greyElement {
+  width: 9px;
+  height: 229px;
+  background-color: #E0E0E0;
+  border-radius: 10px 0px 0px 10px;
+  margin-top: 50px;
+  margin-left: 0px;
+}
+.smallGreyElement {
+  width: 9px;
+  height: 85px;
+  background-color: #E0E0E0;
+  border-radius: 10px 0px 0px 10px;
+  margin-top: 30px;
+  margin-left: 0px;
 }
 
 #chooseGame {
@@ -223,7 +264,7 @@ p {
 }
 
 #gamesWanted {
-  width: 304px;
+  width: 280px;
   height: 33px;
   border: 2px solid #1A3455;
   box-sizing: border-box;
@@ -235,23 +276,31 @@ p {
   flex-direction: column;
 }
 
-.closeButton {
-  width: 125px;
-  height: 59px;
-  border: 3px solid #E21C64;
-  border-radius: 30px;
-  background-color: white;
-  font-family: Poppins;
-  font-weight: 600;
-  font-size: 15px;
-  text-transform: uppercase;
-  color: #E21C64;
+#closeButton {
+  margin-top: 58px;
+  margin-bottom: 150px;
 }
 
 .reviewButton {
   width: 265px;
   height: 59px;
-  border: 3px solid #7D7D7D;
+  border: 4px solid #E21C64;
+  border-radius: 30px;
+  background-color: #E21C64;
+  border-radius: 40px;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-top: 58px;
+  margin-bottom: 150px;
+}
+
+.editButton {
+  width: 265px;
+  height: 59px;
+  border: 4px solid #E21C64;
   border-radius: 30px;
   background-color: white;
   border-radius: 40px;
@@ -259,7 +308,7 @@ p {
   font-weight: 600;
   font-size: 15px;
   text-transform: uppercase;
-  color: #7D7D7D;
+  color: #E21C64;
 }
 
 .formFrame {
@@ -284,15 +333,14 @@ p {
 .formExchange {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
 }
 
 .onetwothree {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  margin-top: 35px;
-  margin-bottom: 15px;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .checkbox {
@@ -300,7 +348,8 @@ p {
 }
 
 .form {
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-align: left;
 }
 
@@ -317,21 +366,23 @@ p {
 }*/
 
 .textarea {
-  width: 641px;
+  width: 100%;
   height: 108px;
   background-color: #FFFFFF;
   border: 2px solid #1A3455;
   box-sizing: border-box;
   border-radius: 10px;
+  padding:10px;
 }
 
 .thin-textarea {
-  width: 641px;
+  width: 100%;
   height: 47px;
   background-color: #FFFFFF;
   border: 2px solid #1A3455;
   box-sizing: border-box;
   border-radius: 10px;
+  padding-left: 10px;
 }
 
 .camera-box {
@@ -439,7 +490,6 @@ p {
   padding-top: 100px;
   padding-bottom: 20px;
   padding-left: 16px;
-  
 }
 
 .tornlogga-inverterad {
@@ -459,6 +509,13 @@ p {
 
 .col {
   text-align: center;
+}
+
+.formCol {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
 }
 
 .bild {
@@ -731,7 +788,7 @@ p {
 }
 
 .cancel {
-  background-color:#FFFFFF;
+  background-color: #FFFFFF;
   border-radius: 50px;
   border-style: none;
   width: 130px;
@@ -758,6 +815,11 @@ p {
   align-items: right;
 }
 
+.no-button {
+  background-color: #FFFFFF;
+  border-style: none;
+}
+
 .addBottom {
   background-color: #1A3455;
   color: #FFFFFF;
@@ -780,27 +842,17 @@ p {
   margin-left: 0px;
 }
 
-.left-align {
-  text-align: left;
-}
-
-.right-align {
-  text-align: right;
-}
-
 /* ------------------------------------------- RADIO BUTTONS -------------------------------------*/
 
 #radio {
   margin-right: 10px;
 }
 
- :root {
+:root {
   --color: #E21C64;
 }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   box-sizing: border-box;
 }
 
@@ -853,7 +905,6 @@ p {
 .center-align {
   text-align: center;
 }
-
 
 .smallAdd {
   display: inline-flex;
@@ -926,7 +977,7 @@ p {
   padding-right: 5px;
   margin-right: 2px;
   margin-bottom: 0px;
-  margin-top:0px;
+  margin-top: 0px;
   font-size: 13px;
   font-weight: 400;
   border: 1px solid #1A3455;
@@ -935,14 +986,11 @@ p {
   margin-bottom: 2px;
   padding-left: 3px;
   padding-right: 3px;
-  display: inline-block;
 }
 
 .tryflex {
   display: flex;
-  align-items: flex-end; 
-  flex-wrap: wrap; 
-  
+  align-items: flex-end;
 }
 
 .testaren {
@@ -971,8 +1019,8 @@ p {
   padding-right: 15px;
 }
 
-.userInfo{
-  padding-left:10px;
+.userInfo {
+  padding-left: 10px;
 }
 
 .descriptionBox {
@@ -999,58 +1047,81 @@ p {
   padding-top: 3px;
 }
 
-.imageSwitcher{
+.imageSwitcher {
   height: 58px;
   width: 58px;
   margin-right: 5px;
   margin-top: 20px;
 }
-.five-margin-bottom{
-margin-bottom: 5px;
+
+.five-margin-bottom {
+  margin-bottom: 5px;
 }
 
-.omdome{
-  margin-bottom:-5px;
+.omdome {
+  margin-bottom: -5px;
 }
-.userName{
-margin-top:-5px;
+
+.userName {
+  margin-top: -5px;
+}
+
+/*------------------------------------------------------------- AddReview -------------------------------------------------------*/
+
+.detailTitle {
+  margin-bottom: 23px;
+}
+
+.onetwothree-two {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.spacer-thirtyfive {
+  margin-right: 35px;
+}
+
+#reviewDescription{
+  border-radius: 0px 0px 20px 0px;
 }
 
 /*------------------------------------------------------------- Condition -------------------------------------------------------*/
 
-.good{
-width: 82px;
-height: 28px;
-background-color: #DFFAE5;
-color:#1A3455;
-border:1px solid #1A3455;
-text-align: center;
-margin-bottom:5px;
+.good {
+  width: 82px;
+  height: 28px;
+  background-color: #DFFAE5;
+  color: #1A3455;
+  border: 1px solid #1A3455;
+  text-align: center;
+  margin-bottom: 5px;
 }
 
-.worn{
+.worn {
   width: 89px;
   height: 28px;
   background-color: #FFEED6;
-  color:#1A3455;
-  border:1px solid #1A3455;
+  color: #1A3455;
+  border: 1px solid #1A3455;
   text-align: center;
-  margin-bottom:5px;
+  margin-bottom: 5px;
 }
 
-.bad{
+.bad {
   width: 114px;
   height: 28px;
   background-color: #FFD8D8;
-  color:#1A3455;
-  border:1px solid #1A3455; 
+  color: #1A3455;
+  border: 1px solid #1A3455;
   text-align: center;
-  margin-bottom:5px;
+  margin-bottom: 5px;
 }
 
-.no-missing-check{
-  height:13.26px;
-  width:14.93px;
+.no-missing-check {
+  height: 13.26px;
+  width: 14.93px;
 }
 
 /*------------------------------------------------------------- Form foldout -------------------------------------------------------*/
@@ -1063,13 +1134,12 @@ margin-bottom:5px;
   margin-top: 20px;
 }
 
-.flexaren{
+.flexaren {
   display: inline-block;
   display: flex;
   border: 1px solid #333;
   align-items: flex-end;
   flex-wrap: wrap;
-
 }
 
 /*------------------------------------------------------------- Modal General -------------------------------------------------------*/
@@ -1089,16 +1159,15 @@ margin-bottom:5px;
 
 /*------------------------------------------------------------- Cancel Modal -------------------------------------------------------*/
 
-
-
 .cancel-modal-content {
   width: 340px;
   height: 225px;
   background-color: #FFFFFF;
   border-radius: 20px;
-  padding-top:25px;
+  padding-top: 25px;
   padding-left: 50px;
   padding-right: 50px;
+  border-style: none;
 }
 
 .cancel-modal-body {
@@ -1106,6 +1175,7 @@ margin-bottom:5px;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
   border-radius: 20px 20px 0px 0px;
+  border-style: none;
 }
 
 .cancel-modal-text {
@@ -1118,9 +1188,9 @@ margin-bottom:5px;
   margin-bottom: 15px;
 }
 
-.cancel-modal-no{
+.cancel-modal-no {
   background-color: #E21C64;
-  border-radius: 90px; 
+  border-radius: 90px;
   border-style: none;
   width: 90px;
   height: 60px;
@@ -1131,8 +1201,8 @@ margin-bottom:5px;
   border: 2px solid #E21C64;
 }
 
-.cancel-modal-yes{
-  background-color:#FFFFFF;
+.cancel-modal-yes {
+  background-color: #FFFFFF;
   border-radius: 90px;
   border-style: none;
   width: 90px;
@@ -1152,9 +1222,10 @@ margin-bottom:5px;
   height: 450px;
   background-color: #FFFFFF;
   border-radius: 20px;
-  padding-top:25px;
+  padding-top: 25px;
   padding-left: 50px;
   padding-right: 50px;
+  border-style: none;
 }
 
 .publish-modal-body {
@@ -1162,16 +1233,17 @@ margin-bottom:5px;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
   border-radius: 20px 20px 0px 0px;
+  border-style: none;
 }
 
-.publish-modal-confirm{
-  width:40px;
-  height:40px;
-  margin-top:10px;
+.publish-modal-confirm {
+  width: 40px;
+  height: 40px;
+  margin-top: 10px;
 }
 
-.publish-modal-back{
-  background-color:#FFFFFF;
+.publish-modal-back {
+  background-color: #FFFFFF;
   border-radius: 90px;
   border-style: none;
   width: 255px;
@@ -1182,12 +1254,12 @@ margin-bottom:5px;
   text-transform: uppercase;
   border: 2px solid #E21C64;
   font-weight: 600;
-  margin-top:50px;
+  margin-top: 50px;
 }
 
-.publish-modal-button{
+.publish-modal-button {
   background-color: #E21C64;
-  border-radius: 90px; 
+  border-radius: 90px;
   border-style: none;
   width: 270px;
   height: 60px;
