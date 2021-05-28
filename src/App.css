@@ -245,7 +245,7 @@ p {
   height: 229px;
   background-color: #e0e0e0;
   border-radius: 10px 0px 0px 10px;
-  margin-top: 50px;
+  margin-top: 20px;
   margin-left: 0px;
 }
 .smallGreyElement {
@@ -352,9 +352,18 @@ p {
 
 .x-mark {
   color: #e21c64;
-  z-index: -1;
   padding-bottom: 20px;
   padding-right: 10px;
+  position: relative;
+  left: -4px;
+  top: 0%;
+  z-index: 1;
+  margin-top: -9px;
+}
+
+.cross:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 .formExchange {
@@ -410,6 +419,10 @@ p {
   box-sizing: border-box;
   border-radius: 10px;
   padding-left: 10px;
+}
+
+.urllink {
+  margin-top: 7px;
 }
 
 .camera-box {
