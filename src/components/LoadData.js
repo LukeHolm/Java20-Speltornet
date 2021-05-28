@@ -14,7 +14,7 @@ const LoadData = ({ gameTitle, gameAdd }) => {
                     <div className="col-sm-5 smallAdd" onClick={() => history.push("/Details/" + add.addId)}>
                         <>
                             <div className="col-sm-5">
-                                <img className="addImg" src={add.imageURL} alt={add.gameTitle} />
+                                <img className="addImg" src={add.imageURL[0]} alt={add.gameTitle} />
                             </div>
                             <div className="col-sm-6">
                                 <div className="location">{add.gameTitle} • {add.location}</div>
