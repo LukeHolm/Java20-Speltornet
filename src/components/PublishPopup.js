@@ -36,7 +36,9 @@ const PublishPopup = props => {
                             <p className="vbm-tag">{props.trading}</p>
                             <br/><br/>
                             <p className="tagg-bold five-margin-bottom">Du vill byta mot:</p>
-                            <p className="vbm-tag">{props.tradingFor}</p>
+                            {props.tradingFor.map(trade =>
+                            <p className="vbm-tag">{trade}</p>
+                            )}
                         </div>
                     </div>
 
