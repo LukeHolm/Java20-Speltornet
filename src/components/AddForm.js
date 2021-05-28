@@ -278,7 +278,7 @@ const AddForm = ({ gamecard }) => {
                   <div className="form-element">
                   {showURL && 
                     <>
-                  <h5>Bild-URL</h5>
+                  <h5 className="urllink">Bild-URL</h5>
                   <input
                     className="thin-textarea"
                     ref={picURLRef}
@@ -289,7 +289,7 @@ const AddForm = ({ gamecard }) => {
                     onChange={(event) => setPicURL2(event.target.value)}
                   />
 
-                  <button type="button" onClick={handlePicURL}>Save</button>
+                  <button type="button" className="urllink" onClick={handlePicURL}>Save</button>
                   </>
                   }
                 </div>
@@ -368,16 +368,17 @@ const AddForm = ({ gamecard }) => {
                     <h5>Du vill ha</h5>
                     <input className="radio-special"
                       type="radio"
-                      id="Önska specifikt spel"
+                      id="vbm"
                       name="desiredGame"
                       required
                       value="Önska specifikt spel"
                       checked={desiredGame === false}
                       onChange={() => {
                         setDesiredGame(false);
+                        setGamesWanted([]);
                       }}
                     />
-                    <label for="no" id="radio-text" className="radio-special-text">
+                    <label for="vbm" id="radio-text" className="radio-special-text">
                       Önska specifika spel
                     </label>
                     <div className="detailText bold specificGame">Max 5 specifika spel</div>
@@ -403,25 +404,26 @@ const AddForm = ({ gamecard }) => {
                       </div>
                     )}
                     <br />
-                    <button type="button" className="cross"><div className="x-mark">x</div></button>
-                    <button
+                    <button type="button" className="cross" onClick={() => setGamesWanted([])}><div className="x-mark">x</div></button>
+                    {/* <button
                     type="button"
                       className="cancel"
                       onClick={() => setGamesWanted([])}>
                       Rensa spel
-                    </button>
+                    </button> */}
                     <input className="radio-special"
                       type="radio"
-                      id="Förslag på spel"
+                      id="vbm-any"
                       name="desiredGame"
-                      value="Förslag på spel"
+                      value="Öppen för förslag"
                       checked={desiredGame === true}
                       onChange={() => {
+                        setGamesWanted(["Öppen för förslag"])
                         setDesiredGame(true);
                       }}
 
                     />
-                    <label for="yes" id="radio-text" className="radio-special-text">
+                    <label for="vbm-any" id="radio-text" className="radio-special-text">
                       Jag vill få förslag på spel
                     </label>
                   </div>
