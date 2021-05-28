@@ -260,19 +260,19 @@ const AddForm = ({ gamecard }) => {
                   <h5>Ladda upp bilder på ditt spel:</h5>
                   <div className="row">
                     <div className="camera-box" onClick={() => setShowURL(!showURL)}>
-                      <Camera />
+                      <Camera img={requestBody.imageURL[0]}/>
                     </div>
                     <div className="camera-box" onClick={() => setShowURL(!showURL)}>
-                      <Camera />
+                      <Camera img={requestBody.imageURL[1]}/>
                     </div>
                     <div className="camera-box" onClick={() => setShowURL(!showURL)}>
-                      <Camera />
+                      <Camera img={requestBody.imageURL[2]}/>
                     </div>
                     <div className="camera-box" onClick={() => setShowURL(!showURL)}>
-                      <Camera />
+                      <Camera img={requestBody.imageURL[3]}/>
                     </div>
                     <div className="camera-box" onClick={() => setShowURL(!showURL)}>
-                      <Camera />
+                      <Camera img={requestBody.imageURL[4]}/>
                     </div>
                   </div>
                   <div className="form-element">
@@ -289,7 +289,7 @@ const AddForm = ({ gamecard }) => {
                     onChange={(event) => setPicURL2(event.target.value)}
                   />
 
-                  <button type="button" className="save-button" onClick={handlePicURL}>Save image</button>
+                  <button type="button" className="save-button" onClick={handlePicURL}>ladda upp bild</button>
                   </>
                   }
                 </div>

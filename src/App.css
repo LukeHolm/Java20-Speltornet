@@ -1399,3 +1399,11 @@ color: #e21c64;
   text-transform: uppercase;
   border: 2px solid #E21C64;
 }
+
+.uploaded-img{
+  width: 106px;
+  height: 112px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  margin-right: 25px
+}
