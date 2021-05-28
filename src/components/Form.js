@@ -37,14 +37,7 @@ const Form = ({trading, tradingFor}) => {
     }).then((responseFromAPI) => {
       if (responseFromAPI.status === 404) {
         alert("Det gick fel, sidan finns inte");
-      } else {
-        alert("Bytesförfrågan skickad!");
-        setHeadline("");
-        setGreeting("");
-        setCondtion("");
-        setPartsMissing("");
-        setPartsText("");
-      }
+      } 
       console.log(responseFromAPI.status);
       console.log(requestBody);
     });
