@@ -289,7 +289,7 @@ const AddForm = ({ gamecard }) => {
                     onChange={(event) => setPicURL2(event.target.value)}
                   />
 
-                  <button type="button" className="urllink" onClick={handlePicURL}>Save</button>
+                  <button type="button" className="save-button" onClick={handlePicURL}>Save image</button>
                   </>
                   }
                 </div>
@@ -405,12 +405,14 @@ const AddForm = ({ gamecard }) => {
                     )}
                     <br />
                     <button type="button" className="cross" onClick={() => setGamesWanted([])}><div className="x-mark">x</div></button>
+                    <hr/>
                     {/* <button
                     type="button"
                       className="cancel"
                       onClick={() => setGamesWanted([])}>
                       Rensa spel
                     </button> */}
+                    
                     <input className="radio-special"
                       type="radio"
                       id="vbm-any"
@@ -421,7 +423,6 @@ const AddForm = ({ gamecard }) => {
                         setGamesWanted(["Öppen för förslag"])
                         setDesiredGame(true);
                       }}
-
                     />
                     <label for="vbm-any" id="radio-text" className="radio-special-text">
                       Jag vill få förslag på spel
