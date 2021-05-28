@@ -34,10 +34,10 @@ const RequestPopup = props => {
                         <div className="col-sm-3 offset-sm-1 left-align">
                             <br/><br/>
                             <p className="tagg-bold five-margin-bottom">Du har:</p>
-                            <p className="vbm-tag">{props.trading}</p>
+                            <p className="vbm-tag">{props.tradingFor}</p>
                             <br/><br/>
                             <p className="tagg-bold five-margin-bottom">Du vill byta mot:</p>
-                            <p className="vbm-tag">{props.tradingFor}</p>
+                            <p className="vbm-tag">{props.trading}</p>
                         </div>
                     </div>
 
