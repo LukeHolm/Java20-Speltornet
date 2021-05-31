@@ -1,0 +1,219 @@
+[
+  {
+    "addId": 1,
+    "userId": 1,
+    "gameTitle": "Pandemic",
+    "addTitle": "Pandemic i gott skick",
+    "addDescription": "Hej, jag säljer mitt begagnade Catan. Det är inte spelat mer än några gånger och alla delar finns kvar. Den lite lite sliten på hörnen.",
+    "condition": "Nyskick",
+    "conditionDescription": "Spelet är lite slitet i hörnet men annars är det i bra skick. Jag har tappat bort ena spelbiten och det fattas tre kort och fyra pengar.",
+    "missingParts": false,
+    "tradeFor": [
+      "Monopol ",
+      "Catan ",
+      "Diamanten "
+    ],
+    "shipping": "Postnord",
+    "location": "Stockholm",
+    "imageURL": [
+      "https://media.newyorker.com/photos/5f0392652385d52b037bf56f/master/w_2560,c_limit/Jahromi-Pandemictheboardgame.jpg",
+      "https://npr.brightspotcdn.com/dims4/default/fbee521/2147483647/strip/true/crop/1431x1073+0+0/resize/880x660!/quality/90/?url=http://npr-brightspot.s3.amazonaws.com/legacy/sites/kunc/files/202006/pandemic_board_game_2020_SW.jpg",
+      "https://cdn.vox-cdn.com/thumbor/uzLWgjTpGjMXWPKmTxny8mzQc5w=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/19788611/pandemicboard.jpg"
+    ]
+  },
+  {
+    "addId": 2,
+    "userId": 5,
+    "gameTitle": "Pandemic",
+    "addTitle": "Välspelat pandemic bytes",
+    "addDescription": null,
+    "condition": "Lite slitet",
+    "conditionDescription": null,
+    "missingParts": false,
+    "tradeFor": [
+      "Ticket to ride ",
+      "Catan ",
+      "Diamanten "
+    ],
+    "shipping": false,
+    "location": "Lund ",
+    "imageURL": [
+      "https://cdn.arstechnica.net/wp-content/uploads/2016/03/IMG_9737-1-980x778.jpg"
+    ]
+  },
+  {
+    "addId": 3,
+    "userId": 4,
+    "gameTitle": "Catan",
+    "addTitle": "Halvsunkigt Catan Europa bytes mot vad som helst",
+    "addDescription": null,
+    "conditionDescription": null,
+    "condition": "Mycket slitet",
+    "missingParts": true,
+    "tradeFor": [
+      "Öppen för förslag"
+    ],
+    "shipping": false,
+    "location": "Göteborg",
+    "imageURL": [
+      "https://s3-alpha-sig.figma.com/img/e809/0dee/4a69b3632e97e266dc76ef830bdeeec8?Expires=1622419200&Signature=NzOpJUITAb9M7uHpwaLfGbiYfflB3L5aR1RLp8isoOoFXKTEUEeP6~PNSNROPQMUrBp7Y1l~mSzBDMGKDlQvWwzqh2eVN-4Hlc21Nyhc4uB~-VAMEYXawHRRxKhXrYmLu0ni8X4fnOsj-UOhubBjYDI39a-tS3hWv4Oj8UxnSS5ZLmJYeHNkcqQngGqQlQmGyz284UsV7QzsDjP45ToAZNILq5QoJYXodtMxPdbE5KBWu-kqqFMI0GFR-mE78CyhvWY0LVs6eLV8yYF0On33fPtePmRVocDN9yQDK7xCvFHNAhef7VW9bRznVNmCEurBE8Msq2vKhGVjG3HuymviGg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+    ]
+  },
+  {
+    "addId": 4,
+    "userId": 3,
+    "gameTitle": "Catan",
+    "addTitle": "Catan bytes mot Ticket To Ride",
+    "addDescription": null,
+    "conditionDescription": null,
+    "condition": "Nyskick",
+    "missingParts": false,
+    "tradeFor": [
+      "Ticket To Ride"
+    ],
+    "shipping": false,
+    "location": "Luleå",
+    "imageURL": [
+      "https://s3-alpha-sig.figma.com/img/3da3/e5ce/cc8909f9677f1da442807bec85be9ddc?Expires=1622419200&Signature=Btc1cBJLmSVxDr8RrehpgFOHSPIfz-~NQatLuxBCUSpB6i~4j36pwfoBCzzlka9MehLQxAFG0MSiveby2XLwfOezELRS3-3v97nFpcLRRJRuNXfcM~Gp7ONexy2Cwo8CjUJn-BUHh1LSduPlshu-9PmL9i5cTXeSNWkZ2zfg5CyG3J4NFQyjFcFY4t-C1At27DT8KrLrdyJUuXyNSoAUQKGVAOcFb5HcFv5PZDtF0WBeGcUTBK6NVvxtoKH3ursCtcn6rpeK1IBRCrumnPGCb7PL2TV~PDHZ4bWLVW2JPidLdWret4B5FliHGYcwi8MSNiZttsmlQ6tpa1pLNauAww__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+    ]
+  },
+  {
+    "addId": 5,
+    "userId": 2,
+    "gameTitle": "Small World",
+    "addTitle": "Oöppnat",
+    "addDescription": null,
+    "conditionDescription": null,
+    "condition": "Nyskick",
+    "missingParts": false,
+    "tradeFor": [
+      "Game of Thrones"
+    ],
+    "shipping": false,
+    "location": "Malmö",
+    "imageURL": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRP6T6_Q5lhfhcoHqXo7yPGbsuzkdMkfaaMg&usqp=CAU"
+    ]
+  },
+  {
+    "addId": 6,
+    "userId": 6,
+    "gameTitle": "Civilization",
+    "addTitle": "Kul spel!",
+    "addDescription": "Byter bort mitt favoritspel",
+    "conditionDescription": "Väl spelat, men i gott skick",
+    "condition": "Lite slitet",
+    "missingParts": false,
+    "tradeFor": [
+      "Small world",
+      "Catan",
+      "Minecraft"
+    ],
+    "shipping": false,
+    "location": "Haparanda",
+    "imageURL": [
+      "https://s3-alpha-sig.figma.com/img/c8e4/480d/f4c82c4505404985d3a15c5a69b6ee68?Expires=1622419200&Signature=WIeJzLf-D9LXgwkE1L1hHcfVz3vDXgQr0n3H8-gEjWGSojIoT~JVceTR75kXOCavI3a3L5qZOC5sUhWW~31NxyMJ4x24Qnc4z2WPsTeB9QRjJMUFqsqbcUEWeq-oc2veHln2XD8cOdDqKpu4MOF4Rp6EBc3-GI5xZ3XOrXaDq3Vbwt4pkDJHpT3PtLhvlFfLvHpNm4qsrtbb8WMmmE5PiMWfnLSI7LIIOPOEgJBpUUc5g-FhUA6e8y0V4iB~yIgFbJOQS1h2J9P5JaZ-d7J3Zj~faikFkEjNjgzrIjfSZRBMthfQejNQSWNZ-QE4GrZg49mZLcCwCNoEypXDSzeR5g__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+    ]
+  },
+  {
+    "addId": 7,
+    "userId": 5,
+    "gameTitle": "Small World",
+    "addTitle": "Small World i originalförpackning",
+    "addDescription": "Hej! Jag köpte det här spelet men ångrade mig sen. Tappade kvittot så kan inte lämna tillbaks det! Det är helt orört och jag skulle vilja ha ett spel i nyskick för det eller två spel i OK skick!",
+    "condition": "Nyskick",
+    "conditionDescription": "Fortfarande i plastförpackningen.",
+    "missingParts": false,
+    "tradeFor": [
+      "Öppen för förslag"
+    ],
+    "shipping": "Avhämtning",
+    "location": "Örebro",
+    "imageURL": [
+      "https://media.jw-it.se/a/large/000/005/202/000005202876.jpg",
+      "https://www.spelexperten.com/bilder/artiklar/ENIGSWSE001.jpg",
+      "https://images.squarespace-cdn.com/content/v1/569bc47dbfe87383e5de8479/1589450606236-NCB13YFDACPX9KW13J2J/ke17ZwdGBToddI8pDm48kGlfORbcJd11Is_-h3fEFKN7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UYsSDJLL_5upixFfGtkfvBEwDAPk1WQx8ogOA5uu26lAbSexTd1-frD7527z4SM9QQ/smallworld_frilagd.png"
+    ]
+  },
+  {
+    "addId": 8,
+    "userId": 4,
+    "gameTitle": "Othello",
+    "addTitle": "Othello i dugligt skick",
+    "addDescription": "Hej hej! Jag vill byta bort mitt Othello. Haft det rätt länge men nu tar det bara upp plats! Vill bara testa nåt nytt spel och det spelar ingen roll vilket!",
+    "condition": "Lite slitet",
+    "conditionDescription": "Spelplanen är lite nött men inget faller isär. Saknar ett par brickor",
+    "missingParts": false,
+    "tradeFor": [
+      "Öppen för förslag"
+    ],
+    "shipping": "Avhämtning",
+    "location": "Flen",
+    "imageURL": [
+      "https://www.spelexperten.com/bilder/artiklar/zoom/38014796_3.jpg?m=1537972679",
+      "http://www.erkstam.se/wp-content/uploads/2012/06/othello-original.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/2/20/Othello-Standard-Board.jpg"
+    ]
+  },
+  {
+    "addId": 9,
+    "userId": 2,
+    "gameTitle": "Ticket To Ride",
+    "addTitle": "Fint Ticket to Ride bytes",
+    "addDescription": "Tjena! Jag byter bort mitt TTR! Den är i fint skick men har tappat bort ett rött tåg. Jag är intresserad av att byta det mot ett ”Nova Luna”!",
+    "condition": "Nyskick",
+    "conditionDescription": "Bra skick. En pjäs saknas",
+    "missingParts": true,
+    "tradeFor": [
+      "Nova Luna"
+    ],
+    "shipping": "Postnord",
+    "location": "Kiruna",
+    "imageURL": [
+      "https://assets.dicebreaker.com/ticket-to-ride-europe-15-anniversary-edition-layout.png/BROK/resize/1920%3E/format/jpg/quality/80/ticket-to-ride-europe-15-anniversary-edition-layout.png",
+      "https://www.spelochsant.se/uploads/images/product_images/322904_original.jpg",
+      "https://z1.adlibris.com/35/0408a044-ff16-4bf3-a220-622c77509e7b.jpg"
+    ]
+  },
+  {
+    "addId": "10",
+    "userId": 7,
+    "gameTitle": "Game of Thrones",
+    "addTitle": "Blod överallt",
+    "addDescription": "Jag fick PTSD av att återuppleva Rob Starks död i min första playthrough, så jag byter bort det här spelet",
+    "condition": "Mycket slitet",
+    "conditionDescription": "Spelet är spelat en gång, men det är blod på alla bitar",
+    "missingParts": false,
+    "tradeFor": [
+      "Öppen för förslag"
+    ],
+    "shipping": "postnord",
+    "location": "Stockholm",
+    "imageURL": [
+      "https://pyxis.nymag.com/v1/imgs/acb/868/51a06af52bd83d0472b30c843feeb812b2-31-got-games-2.rsquare.w700.jpg",
+      "https://i.ytimg.com/vi/H80bGaF3QNQ/maxresdefault.jpg",
+      "https://www.shutupandsitdown.com/wp-content/uploads/2011/12/da7d02f0f7ce11e2b73af23c91709c91_1375047857.jpg"
+    ]
+  },
+  {
+    "addId": "11",
+    "userId": 7,
+    "gameTitle": "Game of Thrones",
+    "addTitle": "Byter bort GoT-spel",
+    "addDescription": "Tjingeling! Jag vill byta bort det här spelet mot i princip vad som helst! \nEn hg med löv hade dugit… Jag älskade det här spelet och det är jättekul \nmen efter att jag såg säsong 8 av tv-serien klarar jag inte \nlängre av att äga detta spel.",
+    "condition": "Nyskick",
+    "conditionDescription": "Lite slitet i hörnen och inget saknas",
+    "missingParts": false,
+    "tradeFor": [
+      "Pandemic",
+      "Small World",
+      "Catan"
+    ],
+    "shipping": "postnord",
+    "location": "Stockholm",
+    "imageURL": [
+      " https://www.shutupandsitdown.com/wp-content/uploads/2019/06/7728e312a35ccb8e531e318e25c04984.jpg",
+      " http://boardgamersanonymous.com/wp-content/uploads/2016/06/A-Game-of-Thrones-Board-Game.jpg"
+    ]
+  }
+]

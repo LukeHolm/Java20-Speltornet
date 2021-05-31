@@ -259,19 +259,19 @@ const AddForm = ({ gamecard }) => {
                 <div className="form-element">
                   <h5>Ladda upp bilder på ditt spel:</h5>
                   <div className="row">
-                    <div className="camera-box" onClick={() => setShowURL(!showURL)}>
+                    <div onClick={() => setShowURL(!showURL)}>
                       <Camera img={requestBody.imageURL[0]}/>
                     </div>
-                    <div className="camera-box" onClick={() => setShowURL(!showURL)}>
+                    <div onClick={() => setShowURL(!showURL)}>
                       <Camera img={requestBody.imageURL[1]}/>
                     </div>
-                    <div className="camera-box" onClick={() => setShowURL(!showURL)}>
+                    <div onClick={() => setShowURL(!showURL)}>
                       <Camera img={requestBody.imageURL[2]}/>
                     </div>
-                    <div className="camera-box" onClick={() => setShowURL(!showURL)}>
+                    <div onClick={() => setShowURL(!showURL)}>
                       <Camera img={requestBody.imageURL[3]}/>
                     </div>
-                    <div className="camera-box" onClick={() => setShowURL(!showURL)}>
+                    <div onClick={() => setShowURL(!showURL)}>
                       <Camera img={requestBody.imageURL[4]}/>
                     </div>
                   </div>

@@ -1,0 +1,92 @@
+[
+  {
+    "userId": "1",
+    "firstName": "Oscar",
+    "lastName": "Franck",
+    "userName": "Francken",
+    "rep": 5,
+    "location": "Stockholm",
+    "img": "https://thumbs.dreamstime.com/b/funny-cartoon-man-long-beard-illustration-48891198.jpg"
+  },
+  {
+    "userId": "2",
+    "firstName": "Miranda",
+    "lastName": "Frisö",
+    "userName": "MirandaFriso",
+    "rep": 0,
+    "location": "Väddö",
+    "img": "https://cdn1.iconfinder.com/data/icons/avatars-1-5/136/87-512.png"
+  },
+  {
+    "userId": "3",
+    "firstName": "Lucas",
+    "lastName": "Holm",
+    "userName": "Luke",
+    "rep": 4,
+    "location": "Trosa",
+    "img": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/137409052/original/d472c30361632da1c8d8fa780f572807d78abd9f/cartoon-profile-picture-or-avatar.png"
+  },
+  {
+    "userId": "4",
+    "firstName": "Markus",
+    "lastName": "Johansson",
+    "userName": "Helleffect",
+    "rep": 3,
+    "location": "Stockholm",
+    "img": "https://regenerationandrepentance.files.wordpress.com/2015/02/3d-abstract_hdwallpaper_imaginary-hell_38156.jpg"
+  },
+  {
+    "userId": "5",
+    "firstName": "Josefin",
+    "lastName": "Pihl",
+    "userName": "Pihlen",
+    "rep": 2,
+    "location": "Stockholm",
+    "img": "https://image.freepik.com/free-vector/portrait-caucasian-woman-profile-with-long-hair-avatar-young-white-girl_102172-419.jpg"
+  },
+  {
+    "userId": "6",
+    "firstName": "Siri",
+    "lastName": "Wallenten",
+    "userName": "HeySiri",
+    "rep": 1,
+    "location": "Malmö",
+    "img": "https://i.pinimg.com/564x/4a/a7/34/4aa734c00441a0c63968c3e5cbd47d03.jpg"
+  },
+  {
+    "userId": "7",
+    "firstName": "Dummy",
+    "lastName": "User",
+    "userName": "CrashTest",
+    "rep": 4,
+    "location": "Haparanda",
+    "img": "https://i.ebayimg.com/images/g/RSkAAOSwd0ha-yKd/s-l400.jpg"
+  },
+  {
+    "userId": "8",
+    "firstName": "Anna",
+    "lastName": "Berg",
+    "userName": "TheMountain",
+    "rep": 4,
+    "location": "Haparanda",
+    "img": "https://static.wikia.nocookie.net/lotr/images/e/e3/Lonely_Mountain_-_DoS.jpg/revision/latest/top-crop/width/360/height/360?cb=20200317224945"
+  },
+  {
+    "userId": "9",
+    "firstName": "Hubert",
+    "lastName": "Farnsworth",
+    "userName": "Professor",
+    "rep": 3,
+    "location": "Haparanda",
+    "img": "https://c4.wallpaperflare.com/wallpaper/452/573/289/white-futurama-profesor-hubert-j-farnsworth-wallpaper-preview.jpg"
+  },
+  {
+    "userId": "10",
+    "firstName": "Stina-Beata",
+    "lastName": "Aften",
+    "userName": "Bee",
+    "rep": 4,
+    "location": "Haparanda",
+    "img": "https://cdn2.vectorstock.com/i/thumb-large/83/66/honey-bee-vintage-drawing-hand-drawn-vector-20038366.jpg"
+  }
+]
